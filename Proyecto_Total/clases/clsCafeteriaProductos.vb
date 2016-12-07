@@ -363,6 +363,27 @@
             Throw ex
         End Try
     End Function
+    Public Function CargarDatosIndexProductoCantidadProductosDisponibles()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeDatos As SqlClient.SqlDataAdapter
+        Try
+            Dim cmd As New SqlClient.SqlCommand
+            cmd.CommandText = "select CantidadProducto from RLProductos where IdProducto = @IdProductos"
+            cmd.Parameters.Add("@IdProductos", SqlDbType.BigInt).Value = idProducto
+            RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+            cmd.Connection = cn
+            RecibeDatos.Fill(datos)
+            If datos.Tables(0).Rows(0).Item("CantidadProducto") Is System.DBNull.Value Then
+                cantidadProducto = " "
+            Else
+                cantidadProducto = datos.Tables(0).Rows(0).Item("CantidadProducto")
+            End If
+            Return cantidadProducto
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 
 
     Public Function CargarDatosDDlComprarNombreCliente()

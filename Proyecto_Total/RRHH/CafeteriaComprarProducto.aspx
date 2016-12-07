@@ -17,55 +17,8 @@
     <link type="text/css" rel="Stylesheet" href="~/Css2/jquery-ui.css" />
     <link type="text/css" rel="Stylesheet" href="~/Css2/Kamilion.css" />
     <script src="../Css2/jquery.min.js"></script>
-    <script>
-        //$(document).ready(function () {
-        //    dato = $("#Drl_Categoria option:selected").val()
-        //    datos = $("#Drl_Categoria").val()
-
-        //    $("#Drl_Categoria").change(function (e) {
-        //        alert($("#Drl_Categoria").val())
-
-        //        switch ($("#Drl_Categoria").val()) {
-        //            case "1":
-        //                alert(($("#Drl_Categoria").val()))
-        //                $("#Drl_Valor").val(1800) //= //($("#Drl_Categoria").val())
-        //                break;
-        //            case 2:
-        //                $("#Drl_Valor").val(2)
-        //                break;
-        //        }
-        //    });
-        //});
-        //$(document).ready(function () {
-        //    //dato = $("#Drl_Categoria option:selected").val()
-        //    //datos = $("#Drl_Productos").val()
-
-        //    $("#Drl_Productos").change(function (e) {
-
-
-        //        switch ($("#Drl_Productos").val()) {
-        //            case "1":
-
-        //                $("#Drl_Valor").val(($("#Drl_Productos").val()))
-        //                break;
-        //            case "2":
-        //                $("#Drl_Valor").val(($("#Drl_Productos").val()))
-        //                break;
-        //            case "3":
-        //                $("#Drl_Valor").val(($("#Drl_Productos").val()))
-        //                break;
-        //            case "4":
-        //                $("#Drl_Valor").val(($("#Drl_Productos").val()))
-        //                break;
-        //        }
-        //    });
-        //});
-
-    </script>
-
 </head>
 <body>
-
     <form runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
         <Control:Header ID="Header" runat="server" />
@@ -98,7 +51,7 @@
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Fecha Venta</div>
-                                   <asp:TextBox ID="TxtFechaVenta" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtFechaVenta" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="Space-Form"></div>
@@ -110,17 +63,23 @@
                                     <asp:Label ID="Lbl_Valor" CssClass="form-control" readonly="true" runat="server"></asp:Label>
                                 </div>
                                 <div class="input-group">
-                                    <div class="input-group-addon">Cantidad</div>
-                                    <asp:TextBox ID="TxtCantidadProducto" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <div class="input-group-addon">Cantidad Disponible</div>
+                                    <asp:Label ID="Lbl_CantidadDisponible" CssClass="form-control" readonly="true" runat="server"></asp:Label>
                                 </div>
+                                   
                                 <div class="input-group">
                                     <div class="input-group-addon">Nombre del Cliente</div>
                                     <asp:DropDownList ID="Drl_NombreCliente" CssClass="form-control" runat="server"></asp:DropDownList>
+                                </div>
+                             <div class="input-group">
+                                    <div class="input-group-addon">Cantidad</div>
+                                    <asp:TextBox ID="TxtCantidadProducto" CssClass="form-control" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
                         <asp:Button ID="btn_Comprar" CssClass="btn btn-primary" runat="server" Text="Comprar" />
                         <asp:Button ID="btn_Agregar" CssClass="btn btn-primary" runat="server" Text="Agregar" />
+                        <asp:Button ID="btn_NuevaCompra" CssClass="btn btn-primary" runat="server" Text="Realizar nueva compra" />
                     </section>
                     <section>
                         <div class="text-center Subtitulos">Total a pagar</div>

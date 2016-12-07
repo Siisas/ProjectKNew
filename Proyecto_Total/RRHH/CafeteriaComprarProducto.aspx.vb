@@ -61,21 +61,25 @@ Public Class CafeteriaComprarProducto
         Dim totalSuma As Double
         Dim totalSuma2 As Double
         Dim dt As DataTable
-        dt = Session("AcumulaRegistros")
-        dt.AcceptChanges()
-        dt.Rows.Add(Convert.ToString(Drl_Productos.SelectedItem), Convert.ToString(Drl_Categoria.SelectedItem), Convert.ToString(Drl_NombreEmpleado.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text), Convert.ToString(Drl_NombreCliente.SelectedValue))
-        Gtg_TotalCompras.DataSource = dt
-        Gtg_TotalCompras.DataBind()
-        Session("AcumulaRegistros") = dt
-        totalSuma = Session("Suma")
-        If totalSuma = 0 Then
-            totalSuma += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
-            Lbl_ValorTotal.Text = totalSuma
+        If Lbl_CantidadDisponible.Text < 0 Or TxtCantidadProducto.Text > Lbl_CantidadDisponible.Text Then
+            Lbl_ValorTotal.Text = "No hay disponibilidad del producto por favor seleccione otro"
         Else
-            totalSuma2 += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
-            Lbl_ValorTotal.Text = totalSuma + totalSuma2
+            dt = Session("AcumulaRegistros")
+            dt.AcceptChanges()
+            dt.Rows.Add(Convert.ToString(Drl_Productos.SelectedItem), Convert.ToString(Drl_Categoria.SelectedItem), Convert.ToString(Drl_NombreEmpleado.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text), Convert.ToString(Drl_NombreCliente.SelectedValue))
+            Gtg_TotalCompras.DataSource = dt
+            Gtg_TotalCompras.DataBind()
+            Session("AcumulaRegistros") = dt
+            totalSuma = Session("Suma")
+            If totalSuma = 0 Then
+                totalSuma += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
+                Lbl_ValorTotal.Text = totalSuma
+            Else
+                totalSuma2 += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
+                Lbl_ValorTotal.Text = totalSuma + totalSuma2
+            End If
+            Session("Suma") += totalSuma
         End If
-        Session("Suma") += totalSuma
     End Sub
     Private Sub Gtg_TotalCompras_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles Gtg_TotalCompras.RowDeleting
         Dim dt As DataTable = Session("AcumulaRegistros")
@@ -94,37 +98,15 @@ Public Class CafeteriaComprarProducto
         End If
         'Session("Resta") = resta - Session("Suma")
     End Sub
-    'Protected Sub GridView1_RowCommand(ByVal sender As Object, ByVal e As System.Web.UI.WebControls.GridViewCommandEventArgs) Handles Gtg_TotalCompras.RowCommand
-    '    If e.CommandName = "Delete" Then
-    '        'Dim indice As Integer = Convert.ToInt32(e.CommandArgument)
-    '        'Dim id As Integer = Gtg_TotalCompras.Re()
 
-    '        'If indice.Cells(1).Text = e.NewSelectedIndex Then
-    '        '    e.Cancel = True
-    '        '    Lbl_ValorTotal.Text = "You cannot select " + row.Cells(2).Text & "."
-    '        'End If
-    '        'dt.Rows.Remove()
-    '    End If
-    'End Sub
-    'Sub CustomersGridView_SelectedIndexChanging(ByVal sender As Object, ByVal e As GridViewSelectEventArgs)
-    '    ' Get the currently selected row. Because the SelectedIndexChanging event
-    '    ' occurs before the select operation in the GridView control, the
-    '    ' SelectedRow property cannot be used. Instead, use the Rows collection
-    '    ' and the NewSelectedIndex property of the e argument passed to this 
-    '    ' event handler.
-    '    Dim row As GridViewRow = Gtg_TotalCompras.Rows(e.NewSelectedIndex)
-    '    ' You can cancel the select operation by using the Cancel
-    '    ' property. For this example, if the user selects a customer with 
-    '    ' the ID "ANATR", the select operation is canceled and an error message
-    '    ' is displayed.
-    '    If row.Cells(1).Text = e.NewSelectedIndex Then
-    '        e.Cancel = True
-    '        Lbl_ValorTotal.Text = "You cannot select " + row.Cells(2).Text & "."
-    '    End If
-    'End Sub
     Protected Sub Drl_Productos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Drl_Productos.SelectedIndexChanged
-            ObjetoClsCafeteriaProductos.PublicidProducto = Drl_Productos.SelectedValue
+        ObjetoClsCafeteriaProductos.PublicidProducto = Drl_Productos.SelectedValue
         Lbl_Valor.Text = ObjetoClsCafeteriaProductos.CargarDatosIndexProducto
+        Lbl_CantidadDisponible.Text = ObjetoClsCafeteriaProductos.CargarDatosIndexProductoCantidadProductosDisponibles
+
+
+
+
     End Sub
 
 
@@ -141,7 +123,7 @@ Public Class CafeteriaComprarProducto
     End Sub
 
     Protected Sub btn_NuevaCompra_Click(sender As Object, e As EventArgs) Handles btn_NuevaCompra.Click
-        Lbl_ValorTotal.Text = "Gracias presiona pararealizar una nueva compra, selecciona los productos"
+        Lbl_ValorTotal.Text = "selecciona los productos"
         Session("Suma") = 0
         Session("Suma") = Nothing
         Session("Suma") = ""
@@ -151,6 +133,7 @@ Public Class CafeteriaComprarProducto
         TxtCantidadProducto.Text = ""
         Drl_NombreCliente.SelectedIndex = 0
         Lbl_Valor.Text = ""
+        Lbl_CantidadDisponible.Text = ""
         'ok
     End Sub
 End Class

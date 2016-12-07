@@ -58870,9 +58870,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaComprarProducto._TxtCantidadProducto">
+<member name="F:digitacion.CafeteriaComprarProducto._Lbl_CantidadDisponible">
 <summary>
-Control TxtCantidadProducto.
+Control Lbl_CantidadDisponible.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -58882,6 +58882,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:digitacion.CafeteriaComprarProducto._Drl_NombreCliente">
 <summary>
 Control Drl_NombreCliente.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.CafeteriaComprarProducto._TxtCantidadProducto">
+<summary>
+Control TxtCantidadProducto.
 </summary>
 <remarks>
 Campo generado automáticamente.

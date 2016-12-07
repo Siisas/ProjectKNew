@@ -86,13 +86,13 @@ Partial Public Class CafeteriaComprarProducto
     Protected WithEvents Lbl_Valor As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control TxtCantidadProducto.
+    '''Control Lbl_CantidadDisponible.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtCantidadProducto As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents Lbl_CantidadDisponible As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Control Drl_NombreCliente.
@@ -102,6 +102,15 @@ Partial Public Class CafeteriaComprarProducto
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Drl_NombreCliente As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
+    '''Control TxtCantidadProducto.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TxtCantidadProducto As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control btn_Comprar.
