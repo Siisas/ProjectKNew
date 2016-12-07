@@ -1,0 +1,604 @@
+﻿body {
+    background-color: #eeeeee;
+}
+/*############### GENERAL ###############*/
+::-webkit-scrollbar {
+    width: 2.5vh;
+}
+
+::-webkit-scrollbar-button {
+    background-color: #B3C556;
+    border-radius: 5px;
+    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%,transparent 25%, transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%, transparent 75%, /*SD*/ transparent);
+}
+
+    ::-webkit-scrollbar-button:active {
+        background: #8F9E45;
+    }
+
+    ::-webkit-scrollbar-button:hover {
+        background-color: #8F9E45;
+    }
+
+::-webkit-scrollbar-thumb {
+    background-color: #B3C556;
+    border-radius: 12px;
+    background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%,transparent 25%, transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%, transparent 75%, /*SD*/ transparent);
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #8F9E45;
+    }
+
+    ::-webkit-scrollbar-thumb:active {
+        background: #8F9E45;
+    }
+
+*::selection {
+    background: #B3C556;
+    color: #fff;
+}
+
+::-moz-selection {
+    background: #B3C556;
+    color: #fff;
+}
+
+@font-face {
+    font-family: FuenteKamilion;
+    src: url(../Css2/Boot/fonts/NEUROPOL.ttf);
+}
+
+.bordes {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    overflow: hidden;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: medium;
+    font-weight: bold;
+}
+/*##########################################################################################################*/
+/*############################################# MAQUETACION ###############################################*/
+/*#########################################################################################################*/
+header .Big-Title {
+    transition: 2s ease;
+    color: #B3C556;
+    text-shadow: -2px -2px 1px #000;
+    font-size: 300%;
+    font-family: FuenteKamilion;
+    text-align: center;
+    font-weight: bold;
+}
+
+    header .Big-Title:hover {
+        color: #B3C556;
+        text-shadow: -2px -2px 1px #fff;
+    }
+
+.alert {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 10px;
+    text-align: center;
+    padding: 2px;
+    border: 1px solid transparent;
+}
+/********TEMPORAL**********/
+.alert-danger {
+    border-color: #ebccd1;
+}
+
+.alert-warning {
+    border-color: #faebcc;
+}
+
+.alert-info {
+    border-color: #bce8f1;
+}
+
+.alert-success {
+    border-color: #d6e9c6;
+}
+/***************************/
+
+.Small-Title {
+    color: #8F9E45;
+    width: 80%;
+    font-size: 18px;
+    font-style: italic;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+/*#############Credenciales###############*/
+.Credenciales {
+    width: 80%;
+    margin: auto;
+}
+
+    .Credenciales > span {
+        margin-right: 5vh;
+    }
+/*#############ESTE FRAGMENTO GESTIONA EL CONTENIDO DE LAPÁGINA##############*/
+article {
+    width: 80%;
+    height: 100%;
+    margin: 0px auto;
+}
+
+section {
+    width: 75%;
+    margin: 0px auto;
+}
+
+footer {
+    height: 20px;
+    width: 100%;
+}
+
+.Subtitulos {
+    background-color: #B3C556;
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    border-radius: 5px;
+    padding: 0.5px 0px 1px 0px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.Sub-Subtitulo {
+    background-color: inherit;
+    font-size: 15px;
+    color: #8F9E45;
+    border: 1.5px solid #B3C556;
+    border-radius: 5px;
+    padding: 0.5px 0px 1px 0px;
+    font-weight: bold;
+}
+
+
+.Leyendas {
+    color: #8F9E45;
+    font-size: 18px;
+    font-family: inherit;
+    font-style: italic;
+    line-height: 1.1;
+    font-weight: 500;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+/*####################__ESTE FRAGMENTO GESTIONA LOS DIVS DE LOS FORMULARIOS__######################*/
+.Form {
+    width: 100%;
+    display: table;
+}
+
+    .Form .Cell-Form {
+        width: 45%;
+        display: table-cell;
+        vertical-align: top;
+    }
+
+    .Form .Space-Form {
+        width: 10%;
+        display: table-cell;
+    }
+
+    .Form .Cell-Form .input-group {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+
+.Separator {
+    border: 1px solid #B3C556;
+    margin: 10px 0px 10px 0px;
+    width: 100%;
+}
+
+.Icono {
+    float: right;
+    padding-right: 8px;
+    padding-top: 2px;
+}
+
+.Label-inherit {
+    background-color: inherit;
+    overflow: auto;
+    height: auto;
+    min-height: 35px;
+    max-height: 100px;
+}
+
+
+/*################ESTE FRAGMENTO GESTIONA EL MENÚ##############*/
+.Fondo_Trans {
+    color: #fff;
+    background-color: transparent;
+}
+
+.Fondo_Trans_Hover {
+    color: #fff;
+    background-color: transparent;
+    z-index: 99999 !important;
+}
+
+    .Fondo_Trans_Hover:hover {
+        color: #fff;
+        background-color: transparent;
+    }
+
+.Menu {
+    color: #fff;
+    font-weight: bold;
+    background-color: #B3C556;
+    Margin: 0 auto;
+    height: 25px;
+    text-align: center;
+    border-radius: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.Celdas {
+    font-weight: bold;
+    color: #fff;
+    background-color: #B3C556;
+    border-radius: 5px;
+    height: 25px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.Celdas-Hover {
+    color: #fff;
+    background-color: #8F9E45;
+    border-radius: 5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+
+.Celdas:hover {
+    color: #fff;
+    background-color: #8F9E45;
+    border-radius: 5px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+}
+/*################Estilos Gráficos Default##############*/
+#Container_Graficos {
+    padding-top: 5vh;
+    width: 80%;
+    margin: 0 auto;
+    display: table;
+    height: 75vh;
+}
+/*estilo desplegable calificar###############*/
+
+.Form-Calificar {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    top: 30%;
+}
+
+    .Form-Calificar .Subtitulos {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .Form-Calificar .input-group {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+
+/*estilo desplegable Mini###############*/
+.Form-Mini-Desp {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    top: 30vh;
+}
+
+    .Form-Mini-Desp .Subtitulos {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .Form-Mini-Desp .input-group {
+        margin-top: 5px;
+        margin-bottom: 5px;
+    }
+/*######################Estilo LOGIN ###############*/
+#Pnl_Login {
+    height: 70vh;
+    width: 70vh;
+    border: 1px solid rgba(0, 0, 0, 0.20);
+    -webkit-box-shadow: 0px 8px 2px -5px rgba(0,0,0,0.41);
+    -moz-box-shadow: 0px 8px 2px -5px rgba(0,0,0,0.41);
+    box-shadow: 0px 8px 2px -5px rgba(0,0,0,0.41);
+    background-color: #5f5b5b;
+    margin: auto;
+}
+
+#Form_Login {
+    position: relative;
+    width: 450px;
+    margin: 0 auto;
+    top: 10vh;
+}
+
+    #Form_Login #Titulo_Login {
+        display: table;
+        width: 100%;
+        height: 100px;
+        font-family: FuenteKamilion;
+        font-size: 450%;
+        margin-bottom: 20px;
+        color: #4d4e4a;
+        transition: 2s ease;
+        text-shadow: 2px 2px 1px #000;
+    }
+
+        #Form_Login #Titulo_Login:hover {
+            text-shadow: 2px 2px 1px #fff;
+        }
+
+        #Form_Login #Titulo_Login div {
+            display: table-cell;
+        }
+
+    #Form_Login #Logo_Login {
+        width: 100%;
+        background-image: url('Imagenes/LogoMilDelicias.JPG');
+        background-repeat: no-repeat;
+        background-size: 100%;
+        background-position: center;
+        border-radius: 100px 30px;
+    }
+
+    #Form_Login .input-group {
+        margin-bottom: 20px;
+    }
+
+    #Form_Login .btn {
+        margin-top: 20px;
+        width: 40%;
+        color: white;
+    }
+
+#Caplock {
+    visibility: hidden;
+}
+
+#Form_Login .alert {
+    width: 100%;
+}
+
+/*#####################Desplegables################################*/
+.Desplegable {
+    display: none;
+    background-color: rgba(0,0,0,0.50);
+    background-size: 10px, 10px;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    z-index: 999999;
+}
+/*#########################loading#######################################*/
+.Logo_Loading {
+    display: none;
+    background-image: url("/Css2/Imagenes/Loading_6.gif");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    width: 10vh;
+    height: 10vh;
+    margin: auto;
+    margin-top: 40vh;
+    position: fixed;
+    top: 10vh;
+    right: 100vh;
+}
+/*#########Color de Grid############*/
+.Grid_Js {
+    margin-top: 20px;
+    display: none;
+    overflow: auto;
+}
+
+    .Grid_Js .jqx-widget-header {
+        background-color: #B3C556;
+        font-weight: bold;
+        color: white;
+    }
+
+.Cell-Grid {
+    font-weight: bold;
+    color: #555;
+    margin-left: 4px;
+    margin-top: 9px;
+    float: left;
+}
+
+.Cell-SubGrid {
+    font-weight: bold;
+    color: #555;
+    margin-left: 4px;
+    margin-top: 9px;
+    float: left;
+}
+
+.input-group-addon-file {
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+
+    .input-group-addon-file .btn-file {
+        background: #fff;
+        border: 0;
+        color: rgba(85, 85, 85, 0.78);
+        width: 100%;
+    }
+
+        .input-group-addon-file .btn-file .file {
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 100px;
+            opacity: 0;
+            cursor: inherit;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+/*loading*/
+#Desp_Loading {
+    background-image: url("Imagenes/Loading_6.gif");
+    background-repeat: no-repeat;
+    background-size: 4%;
+    background-position: center;
+}
+/*dialogo de confirmación*/
+.Dialog-Confirm {
+    position: relative;
+    width: 400px;
+    margin: 0 auto;
+    top: 40%;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: rgba(0,0,0, 0.5);
+}
+
+    .Dialog-Confirm span {
+        font-weight: bold;
+        color: white;
+    }
+
+    .Dialog-Confirm .Subtitulos {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        border-radius: 0px;
+    }
+
+    .Dialog-Confirm .btn {
+        margin-top: 10px;
+    }
+
+    .Dialog-Confirm textarea {
+        width: 90%;
+        margin: auto;
+        border-radius: 4px;
+    }
+/*//////////////////ESTILOS UNICOS PARA REG_CRM/////////////////////*/
+.Sub-TituloCRM {
+    text-align: center;
+    font-size: 15px;
+    color: #8F9E45;
+    border: 1.5px solid #eeeeee;
+    border-radius: 5px;
+    padding: 0.5px 0px 1px 0px;
+    background: #B3C556;
+    background: -moz-linear-gradient(top, #B3C556 0%, #eeeeee 40%, #eeeeee 60%, #B3C556 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #B3C556), color-stop(40%, #eeeeee), color-stop(60%, #eeeeee), color-stop(100%, #B3C556));
+    background: -webkit-linear-gradient(top, #B3C556 0%, #eeeeee 40%, #eeeeee 60%, #B3C556 100%);
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+.TituloCRM {
+    background: #B3C556;
+    background: -moz-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #8F9E45), color-stop(40%, #B3C556), color-stop(60%, #B3C556), color-stop(100%, #8F9E45));
+    background: -webkit-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    border: 1.5px solid #B3C556;
+    border-radius: 5px;
+    padding: 0.5px 0px 1px 0px;
+    font-weight: bold;
+    width: 100%;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+.btn-crm {
+    background: #B3C556;
+    background: -moz-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #8F9E45), color-stop(40%, #B3C556), color-stop(60%, #B3C556), color-stop(100%, #8F9E45));
+    background: -webkit-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    color: white;
+    border: 1.5px solid #8F9E45;
+}
+
+    .btn-crm:hover {
+        background: #8F9E45;
+        background: -moz-linear-gradient(top, #B3C556 0%, #8F9E45 40%, #8F9E45 60%, #B3C556 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #B3C556), color-stop(40%, #8F9E45), color-stop(60%, #8F9E45), color-stop(100%, #B3C556));
+        background: -webkit-linear-gradient(top, #B3C556 0%, #8F9E45 40%, #8F9E45 60%, #B3C556 100%);
+        color: white;
+    }
+/*/////////////////////////////////////////////////////////////////*/
+/*modificaciones y añadidos al bostrap*/
+.input-group-multi {
+    color: #555;
+    text-align: center;
+    background-color: #eee;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+}
+/**************************************/
+
+/*********GESTIONA LOS PANELES DESPLEGABLES************/
+.panel_desplegable {
+    min-width: 100%;
+    height: 98%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    margin-top: -150%;
+    box-shadow: 0px 4px 7px rgba(0,0,0,0.6);
+    transition: all 1.4s ease-in-out;
+}
+
+.panel_desplegable2 {
+    margin-top: 0%;
+    transition: all 1.4s ease-in-out;
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(-2000px);
+    }
+
+    20% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-200px);
+    }
+
+    60% {
+        transform: translateY(0);
+    }
+
+    80% {
+        transform: translateY(-120px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+/******************************************************/

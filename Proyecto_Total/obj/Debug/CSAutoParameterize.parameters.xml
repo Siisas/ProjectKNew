@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="conexion-Web.config Connection String" description="conexion Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultvalue="data source= 192.168.100.218; initial catalog= datosclaro; user id = bdclaro; password=claro1" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conexion']/@connectionString" />
+  </parameter>
+  <parameter name="conexion1-Web.config Connection String" description="conexion1 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultvalue="data source= 192.168.100.218 ; initial catalog= conexred; user id = bdclaro; password=claro1" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conexion1']/@connectionString" />
+  </parameter>
+  <parameter name="conexion2-Web.config Connection String" description="conexion2 Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultvalue="data source= 192.168.100.218 ; initial catalog= admin_cham; user id = admincham; password=admin1" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conexion2']/@connectionString" />
+  </parameter>
+  <parameter name="conexionvoz-Web.config Connection String" description="conexionvoz Cadena de conexión que usa la aplicación en web.config para obtener acceso a la base de datos." defaultvalue="data source= 192.168.100.218 ; initial catalog= Clarovoz; user id = clarovoz; password=voz1" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="obj\\Debug\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='conexionvoz']/@connectionString" />
+  </parameter>
+</parameters>

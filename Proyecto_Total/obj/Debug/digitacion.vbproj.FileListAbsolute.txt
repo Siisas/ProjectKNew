@@ -1,0 +1,175 @@
+C:\Inetpub\wwwroot\digitacion\digitacion\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\digitacion\digitacion\obj\Debug\digitacion.Resources.resources
+C:\Inetpub\wwwroot\digitacion\digitacion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Inetpub\wwwroot\digitacion\digitacion\bin\digitacion.dll
+C:\Inetpub\wwwroot\digitacion\digitacion\bin\digitacion.pdb
+C:\Inetpub\wwwroot\digitacion\digitacion\bin\digitacion.xml
+C:\Inetpub\wwwroot\digitacion\digitacion\obj\Debug\digitacion.dll
+C:\Inetpub\wwwroot\digitacion\digitacion\obj\Debug\digitacion.xml
+C:\Inetpub\wwwroot\digitacion\digitacion\obj\Debug\digitacion.pdb
+C:\Inetpub\wwwroot\DIGIERP\digitacion\bin\digitacion.dll
+C:\Inetpub\wwwroot\DIGIERP\digitacion\bin\digitacion.pdb
+C:\Inetpub\wwwroot\DIGIERP\digitacion\bin\digitacion.xml
+C:\Inetpub\wwwroot\DIGIERP\digitacion\obj\Debug\ResolveAssemblyReference.cache
+C:\Inetpub\wwwroot\DIGIERP\digitacion\obj\Debug\digitacion.Resources.resources
+C:\Inetpub\wwwroot\DIGIERP\digitacion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Inetpub\wwwroot\DIGIERP\digitacion\obj\Debug\digitacion.dll
+C:\Inetpub\wwwroot\DIGIERP\digitacion\obj\Debug\digitacion.xml
+C:\Inetpub\wwwroot\DIGIERP\digitacion\obj\Debug\digitacion.pdb
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\bin\digitacion.dll
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\bin\digitacion.pdb
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\bin\digitacion.xml
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\obj\Debug\digitacion.Resources.resources
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\obj\Debug\digitacion.dll
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\obj\Debug\digitacion.xml
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\DIGIERP\digitacion\obj\Debug\digitacion.pdb
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\bin\digitacion.dll
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\bin\digitacion.pdb
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\bin\digitacion.xml
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\obj\Debug\digitacion.Resources.resources
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\obj\Debug\digitacion.dll
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\obj\Debug\digitacion.xml
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\digitacion\obj\Debug\digitacion.pdb
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\bin\digitacion.dll
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\bin\digitacion.pdb
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\bin\digitacion.xml
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\obj\Debug\digitacion.Resources.resources
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\obj\Debug\digitacion.dll
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\obj\Debug\digitacion.xml
+C:\Users\Administrador\Documents\Visual Studio 2010\Projects\datosclaro\obj\Debug\digitacion.pdb
+D:\lscs\datosclaro\bin\digitacion.dll
+D:\lscs\datosclaro\bin\digitacion.pdb
+D:\lscs\datosclaro\bin\digitacion.xml
+D:\lscs\datosclaro\obj\Debug\digitacion.Resources.resources
+D:\lscs\datosclaro\obj\Debug\digitacion.dll
+D:\lscs\datosclaro\obj\Debug\digitacion.xml
+D:\lscs\datosclaro\obj\Debug\digitacion.pdb
+D:\lscs\datosclaro\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Officce\datosclaro\bin\digitacion.dll
+C:\Officce\datosclaro\bin\digitacion.pdb
+C:\Officce\datosclaro\bin\digitacion.xml
+C:\Officce\datosclaro\obj\Debug\digitacion.Resources.resources
+C:\Officce\datosclaro\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Officce\datosclaro\obj\Debug\digitacion.dll
+C:\Officce\datosclaro\obj\Debug\digitacion.xml
+C:\Officce\datosclaro\obj\Debug\digitacion.pdb
+C:\inetpub\wwwroot\datosclaro\bin\digitacion.dll
+C:\inetpub\wwwroot\datosclaro\bin\digitacion.pdb
+C:\inetpub\wwwroot\datosclaro\bin\digitacion.xml
+C:\inetpub\wwwroot\datosclaro\obj\Debug\digitacion.Resources.resources
+C:\inetpub\wwwroot\datosclaro\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\inetpub\wwwroot\datosclaro\obj\Debug\digitacion.dll
+C:\inetpub\wwwroot\datosclaro\obj\Debug\digitacion.xml
+C:\inetpub\wwwroot\datosclaro\obj\Debug\digitacion.pdb
+D:\datosclaro\bin\digitacion.dll
+D:\datosclaro\bin\digitacion.pdb
+D:\datosclaro\bin\digitacion.xml
+D:\datosclaro\obj\Debug\digitacion.Resources.resources
+D:\datosclaro\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+D:\datosclaro\obj\Debug\digitacion.dll
+D:\datosclaro\obj\Debug\digitacion.xml
+D:\datosclaro\obj\Debug\digitacion.pdb
+C:\Users\Administrador\Desktop\Pre_Produccion\bin\digitacion.dll
+C:\Users\Administrador\Desktop\Pre_Produccion\bin\digitacion.pdb
+C:\Users\Administrador\Desktop\Pre_Produccion\bin\digitacion.xml
+C:\Users\Administrador\Desktop\Pre_Produccion\obj\Debug\digitacion.Resources.resources
+C:\Users\Administrador\Desktop\Pre_Produccion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\Administrador\Desktop\Pre_Produccion\obj\Debug\digitacion.dll
+C:\Users\Administrador\Desktop\Pre_Produccion\obj\Debug\digitacion.xml
+C:\Users\Administrador\Desktop\Pre_Produccion\obj\Debug\digitacion.pdb
+C:\Users\ECH3064A\Desktop\Pre_Produccion\bin\digitacion.dll
+C:\Users\ECH3064A\Desktop\Pre_Produccion\bin\digitacion.pdb
+C:\Users\ECH3064A\Desktop\Pre_Produccion\bin\digitacion.xml
+C:\Users\ECH3064A\Desktop\Pre_Produccion\obj\Debug\digitacion.Resources.resources
+C:\Users\ECH3064A\Desktop\Pre_Produccion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\ECH3064A\Desktop\Pre_Produccion\obj\Debug\digitacion.dll
+C:\Users\ECH3064A\Desktop\Pre_Produccion\obj\Debug\digitacion.xml
+C:\Users\ECH3064A\Desktop\Pre_Produccion\obj\Debug\digitacion.pdb
+C:\Users\ECH2523A\Desktop\Pre_Produccion\bin\digitacion.dll
+C:\Users\ECH2523A\Desktop\Pre_Produccion\bin\digitacion.pdb
+C:\Users\ECH2523A\Desktop\Pre_Produccion\bin\digitacion.xml
+C:\Users\ECH2523A\Desktop\Pre_Produccion\obj\Debug\digitacion.Resources.resources
+C:\Users\ECH2523A\Desktop\Pre_Produccion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\ECH2523A\Desktop\Pre_Produccion\obj\Debug\digitacion.dll
+C:\Users\ECH2523A\Desktop\Pre_Produccion\obj\Debug\digitacion.xml
+C:\Users\ECH2523A\Desktop\Pre_Produccion\obj\Debug\digitacion.pdb
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\bin\digitacion.dll.config
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\bin\digitacion.dll
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\bin\digitacion.pdb
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\bin\digitacion.xml
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\obj\Debug\digitacion.Resources.resources
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\obj\Debug\digitacion.dll
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\obj\Debug\digitacion.xml
+C:\Users\ECH2523A\Desktop\PRUEBA\Nueva carpeta\Pre_Produccion\obj\Debug\digitacion.pdb
+C:\Users\ECH2523A\Desktop\Pre_Produccion\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.dll.config
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.Resources.resources
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectKami\Proyecto_Total\bin\Css2\Imagenes\FondoCafeteria.jpg
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\bin\Css2\Imagenes\FondoCafeteria.jpg
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.dll.config
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.dll
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.pdb
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\bin\digitacion.xml
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.Resources.resources
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.dll
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.xml
+C:\Users\Ricar\Source\Repos\ProjectKami\Proyecto_Total\obj\Debug\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\bin\Css2\Imagenes\FondoCafeteria.jpg
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\bin\digitacion.dll.config
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\bin\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\bin\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\bin\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\obj\Debug\digitacion.Resources.resources
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\obj\Debug\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\obj\Debug\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectK\Proyecto_Total\obj\Debug\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\bin\Css2\Imagenes\FondoCafeteria.jpg
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\bin\digitacion.dll.config
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\bin\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\bin\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\bin\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\obj\Debug\digitacion.Resources.resources
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\obj\Debug\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\obj\Debug\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectK2\Proyecto_Total\obj\Debug\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\bin\Css2\Imagenes\FondoCafeteria.jpg
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\bin\digitacion.dll.config
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\bin\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\bin\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\bin\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\obj\Debug\digitacion.Resources.resources
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\obj\Debug\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\obj\Debug\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectK3\Proyecto_Total\obj\Debug\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\bin\Css2\Imagenes\FondoCafeteria.jpg
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\bin\digitacion.dll.config
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\bin\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\bin\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\bin\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\obj\Debug\digitacion.Resources.resources
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\obj\Debug\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\obj\Debug\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectKNew\Proyecto_Total\obj\Debug\digitacion.pdb

@@ -1,0 +1,446 @@
+/*####################################*/
+    body{
+        background-color:#EEEEEE;
+    }
+    header{
+        text-align:center;
+        width:100%;
+        margin:auto;
+        position:relative;
+        transition: 2s ease;
+        color: #B3C556;
+        text-shadow: -2px -2px 1px #000;
+    }
+    header:hover{
+        color: #B3C556;
+        text-shadow: -2px -2px 1px #fff;
+    }
+    nav {
+        width: 100%;
+        margin: auto;
+        position: relative;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        color: navy;
+        font-weight: bold;
+        z-index:3;
+    }
+    .profile{
+        width:80%;
+        text-align:left;
+    }
+    article{
+        text-align:center;
+        width:100%;
+        margin:auto;
+        position:relative;
+    }
+    section{
+        text-align:center;
+        width:60%;
+        margin:auto;
+        position:relative;
+    }
+    .Titulo {
+        background-color: #B3C556;
+        color: white;
+        border-radius: 5px;
+        padding: 0.5px 0px 1px 0px;
+    }
+    .DataGrids{
+        width:80%;
+        text-align:left;
+    }
+/***************************************/
+    ::-webkit-scrollbar {
+        width: 2.5vh;    
+    }
+    ::-webkit-scrollbar-button {
+        background-color:#B3C556;
+        border-radius: 5px;
+        background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%,transparent 25%,
+        transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,
+        transparent 75%,/*SD*/transparent)
+    } 
+    ::-webkit-scrollbar-button:active {
+      background: #8F9E45;
+    }
+    ::-webkit-scrollbar-button:hover {
+        background-color: #8F9E45;
+    }
+    ::-webkit-scrollbar-thumb {
+        background-color: #B3C556;  
+        border-radius: 12px;
+        background-image: -webkit-linear-gradient(45deg,rgba(255, 255, 255, .2) 25%,transparent 25%,
+                                                  transparent 50%,rgba(255, 255, 255, .2) 50%,rgba(255, 255, 255, .2) 75%,
+                                                  transparent 75%,/*SD*/transparent)
+    }
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: #8F9E45;
+    }
+    ::-webkit-scrollbar-thumb:active {
+      background: #8F9E45;
+    }
+    *::selection {
+        background: #B3C556;
+        color: #fff;
+                }
+    ::-moz-selection {background: #B3C556;
+    color: #fff;
+
+    }
+    @font-face {
+        font-family: FuenteKamilion;
+        src: url(../Css2/Boot/fonts/NEUROPOL.ttf);
+    }
+    .bordes {
+        -webkit-border-radius: 5px;
+        -moz-border-radius: 5px;
+        border-radius: 5px;
+        overflow: hidden;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: medium;
+        font-weight: bold;
+    }
+/*############Titulo principal################*/
+    .Header .Big-Title{ 
+        transition: 2s ease;
+        color: #B3C556;
+        text-shadow: -2px -2px 1px #000;
+        font-size: 300%;
+        font-family: FuenteKamilion;
+        text-align: center;
+        font-weight:bold;
+    }
+    .Header .Big-Title:hover{ 
+        color: #B3C556;
+        text-shadow: -2px -2px 1px #fff;
+    }
+    .alert {
+        width: 60%;
+        margin: 0 auto;
+        font-weight: bold;
+        text-align: center;
+     }
+
+/*#################################ESTE FRAGMENTO GESTIONA EL CONTENIDO DE LA PÁGINA###################################*/
+    .Contenido {
+        width: 75%;
+        height: 100%;
+        margin: 0px auto;
+    }
+
+    .Articulo {
+        width: 80%;
+        margin: 0px auto;
+    }
+
+    .Subtitulos {
+        background-color: #B3C556;
+        width: 100%;
+        color: white;
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 0.5px 0px 1px 0px;
+        margin-bottom: 15px;
+        margin-top: 15px;
+    }
+
+    .Leyendas {
+        color: #8F9E45;
+        font-size: 20px;
+        font-style: italic;
+        margin-top: 20px;
+        margin-bottom: 10px;
+    }
+/*####################__ESTE FRAGMENTO GESTIONA LOS DIVS DE LOS FORMULARIOS__######################*/
+    .Form {
+        width: 100%;
+        display: table;
+    }
+
+    .Form .Cell-Form {
+        width: 45%;
+        display: table-cell;
+    }
+
+    .Form .Space-Form {
+        width: 10%;
+        display: table-cell;
+    }
+
+    .Form .Cell-Form .input-group {
+        margin-top: 3px;
+        margin-bottom: 3px;
+    }
+    .Form .Dv-Btn {
+        margin-top: 10px;
+    }
+
+/*#################################ESTE FRAGMENTO GESTIONA EL MENÚ###################################*/
+    .Fondo_Trans {
+            color:#fff;
+            background-color: transparent;
+        }
+    .Fondo_Trans_Hover{
+            color: #fff;
+            background-color: transparent;
+        
+        }
+    .Fondo_Trans_Hover:hover{
+            color: #fff;
+            background-color: transparent;
+        }
+    .Menu {
+            color:#fff;
+            font-weight: bold;
+            background-color: #B3C556;
+            Margin: 0 auto;
+            height:25px;
+            text-align:center;
+            border-radius:5px;
+            font-family: Arial, Helvetica, sans-serif;
+            
+        
+        }
+    .Celdas {
+            font-weight: bold;
+            color:#fff;
+            background-color: #B3C556;
+            border-radius:5px;
+            height:25px;
+            border-left:5px solid transparent; 
+            border-right:5px solid transparent; 
+            
+    
+        
+        }
+    .Celdas-Hover{
+            color: #fff;
+            background-color: #8F9E45;
+            border-radius:5px;
+            border-left:5px solid transparent; 
+            border-right:5px solid transparent; 
+             
+        
+        }
+    .Celdas:hover{
+            color: #fff;
+            background-color: #8F9E45;
+            border-radius:5px;
+            border-left:5px solid transparent; 
+            border-right:5px solid transparent; 
+            
+            
+        }
+/*#############Credenciales###############*/        
+    .Credenciales{
+        width : 75%;
+        margin:auto;
+        margin-top: 5vh;
+    }
+    .Credenciales span{
+        margin-right: 5vh;
+    }
+/*################Estilos Gráficos Default##############*/
+       #Container_Graficos{
+        padding-top: 5vh;
+        width:80%;
+        margin: 0 auto;
+        display: table;
+        height:75vh;
+    }
+
+
+    /*****************************************************************/
+    /*estilo desplegable calificar###############*/
+
+    .Form-Calificar {
+        position: relative;
+        width: 400px;
+        margin: 0 auto;
+        top: 30%;
+    }
+
+    .Form-Calificar .Subtitulos {
+        margin-top: 0px;
+        margin-bottom: 10px;
+    }
+
+    .Form-Calificar .input-group{
+        margin-top:5px;
+        margin-bottom:5px;
+    }
+/*###################_Etilos formulario cambio pw_###########################*/
+        .Form-Pw {
+            position: relative;
+            width: 400px;
+            margin: 0 auto;
+            top: 30%;
+        }
+        .Form-Pw .Subtitulos {
+            margin-top: 0px;
+            margin-bottom: 10px;
+        }
+        .Form-Pw .input-group{
+            margin-top:5px;
+            margin-bottom:5px;
+        }
+        
+/*###############Estilo general para desplegables#####################*/
+    .Desplegable {
+        display: none;
+        background-color : rgba(0,0,0,0.50);
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0px;
+        top: 0px;
+        z-index: 999999;
+    }
+/*#########################loading#######################################*/
+    .Logo_Loading {
+        display: none;
+        background-image: url("/Css2/Imagenes/Loading_6.gif");
+        background-repeat: no-repeat;
+        background-size:100%;
+        width: 10vh;
+        height:10vh;
+        margin:auto;
+        margin-top:40vh;
+        position:fixed;
+        top:10vh;
+        right:100vh;
+    }
+
+/*#########Color de Grid############*/
+   .Grid_Js{
+        margin-top: 20px;
+        display: none;
+        overflow: auto;
+    }
+    .Grid_Js .jqx-widget-header{
+        background-color: #B3C556;
+        font-weight: bold;
+        color: white;
+    }
+    .Cell-Grid{
+        font-weight: bold;
+        color: #555;
+        margin-left: 4px; 
+        margin-top: 9px; 
+        float: left
+        
+    }
+    .Cell-SubGrid{
+        font-weight: bold;
+        color: #555;
+        margin-left: 4px; 
+        margin-top: 9px; 
+        float: left
+    }
+    .input-group-addon-file {
+        position: relative;
+        overflow: hidden;
+        padding: 0;
+    }
+    .input-group-addon-file .btn-file{
+        background: #fff;
+        border: 0;
+        color: rgba(85, 85, 85, 0.78);
+        width: 100%;
+    }
+    .input-group-addon-file .btn-file .file {
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 100px;
+        opacity: 0;
+        cursor: inherit;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+    }
+/*loading*/
+    #Desp_Loading{
+        background-image: url("Imagenes/Loading_6.gif");
+        background-repeat: no-repeat;
+        background-size: 4%;
+        background-position: center; 
+
+    }
+/*dialogo de confirmación*/
+    .Dialog-Confirm {
+        position: relative;
+        width: 400px;
+        margin: 0 auto;
+        top: 40%;
+        text-align: center;
+        border: 1px solid white; 
+        border-radius: 5px;
+        background-color: rgba(0,0,0, 0.5);
+    }
+    .Dialog-Confirm span{
+        font-weight: bold;
+        color: white;
+
+    }
+    .Dialog-Confirm .Subtitulos {
+        margin-top: 0px;
+        margin-bottom: 10px;
+        border-radius: 0px;
+    }
+    .Dialog-Confirm .btn {
+        margin-top: 10px
+    }
+    .Dialog-Confirm textarea {
+        width: 90%;
+        margin: auto;
+        border-radius: 4px;
+    }
+
+
+  /*//////////////////ESTILOS UNICOS PARA REG_CRM/////////////////////*/
+
+.Sub-TituloCRM {
+    text-align: center;
+    font-size: 15px;
+    color: #8F9E45;
+    border: 1.5px solid #eeeeee;
+    border-radius: 5px;
+    padding: 0.5px 0px 1px 0px;
+    background: #B3C556;
+    background: -moz-linear-gradient(top, #B3C556 0%, #eeeeee 40%, #eeeeee 60%, #B3C556 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #B3C556), color-stop(40%, #eeeeee), color-stop(60%, #eeeeee), color-stop(100%, #B3C556));
+    background: -webkit-linear-gradient(top, #B3C556 0%, #eeeeee 40%, #eeeeee 60%, #B3C556 100%);
+}
+
+.TituloCRM {
+    background: #B3C556;
+    background: -moz-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #8F9E45), color-stop(40%, #B3C556), color-stop(60%, #B3C556), color-stop(100%, #8F9E45));
+    background: -webkit-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    text-align: center;
+    font-size: 15px;
+    color: white;
+    border: 1.5px solid #B3C556;
+    border-radius: 5px;
+    padding: 0.5px 0px 1px 0px;
+}
+
+.btn-crm {
+    background: #B3C556;
+    background: -moz-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, #8F9E45), color-stop(40%, #B3C556), color-stop(60%, #B3C556), color-stop(100%, #8F9E45));
+    background: -webkit-linear-gradient(top, #8F9E45 0%, #B3C556 40%, #B3C556 60%, #8F9E45 100%);
+    color: white;
+    border: 1.5px solid #8F9E45;
+}
+    .btn-crm:hover {
+        background: #8F9E45;
+        background: -moz-linear-gradient(top, #B3C556 0%, #8F9E45 40%, #8F9E45 60%, #B3C556 100%);
+        background: -webkit-gradient(left top, left bottom, color-stop(0%, #B3C556), color-stop(40%, #8F9E45), color-stop(60%, #8F9E45), color-stop(100%, #B3C556));
+        background: -webkit-linear-gradient(top, #B3C556 0%, #8F9E45 40%, #8F9E45 60%, #B3C556 100%);
+        color: white;
+    }

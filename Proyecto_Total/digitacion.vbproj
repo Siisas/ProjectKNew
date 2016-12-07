@@ -1,0 +1,2021 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4BB58509-4AA7-4875-A289-29FD86E61CA4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>digitacion</RootNamespace>
+    <AssemblyName>digitacion</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation />
+    <UseIISExpress>false</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>digitacion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <FilesToIncludeForPublish>AllFilesInProjectFolder</FilesToIncludeForPublish>
+    <DesktopBuildPackageLocation>..\Publicado\digitacion.zip</DesktopBuildPackageLocation>
+    <DeployIisAppPath>kamilion/crm</DeployIisAppPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>digitacion.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022,42353,42354,42355</NoWarn>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Bitacora\consbitacora.aspx" />
+    <Content Include="Bitacora\Regbitacora.aspx" />
+    <Content Include="Calidad\AsigSegundoConcepto.aspx" />
+    <Content Include="Calidad\Auditoria.aspx" />
+    <Content Include="Calidad\AuditoriaDirectTv.aspx" />
+    <Content Include="Calidad\Auditoria_Con_V2.aspx" />
+    <Content Include="Calidad\Auditoria_Con_V3.aspx" />
+    <Content Include="Calidad\Auditoria_Con_V4.aspx" />
+    <Content Include="Calidad\Auditoria_Reg_V2.aspx" />
+    <Content Include="Calidad\Auditoria_Reg_V3.aspx" />
+    <Content Include="Calidad\Auditoria_Reg_V4.aspx" />
+    <Content Include="Calidad\BandejaAuditor.aspx" />
+    <Content Include="Calidad\BandejaAuditoria.aspx" />
+    <Content Include="Calidad\CalibracionSala.aspx" />
+    <Content Include="Calidad\calidadxagente.aspx" />
+    <Content Include="Calidad\consaudit.aspx" />
+    <Content Include="Calidad\Documentacion_Asignacion.aspx" />
+    <Content Include="Calidad\Documentacion_Respuesta_Solicitud.aspx" />
+    <Content Include="Calidad\Documentacion_Solicitud.aspx" />
+    <Content Include="Calidad\Formacion_Asignacion.aspx" />
+    <Content Include="Calidad\Formacion_Respuesta.aspx" />
+    <Content Include="Calidad\Formacion_Solicitud.aspx" />
+    <Content Include="Calidad\Justificaciones_Pqr.aspx" />
+    <Content Include="Calidad\Reporte_Diario_Auditorias.aspx" />
+    <Content Include="Calidad\ResSegundoC.aspx" />
+    <Content Include="Calidad\ResultadoAuditoriaCalidadVD.aspx" />
+    <Content Include="Calidad\RetroCalidad.aspx" />
+    <Content Include="Calidad\RetroCalidadV2.aspx" />
+    <Content Include="Calidad\RetroCalidad_Agente.aspx" />
+    <Content Include="Calidad\Seguimiento_Retro.aspx" />
+    <Content Include="Calidad\SegundoConcepto.aspx" />
+    <Content Include="Conexred\captconexred.aspx" />
+    <Content Include="Controles\Header.ascx" />
+    <Content Include="Controles\Menu.ascx" />
+    <Content Include="Css2\Imagenes\FondoCafeteria.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Css2\Imagenes\FondoCafeteria2.jpg" />
+    <Content Include="Css2\Imagenes\LogoMilDelicias.JPG" />
+    <Content Include="DatosCRM\Asignaciones.aspx" />
+    <Content Include="DatosCRM\Asignaciongestion.aspx" />
+    <Content Include="DatosCRM\AsignacionNivel3.aspx" />
+    <Content Include="DatosCRM\AsignacionProgramados.aspx" />
+    <Content Include="DatosCRM\Asignacionsegdigitac.aspx" />
+    <Content Include="DatosCRM\asignacionservicedatos.aspx" />
+    <Content Include="DatosCRM\asignacionservicedatos.aspx.js" />
+    <Content Include="DatosCRM\asignadigitaciondatos.aspx" />
+    <Content Include="DatosCRM\Asignafallatec.aspx" />
+    <Content Include="DatosCRM\BoldChat.aspx" />
+    <Content Include="DatosCRM\CampañaDatos.aspx" />
+    <Content Include="DatosCRM\CasosHoraD.aspx" />
+    <Content Include="DatosCRM\CasosProgramados.aspx" />
+    <Content Include="DatosCRM\consdilo.aspx" />
+    <Content Include="DatosCRM\Consgeneralfallatec.aspx" />
+    <Content Include="DatosCRM\consinc.aspx" />
+    <Content Include="DatosCRM\consn3.aspx" />
+    <Content Include="DatosCRM\consproductivxag.aspx" />
+    <Content Include="DatosCRM\ConsultaBoldChat.aspx" />
+    <Content Include="DatosCRM\ConsultaInbound.aspx" />
+    <Content Include="DatosCRM\Consulta_Falla_Des.aspx" />
+    <Content Include="DatosCRM\Consulta_inbound.aspx" />
+    <Content Include="DatosCRM\Control.aspx" />
+    <Content Include="DatosCRM\ControlAsignacion.aspx" />
+    <Content Include="DatosCRM\Controlescalado.aspx" />
+    <Content Include="DatosCRM\Control_Escalamiento_CPD.aspx" />
+    <Content Include="DatosCRM\Control_Escalamiento_SD.aspx" />
+    <Content Include="DatosCRM\Control_PQR.aspx" />
+    <Content Include="DatosCRM\devolucionservice.aspx" />
+    <Content Include="DatosCRM\digitaciondt.aspx" />
+    <Content Include="DatosCRM\digitacionseg.aspx" />
+    <Content Include="DatosCRM\dilo.aspx" />
+    <Content Include="DatosCRM\consmarcacion.aspx" />
+    <Content Include="DatosCRM\Dilo2.aspx" />
+    <Content Include="DatosCRM\Dilo_inbound.aspx" />
+    <Content Include="DatosCRM\Encuesta611Datos.aspx" />
+    <Content Include="DatosCRM\EscalamientoInbound.aspx" />
+    <Content Include="DatosCRM\Escalamservice.aspx" />
+    <Content Include="DatosCRM\Estadistica.aspx" />
+    <Content Include="DatosCRM\Fallamasiva.aspx" />
+    <Content Include="DatosCRM\FallamasivaConsulta.aspx" />
+    <Content Include="DatosCRM\inconsist.aspx" />
+    <Content Include="DatosCRM\infdinamico.aspx" />
+    <Content Include="DatosCRM\InformeInconsistencias.aspx" />
+    <Content Include="DatosCRM\InformeRemisionEquiposCav.aspx" />
+    <Content Include="DatosCRM\InformesVoz-Datos.aspx" />
+    <Content Include="DatosCRM\liberaasignaciondigitac.aspx" />
+    <Content Include="DatosCRM\Liberarasiggestion.aspx" />
+    <Content Include="DatosCRM\Liberarasigseguim.aspx" />
+    <Content Include="DatosCRM\liberarasigservdatos.aspx" />
+    <Content Include="DatosCRM\liberarfallatec.aspx" />
+    <Content Include="DatosCRM\LiberarNivel3.aspx" />
+    <Content Include="DatosCRM\modsuperv.aspx" />
+    <Content Include="DatosCRM\Nxmonitor.aspx" />
+    <Content Include="DatosCRM\PendientesAmdocs.aspx" />
+    <Content Include="DatosCRM\PerfilamientoCasos.aspx" />
+    <Content Include="DatosCRM\PollaMundialista.aspx" />
+    <Content Include="DatosCRM\PollaMundialista2.aspx" />
+    <Content Include="DatosCRM\prioriza.aspx" />
+    <Content Include="DatosCRM\procesofallatec.aspx" />
+    <Content Include="DatosCRM\Productgral.aspx" />
+    <Content Include="DatosCRM\Productividad.aspx" />
+    <Content Include="DatosCRM\regcrm.aspx" />
+    <Content Include="DatosCRM\regcrm2.aspx" />
+    <Content Include="DatosCRM\RegCrmBienvenida.aspx" />
+    <Content Include="DatosCRM\RegCRM_BSCS.aspx" />
+    <Content Include="DatosCRM\RegCrm_Falla_Des.aspx" />
+    <Content Include="DatosCRM\RegCrm_Falla_Des2.aspx" />
+    <Content Include="DatosCRM\Registro_Inbound.aspx" />
+    <Content Include="DatosCRM\regn2.aspx" />
+    <Content Include="DatosCRM\regn3.aspx" />
+    <Content Include="DatosCRM\ReporteEscalamiento.aspx" />
+    <Content Include="DatosCRM\ReporteSolicitado.aspx" />
+    <Content Include="DatosCRM\Resolved_SD.aspx" />
+    <Content Include="DatosCRM\SeguimientoIlocalizableD.aspx" />
+    <Content Include="DatosCRM\ServicioTecnicoDomicilio.aspx" />
+    <Content Include="DatosCRM\Tipo_Cliente_Datos.aspx" />
+    <Content Include="default.aspx" />
+    <Content Include="default.aspx.js" />
+    <Content Include="Development\Desarrollo_Asignacion.aspx" />
+    <Content Include="Development\Desarrollo_Consulta_General.aspx" />
+    <Content Include="Development\Desarrollo_Gestion.aspx" />
+    <Content Include="Development\Desarrollo_Registro.aspx" />
+    <Content Include="Development\StyleDesarrollo.css" />
+    <Content Include="DirecTv\Adidas.aspx" />
+    <Content Include="DirecTv\DirectvConsultaAu.aspx" />
+    <Content Include="DirecTv\DirecTv_Consulta.aspx" />
+    <Content Include="entrada.aspx" />
+    <Content Include="Estilos.css" />
+    <Content Include="Help\HelpDeskAsignacion.aspx" />
+    <Content Include="Help\HelpDeskRegistro.aspx" />
+    <Content Include="Help\HelpDeskSolucion.aspx" />
+    <Content Include="LOGO.jpg" />
+    <Content Include="menu.ascx" />
+    <Content Include="RRHH\ArchivosDoc.aspx" />
+    <Content Include="RRHH\AsignacionHorario.aspx" />
+    <Content Include="RRHH\AsignacionHorariosCambios.aspx" />
+    <Content Include="RRHH\AsignacionHorariosMalla.aspx" />
+    <Content Include="RRHH\AsignacionHorariosValidacion.aspx" />
+    <Content Include="RRHH\Aspirante.aspx" />
+    <Content Include="RRHH\Cafeteria.aspx" />
+    <Content Include="RRHH\CafeteriaComprarProducto.aspx" />
+    <Content Include="RRHH\CafeteriaCrearEmpClie.aspx" />
+    <Content Include="RRHH\CafeteriaCRM.aspx" />
+    <Content Include="RRHH\CaidaSistema.aspx" />
+    <Content Include="RRHH\centinela.aspx" />
+    <Content Include="RRHH\checkdoc.aspx" />
+    <Content Include="RRHH\consbonos.aspx" />
+    <Content Include="RRHH\conscentinela.aspx" />
+    <Content Include="RRHH\consnovxusu.aspx" />
+    <Content Include="RRHH\consulta.aspx" />
+    <Content Include="RRHH\consultacompleta.aspx" />
+    <Content Include="RRHH\ConsultaCompletaCentinela.aspx" />
+    <Content Include="RRHH\consultanov.aspx" />
+    <Content Include="RRHH\ConsultaVenta.aspx" />
+    <Content Include="RRHH\desprendible.aspx" />
+    <Content Include="RRHH\DesprendibleCafeteUsu.aspx" />
+    <Content Include="RRHH\Estudios.aspx" />
+    <Content Include="RRHH\MesCafeteria.aspx" />
+    <Content Include="RRHH\modificaop.aspx" />
+    <Content Include="RRHH\novedades.aspx" />
+    <Content Include="RRHH\Plantilla.aspx" />
+    <Content Include="RRHH\procesosolicdoc.aspx" />
+    <Content Include="RRHH\Productividad.aspx" />
+    <Content Include="RRHH\ProductividadVoz.aspx" />
+    <Content Include="RRHH\regdotacion.aspx" />
+    <Content Include="RRHH\RegProduc.aspx" />
+    <Content Include="RRHH\regrrhh.aspx" />
+    <Content Include="RRHH\Retroalimentacion.aspx" />
+    <Content Include="RRHH\solicituddoc.aspx" />
+    <Content Include="SolicClaro\respuestaclaro.aspx" />
+    <Content Include="SolicClaro\Seguimasig.aspx" />
+    <Content Include="SolicClaro\Solicitud.aspx" />
+    <Content Include="Soporte\Activo_Inventario.aspx" />
+    <Content Include="Soporte\Activo_Inventario_Acta.aspx" />
+    <Content Include="Soporte\Activo_inventario_Cambio.aspx" />
+    <Content Include="Soporte\ConDatosUsu.aspx" />
+    <Content Include="Soporte\ConsCredenciales.aspx" />
+    <Content Include="Soporte\Historial_Equipos.aspx" />
+    <Content Include="Soporte\Historial_Equipos.aspx.js" />
+    <Content Include="Soporte\Inventario.aspx" />
+    <Content Include="Soporte\InventarioActivos.aspx" />
+    <Content Include="Soporte\InventarioActivosCambio.aspx" />
+    <Content Include="Soporte\inventarioActivosMantenimiento.aspx" />
+    <Content Include="Soporte\InventarioCambios.aspx" />
+    <Content Include="Soporte\InventarioSoftware.aspx" />
+    <Content Include="Soporte\RegDatosUsu.aspx" />
+    <Content Include="Soporte\RegDatosUsuCarga.aspx" />
+    <Content Include="Soporte\UbicacionModulo.aspx" />
+    <Content Include="VozCRM\Acumulado_Voz.aspx" />
+    <Content Include="VozCRM\asignacionescalamservice.aspx" />
+    <Content Include="VozCRM\Asignaciongestionvoz.aspx" />
+    <Content Include="VozCRM\asignadigitacion.aspx" />
+    <Content Include="VozCRM\Asignafallatec.aspx" />
+    <Content Include="VozCRM\Asignaseguimdigita.aspx" />
+    <Content Include="VozCRM\CampañasVoz.aspx" />
+    <Content Include="VozCRM\CasosHoraV.aspx" />
+    <Content Include="VozCRM\Chat_Agente.aspx" />
+    <Content Include="VozCRM\Chat_Supervisor.aspx" />
+    <Content Include="VozCRM\consfallasred.aspx" />
+    <Content Include="VozCRM\consgralvoz.aspx" />
+    <Content Include="VozCRM\consincvoz.aspx" />
+    <Content Include="VozCRM\ConsultaCasosVipSegGran.aspx" />
+    <Content Include="VozCRM\crmpqr.aspx" />
+    <Content Include="VozCRM\CuadroMando.aspx" />
+    <Content Include="VozCRM\devolucionesc.aspx" />
+    <Content Include="VozCRM\digitacion.aspx" />
+    <Content Include="VozCRM\Digitacionsegvoz.aspx" />
+    <Content Include="DirecTv\Direct-TV.aspx" />
+    <Content Include="VozCRM\Encuesta611Voz.aspx" />
+    <Content Include="VozCRM\escalamiento.aspx" />
+    <Content Include="VozCRM\escalamiento.aspx.js" />
+    <Content Include="VozCRM\estadisticasvoz.aspx" />
+    <Content Include="VozCRM\GestionporGrupo.aspx" />
+    <Content Include="VozCRM\inconsvoz.aspx" />
+    <Content Include="VozCRM\InformeBarriosVoz.aspx" />
+    <Content Include="VozCRM\InformeInconsistenciasVoz.aspx" />
+    <Content Include="VozCRM\InformeMensualLDI.aspx" />
+    <Content Include="VozCRM\liberaasignacion.aspx" />
+    <Content Include="VozCRM\liberaasigservice.aspx" />
+    <Content Include="VozCRM\liberafallatecv.aspx" />
+    <Content Include="VozCRM\liberarasiggestionvoz.aspx" />
+    <Content Include="VozCRM\liberarasigseguimdigit.aspx" />
+    <Content Include="VozCRM\LiberarDigitacion.aspx" />
+    <Content Include="VozCRM\nuevoformato.aspx" />
+    <Content Include="VozCRM\PendientesAmdocsV.aspx" />
+    <Content Include="VozCRM\procescala.aspx" />
+    <Content Include="VozCRM\procescalav2.aspx" />
+    <Content Include="VozCRM\procesofallatecv.aspx" />
+    <Content Include="VozCRM\RegCrmMTI.aspx" />
+    <Content Include="VozCRM\regcrmvoz.aspx" />
+    <Content Include="VozCRM\RegCRM_Config_Red.aspx" />
+    <Content Include="VozCRM\RegCrm_Poll.aspx" />
+    <Content Include="VozCRM\Resolved.aspx" />
+    <Content Include="VozCRM\Revisionmodulo.aspx" />
+    <Content Include="VozCRM\SeguimientoIlocalizableV.aspx" />
+    <Content Include="VozCRM\TiendaVirtual.aspx" />
+    <Content Include="VozCRM\TipoFallaVozNueva.aspx" />
+    <Content Include="VozCRM\Tipo_Cliente_Voz.aspx" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Bitacora\consbitacora.aspx.designer.vb">
+      <DependentUpon>consbitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora\consbitacora.aspx.vb">
+      <DependentUpon>consbitacora.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Bitacora\Regbitacora.aspx.designer.vb">
+      <DependentUpon>Regbitacora.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Bitacora\Regbitacora.aspx.vb">
+      <DependentUpon>Regbitacora.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\AsigSegundoConcepto.aspx.designer.vb">
+      <DependentUpon>AsigSegundoConcepto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\AsigSegundoConcepto.aspx.vb">
+      <DependentUpon>AsigSegundoConcepto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Auditoria.aspx.designer.vb">
+      <DependentUpon>Auditoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Auditoria.aspx.vb">
+      <DependentUpon>Auditoria.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\AuditoriaDirectTv.aspx.designer.vb">
+      <DependentUpon>AuditoriaDirectTv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\AuditoriaDirectTv.aspx.vb">
+      <DependentUpon>AuditoriaDirectTv.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Con_V2.aspx.designer.vb">
+      <DependentUpon>Auditoria_Con_V2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Con_V2.aspx.vb">
+      <DependentUpon>Auditoria_Con_V2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Con_V3.aspx.designer.vb">
+      <DependentUpon>Auditoria_Con_V3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Con_V3.aspx.vb">
+      <DependentUpon>Auditoria_Con_V3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Con_V4.aspx.designer.vb">
+      <DependentUpon>Auditoria_Con_V4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Con_V4.aspx.vb">
+      <DependentUpon>Auditoria_Con_V4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Reg_V2.aspx.designer.vb">
+      <DependentUpon>Auditoria_Reg_V2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Reg_V2.aspx.vb">
+      <DependentUpon>Auditoria_Reg_V2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Reg_V3.aspx.designer.vb">
+      <DependentUpon>Auditoria_Reg_V3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Reg_V3.aspx.vb">
+      <DependentUpon>Auditoria_Reg_V3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Reg_V4.aspx.designer.vb">
+      <DependentUpon>Auditoria_Reg_V4.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Auditoria_Reg_V4.aspx.vb">
+      <DependentUpon>Auditoria_Reg_V4.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\BandejaAuditor.aspx.designer.vb">
+      <DependentUpon>BandejaAuditor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\BandejaAuditor.aspx.vb">
+      <DependentUpon>BandejaAuditor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\BandejaAuditoria.aspx.designer.vb">
+      <DependentUpon>BandejaAuditoria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\BandejaAuditoria.aspx.vb">
+      <DependentUpon>BandejaAuditoria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\CalibracionSala.aspx.designer.vb">
+      <DependentUpon>CalibracionSala.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\CalibracionSala.aspx.vb">
+      <DependentUpon>CalibracionSala.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\calidadxagente.aspx.designer.vb">
+      <DependentUpon>calidadxagente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\calidadxagente.aspx.vb">
+      <DependentUpon>calidadxagente.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\consaudit.aspx.designer.vb">
+      <DependentUpon>consaudit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\consaudit.aspx.vb">
+      <DependentUpon>consaudit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Documentacion_Asignacion.aspx.designer.vb">
+      <DependentUpon>Documentacion_Asignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Documentacion_Asignacion.aspx.vb">
+      <DependentUpon>Documentacion_Asignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Documentacion_Respuesta_Solicitud.aspx.designer.vb">
+      <DependentUpon>Documentacion_Respuesta_Solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Documentacion_Respuesta_Solicitud.aspx.vb">
+      <DependentUpon>Documentacion_Respuesta_Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Documentacion_Solicitud.aspx.designer.vb">
+      <DependentUpon>Documentacion_Solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Documentacion_Solicitud.aspx.vb">
+      <DependentUpon>Documentacion_Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Formacion_Asignacion.aspx.designer.vb">
+      <DependentUpon>Formacion_Asignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Formacion_Asignacion.aspx.vb">
+      <DependentUpon>Formacion_Asignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Formacion_Respuesta.aspx.designer.vb">
+      <DependentUpon>Formacion_Respuesta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Formacion_Respuesta.aspx.vb">
+      <DependentUpon>Formacion_Respuesta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Formacion_Solicitud.aspx.designer.vb">
+      <DependentUpon>Formacion_Solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Formacion_Solicitud.aspx.vb">
+      <DependentUpon>Formacion_Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Justificaciones_Pqr.aspx.designer.vb">
+      <DependentUpon>Justificaciones_Pqr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Justificaciones_Pqr.aspx.vb">
+      <DependentUpon>Justificaciones_Pqr.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Reporte_Diario_Auditorias.aspx.designer.vb">
+      <DependentUpon>Reporte_Diario_Auditorias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Reporte_Diario_Auditorias.aspx.vb">
+      <DependentUpon>Reporte_Diario_Auditorias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\ResSegundoC.aspx.designer.vb">
+      <DependentUpon>ResSegundoC.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\ResSegundoC.aspx.vb">
+      <DependentUpon>ResSegundoC.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\ResultadoAuditoriaCalidadVD.aspx.designer.vb">
+      <DependentUpon>ResultadoAuditoriaCalidadVD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\ResultadoAuditoriaCalidadVD.aspx.vb">
+      <DependentUpon>ResultadoAuditoriaCalidadVD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\RetroCalidad.aspx.designer.vb">
+      <DependentUpon>RetroCalidad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\RetroCalidad.aspx.vb">
+      <DependentUpon>RetroCalidad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\RetroCalidadV2.aspx.designer.vb">
+      <DependentUpon>RetroCalidadV2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\RetroCalidadV2.aspx.vb">
+      <DependentUpon>RetroCalidadV2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\RetroCalidad_Agente.aspx.designer.vb">
+      <DependentUpon>RetroCalidad_Agente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\RetroCalidad_Agente.aspx.vb">
+      <DependentUpon>RetroCalidad_Agente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\Seguimiento_Retro.aspx.designer.vb">
+      <DependentUpon>Seguimiento_Retro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\Seguimiento_Retro.aspx.vb">
+      <DependentUpon>Seguimiento_Retro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Calidad\SegundoConcepto.aspx.designer.vb">
+      <DependentUpon>SegundoConcepto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Calidad\SegundoConcepto.aspx.vb">
+      <DependentUpon>SegundoConcepto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="clases\clsAdidas.vb" />
+    <Compile Include="clases\clsbitacora.vb" />
+    <Compile Include="clases\clsBoldChat.vb" />
+    <Compile Include="clases\clsCafeteria.vb" />
+    <Compile Include="clases\clsCafeteriaProductos.vb" />
+    <Compile Include="clases\clsCaidaSistema.vb" />
+    <Compile Include="clases\clscalidad.vb" />
+    <Compile Include="clases\clsChat.vb" />
+    <Compile Include="clases\clscorreos.vb" />
+    <Compile Include="clases\clscrmdatos.vb" />
+    <Compile Include="clases\clsdatos.vb" />
+    <Compile Include="clases\ClsDesarrollo.vb" />
+    <Compile Include="clases\clsDirectTv.vb" />
+    <Compile Include="clases\clsFormacion.vb" />
+    <Compile Include="clases\clsgeneral.vb" />
+    <Compile Include="clases\clsHelpDesk.vb" />
+    <Compile Include="clases\clsInformes.vb" />
+    <Compile Include="clases\clsInventario.vb" />
+    <Compile Include="clases\clsProcesoSeleccion.vb" />
+    <Compile Include="clases\Clsretroalimentacion.vb" />
+    <Compile Include="clases\clsrrhh.vb" />
+    <Compile Include="clases\clssolicitud.vb" />
+    <Compile Include="clases\clsusuario.vb" />
+    <Compile Include="clases\clsvoz.vb" />
+    <Compile Include="clases\Cls_Gestion_Datos.vb" />
+    <Compile Include="Conexred\captconexred.aspx.designer.vb">
+      <DependentUpon>captconexred.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Conexred\captconexred.aspx.vb">
+      <DependentUpon>captconexred.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Header.ascx.designer.vb">
+      <DependentUpon>Header.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Header.ascx.vb">
+      <DependentUpon>Header.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controles\Menu.ascx.designer.vb">
+      <DependentUpon>Menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="Controles\Menu.ascx.vb">
+      <DependentUpon>Menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Asignaciones.aspx.designer.vb">
+      <DependentUpon>Asignaciones.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Asignaciones.aspx.vb">
+      <DependentUpon>Asignaciones.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Asignaciongestion.aspx.designer.vb">
+      <DependentUpon>Asignaciongestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Asignaciongestion.aspx.vb">
+      <DependentUpon>Asignaciongestion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\AsignacionNivel3.aspx.designer.vb">
+      <DependentUpon>AsignacionNivel3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\AsignacionNivel3.aspx.vb">
+      <DependentUpon>AsignacionNivel3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\AsignacionProgramados.aspx.designer.vb">
+      <DependentUpon>AsignacionProgramados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\AsignacionProgramados.aspx.vb">
+      <DependentUpon>AsignacionProgramados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Asignacionsegdigitac.aspx.designer.vb">
+      <DependentUpon>Asignacionsegdigitac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Asignacionsegdigitac.aspx.vb">
+      <DependentUpon>Asignacionsegdigitac.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\asignacionservicedatos.aspx.designer.vb">
+      <DependentUpon>asignacionservicedatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\asignacionservicedatos.aspx.vb">
+      <DependentUpon>asignacionservicedatos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\asignadigitaciondatos.aspx.designer.vb">
+      <DependentUpon>asignadigitaciondatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\asignadigitaciondatos.aspx.vb">
+      <DependentUpon>asignadigitaciondatos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Asignafallatec.aspx.designer.vb">
+      <DependentUpon>Asignafallatec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Asignafallatec.aspx.vb">
+      <DependentUpon>Asignafallatec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\BoldChat.aspx.designer.vb">
+      <DependentUpon>BoldChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\BoldChat.aspx.vb">
+      <DependentUpon>BoldChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\CampañaDatos.aspx.designer.vb">
+      <DependentUpon>CampañaDatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\CampañaDatos.aspx.vb">
+      <DependentUpon>CampañaDatos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\CasosHoraD.aspx.designer.vb">
+      <DependentUpon>CasosHoraD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\CasosHoraD.aspx.vb">
+      <DependentUpon>CasosHoraD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\CasosProgramados.aspx.designer.vb">
+      <DependentUpon>CasosProgramados.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\CasosProgramados.aspx.vb">
+      <DependentUpon>CasosProgramados.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\consdilo.aspx.designer.vb">
+      <DependentUpon>consdilo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\consdilo.aspx.vb">
+      <DependentUpon>consdilo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Consgeneralfallatec.aspx.designer.vb">
+      <DependentUpon>Consgeneralfallatec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Consgeneralfallatec.aspx.vb">
+      <DependentUpon>Consgeneralfallatec.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\consinc.aspx.designer.vb">
+      <DependentUpon>consinc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\consinc.aspx.vb">
+      <DependentUpon>consinc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\consn3.aspx.designer.vb">
+      <DependentUpon>consn3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\consn3.aspx.vb">
+      <DependentUpon>consn3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\consproductivxag.aspx.designer.vb">
+      <DependentUpon>consproductivxag.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\consproductivxag.aspx.vb">
+      <DependentUpon>consproductivxag.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\ConsultaBoldChat.aspx.designer.vb">
+      <DependentUpon>ConsultaBoldChat.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\ConsultaBoldChat.aspx.vb">
+      <DependentUpon>ConsultaBoldChat.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\ConsultaInbound.aspx.designer.vb">
+      <DependentUpon>ConsultaInbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\ConsultaInbound.aspx.vb">
+      <DependentUpon>ConsultaInbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Consulta_Falla_Des.aspx.designer.vb">
+      <DependentUpon>Consulta_Falla_Des.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Consulta_Falla_Des.aspx.vb">
+      <DependentUpon>Consulta_Falla_Des.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Consulta_inbound.aspx.designer.vb">
+      <DependentUpon>Consulta_inbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Consulta_inbound.aspx.vb">
+      <DependentUpon>Consulta_inbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Control.aspx.designer.vb">
+      <DependentUpon>Control.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Control.aspx.vb">
+      <DependentUpon>Control.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\ControlAsignacion.aspx.designer.vb">
+      <DependentUpon>ControlAsignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\ControlAsignacion.aspx.vb">
+      <DependentUpon>ControlAsignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Controlescalado.aspx.designer.vb">
+      <DependentUpon>Controlescalado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Controlescalado.aspx.vb">
+      <DependentUpon>Controlescalado.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Control_Escalamiento_CPD.aspx.designer.vb">
+      <DependentUpon>Control_Escalamiento_CPD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Control_Escalamiento_CPD.aspx.vb">
+      <DependentUpon>Control_Escalamiento_CPD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Control_Escalamiento_SD.aspx.designer.vb">
+      <DependentUpon>Control_Escalamiento_SD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Control_Escalamiento_SD.aspx.vb">
+      <DependentUpon>Control_Escalamiento_SD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Control_PQR.aspx.designer.vb">
+      <DependentUpon>Control_PQR.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Control_PQR.aspx.vb">
+      <DependentUpon>Control_PQR.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\devolucionservice.aspx.designer.vb">
+      <DependentUpon>devolucionservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\devolucionservice.aspx.vb">
+      <DependentUpon>devolucionservice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\digitaciondt.aspx.designer.vb">
+      <DependentUpon>digitaciondt.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\digitaciondt.aspx.vb">
+      <DependentUpon>digitaciondt.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\digitacionseg.aspx.designer.vb">
+      <DependentUpon>digitacionseg.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\digitacionseg.aspx.vb">
+      <DependentUpon>digitacionseg.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\dilo.aspx.designer.vb">
+      <DependentUpon>dilo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\dilo.aspx.vb">
+      <DependentUpon>dilo.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\consmarcacion.aspx.designer.vb">
+      <DependentUpon>consmarcacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\consmarcacion.aspx.vb">
+      <DependentUpon>consmarcacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Dilo2.aspx.designer.vb">
+      <DependentUpon>Dilo2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Dilo2.aspx.vb">
+      <DependentUpon>Dilo2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Dilo_inbound.aspx.designer.vb">
+      <DependentUpon>Dilo_inbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Dilo_inbound.aspx.vb">
+      <DependentUpon>Dilo_inbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Encuesta611Datos.aspx.designer.vb">
+      <DependentUpon>Encuesta611Datos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Encuesta611Datos.aspx.vb">
+      <DependentUpon>Encuesta611Datos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\EscalamientoInbound.aspx.designer.vb">
+      <DependentUpon>EscalamientoInbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\EscalamientoInbound.aspx.vb">
+      <DependentUpon>EscalamientoInbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Escalamservice.aspx.designer.vb">
+      <DependentUpon>Escalamservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Escalamservice.aspx.vb">
+      <DependentUpon>Escalamservice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Estadistica.aspx.designer.vb">
+      <DependentUpon>Estadistica.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Estadistica.aspx.vb">
+      <DependentUpon>Estadistica.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Fallamasiva.aspx.designer.vb">
+      <DependentUpon>Fallamasiva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Fallamasiva.aspx.vb">
+      <DependentUpon>Fallamasiva.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\FallamasivaConsulta.aspx.designer.vb">
+      <DependentUpon>FallamasivaConsulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\FallamasivaConsulta.aspx.vb">
+      <DependentUpon>FallamasivaConsulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\inconsist.aspx.designer.vb">
+      <DependentUpon>inconsist.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\inconsist.aspx.vb">
+      <DependentUpon>inconsist.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\infdinamico.aspx.designer.vb">
+      <DependentUpon>infdinamico.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\infdinamico.aspx.vb">
+      <DependentUpon>infdinamico.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\InformeInconsistencias.aspx.designer.vb">
+      <DependentUpon>InformeInconsistencias.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\InformeInconsistencias.aspx.vb">
+      <DependentUpon>InformeInconsistencias.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\InformeRemisionEquiposCav.aspx.designer.vb">
+      <DependentUpon>InformeRemisionEquiposCav.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\InformeRemisionEquiposCav.aspx.vb">
+      <DependentUpon>InformeRemisionEquiposCav.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\InformesVoz-Datos.aspx.designer.vb">
+      <DependentUpon>InformesVoz-Datos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\InformesVoz-Datos.aspx.vb">
+      <DependentUpon>InformesVoz-Datos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\liberaasignaciondigitac.aspx.designer.vb">
+      <DependentUpon>liberaasignaciondigitac.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\liberaasignaciondigitac.aspx.vb">
+      <DependentUpon>liberaasignaciondigitac.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Liberarasiggestion.aspx.designer.vb">
+      <DependentUpon>Liberarasiggestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Liberarasiggestion.aspx.vb">
+      <DependentUpon>Liberarasiggestion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Liberarasigseguim.aspx.designer.vb">
+      <DependentUpon>Liberarasigseguim.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Liberarasigseguim.aspx.vb">
+      <DependentUpon>Liberarasigseguim.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\liberarasigservdatos.aspx.designer.vb">
+      <DependentUpon>liberarasigservdatos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\liberarasigservdatos.aspx.vb">
+      <DependentUpon>liberarasigservdatos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\liberarfallatec.aspx.designer.vb">
+      <DependentUpon>liberarfallatec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\liberarfallatec.aspx.vb">
+      <DependentUpon>liberarfallatec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\LiberarNivel3.aspx.designer.vb">
+      <DependentUpon>LiberarNivel3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\LiberarNivel3.aspx.vb">
+      <DependentUpon>LiberarNivel3.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\modsuperv.aspx.designer.vb">
+      <DependentUpon>modsuperv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\modsuperv.aspx.vb">
+      <DependentUpon>modsuperv.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Nxmonitor.aspx.designer.vb">
+      <DependentUpon>Nxmonitor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Nxmonitor.aspx.vb">
+      <DependentUpon>Nxmonitor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\PendientesAmdocs.aspx.designer.vb">
+      <DependentUpon>PendientesAmdocs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\PendientesAmdocs.aspx.vb">
+      <DependentUpon>PendientesAmdocs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\PerfilamientoCasos.aspx.designer.vb">
+      <DependentUpon>PerfilamientoCasos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\PerfilamientoCasos.aspx.vb">
+      <DependentUpon>PerfilamientoCasos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\PollaMundialista.aspx.designer.vb">
+      <DependentUpon>PollaMundialista.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\PollaMundialista.aspx.vb">
+      <DependentUpon>PollaMundialista.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\PollaMundialista2.aspx.designer.vb">
+      <DependentUpon>PollaMundialista2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\PollaMundialista2.aspx.vb">
+      <DependentUpon>PollaMundialista2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\prioriza.aspx.designer.vb">
+      <DependentUpon>prioriza.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\prioriza.aspx.vb">
+      <DependentUpon>prioriza.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\procesofallatec.aspx.designer.vb">
+      <DependentUpon>procesofallatec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\procesofallatec.aspx.vb">
+      <DependentUpon>procesofallatec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Productgral.aspx.designer.vb">
+      <DependentUpon>Productgral.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Productgral.aspx.vb">
+      <DependentUpon>Productgral.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Productividad.aspx.designer.vb">
+      <DependentUpon>Productividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Productividad.aspx.vb">
+      <DependentUpon>Productividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\regcrm.aspx.designer.vb">
+      <DependentUpon>regcrm.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\regcrm.aspx.vb">
+      <DependentUpon>regcrm.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\regcrm2.aspx.designer.vb">
+      <DependentUpon>regcrm2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\regcrm2.aspx.vb">
+      <DependentUpon>regcrm2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\RegCrmBienvenida.aspx.designer.vb">
+      <DependentUpon>RegCrmBienvenida.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\RegCrmBienvenida.aspx.vb">
+      <DependentUpon>RegCrmBienvenida.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\RegCRM_BSCS.aspx.designer.vb">
+      <DependentUpon>RegCRM_BSCS.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\RegCRM_BSCS.aspx.vb">
+      <DependentUpon>RegCRM_BSCS.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\RegCrm_Falla_Des.aspx.designer.vb">
+      <DependentUpon>RegCrm_Falla_Des.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\RegCrm_Falla_Des.aspx.vb">
+      <DependentUpon>RegCrm_Falla_Des.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\RegCrm_Falla_Des2.aspx.designer.vb">
+      <DependentUpon>RegCrm_Falla_Des2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\RegCrm_Falla_Des2.aspx.vb">
+      <DependentUpon>RegCrm_Falla_Des2.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Registro_Inbound.aspx.designer.vb">
+      <DependentUpon>Registro_Inbound.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Registro_Inbound.aspx.vb">
+      <DependentUpon>Registro_Inbound.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\regn2.aspx.designer.vb">
+      <DependentUpon>regn2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\regn2.aspx.vb">
+      <DependentUpon>regn2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\regn3.aspx.designer.vb">
+      <DependentUpon>regn3.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\regn3.aspx.vb">
+      <DependentUpon>regn3.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\ReporteEscalamiento.aspx.designer.vb">
+      <DependentUpon>ReporteEscalamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\ReporteEscalamiento.aspx.vb">
+      <DependentUpon>ReporteEscalamiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\ReporteSolicitado.aspx.designer.vb">
+      <DependentUpon>ReporteSolicitado.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\ReporteSolicitado.aspx.vb">
+      <DependentUpon>ReporteSolicitado.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Resolved_SD.aspx.designer.vb">
+      <DependentUpon>Resolved_SD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Resolved_SD.aspx.vb">
+      <DependentUpon>Resolved_SD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\SeguimientoIlocalizableD.aspx.designer.vb">
+      <DependentUpon>SeguimientoIlocalizableD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\SeguimientoIlocalizableD.aspx.vb">
+      <DependentUpon>SeguimientoIlocalizableD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\ServicioTecnicoDomicilio.aspx.designer.vb">
+      <DependentUpon>ServicioTecnicoDomicilio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\ServicioTecnicoDomicilio.aspx.vb">
+      <DependentUpon>ServicioTecnicoDomicilio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DatosCRM\Tipo_Cliente_Datos.aspx.designer.vb">
+      <DependentUpon>Tipo_Cliente_Datos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DatosCRM\Tipo_Cliente_Datos.aspx.vb">
+      <DependentUpon>Tipo_Cliente_Datos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="default.aspx.designer.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="default.aspx.vb">
+      <DependentUpon>default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Asignacion.aspx.designer.vb">
+      <DependentUpon>Desarrollo_Asignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Asignacion.aspx.vb">
+      <DependentUpon>Desarrollo_Asignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Consulta_General.aspx.designer.vb">
+      <DependentUpon>Desarrollo_Consulta_General.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Consulta_General.aspx.vb">
+      <DependentUpon>Desarrollo_Consulta_General.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Gestion.aspx.designer.vb">
+      <DependentUpon>Desarrollo_Gestion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Gestion.aspx.vb">
+      <DependentUpon>Desarrollo_Gestion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Registro.aspx.designer.vb">
+      <DependentUpon>Desarrollo_Registro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Development\Desarrollo_Registro.aspx.vb">
+      <DependentUpon>Desarrollo_Registro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirecTv\Adidas.aspx.designer.vb">
+      <DependentUpon>Adidas.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirecTv\Adidas.aspx.vb">
+      <DependentUpon>Adidas.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirecTv\DirectvConsultaAu.aspx.designer.vb">
+      <DependentUpon>DirectvConsultaAu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirecTv\DirectvConsultaAu.aspx.vb">
+      <DependentUpon>DirectvConsultaAu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="DirecTv\DirecTv_Consulta.aspx.designer.vb">
+      <DependentUpon>DirecTv_Consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirecTv\DirecTv_Consulta.aspx.vb">
+      <DependentUpon>DirecTv_Consulta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="entrada.aspx.designer.vb">
+      <DependentUpon>entrada.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="entrada.aspx.vb">
+      <DependentUpon>entrada.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Help\HelpDeskAsignacion.aspx.designer.vb">
+      <DependentUpon>HelpDeskAsignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\HelpDeskAsignacion.aspx.vb">
+      <DependentUpon>HelpDeskAsignacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\HelpDeskRegistro.aspx.designer.vb">
+      <DependentUpon>HelpDeskRegistro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\HelpDeskRegistro.aspx.vb">
+      <DependentUpon>HelpDeskRegistro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Help\HelpDeskSolucion.aspx.designer.vb">
+      <DependentUpon>HelpDeskSolucion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Help\HelpDeskSolucion.aspx.vb">
+      <DependentUpon>HelpDeskSolucion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="menu.ascx.designer.vb">
+      <DependentUpon>menu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="menu.ascx.vb">
+      <DependentUpon>menu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="RRHH\ArchivosDoc.aspx.designer.vb">
+      <DependentUpon>ArchivosDoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\ArchivosDoc.aspx.vb">
+      <DependentUpon>ArchivosDoc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorario.aspx.designer.vb">
+      <DependentUpon>AsignacionHorario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorario.aspx.vb">
+      <DependentUpon>AsignacionHorario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorariosCambios.aspx.designer.vb">
+      <DependentUpon>AsignacionHorariosCambios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorariosCambios.aspx.vb">
+      <DependentUpon>AsignacionHorariosCambios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorariosMalla.aspx.designer.vb">
+      <DependentUpon>AsignacionHorariosMalla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorariosMalla.aspx.vb">
+      <DependentUpon>AsignacionHorariosMalla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorariosValidacion.aspx.designer.vb">
+      <DependentUpon>AsignacionHorariosValidacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\AsignacionHorariosValidacion.aspx.vb">
+      <DependentUpon>AsignacionHorariosValidacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\Aspirante.aspx.designer.vb">
+      <DependentUpon>Aspirante.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\Aspirante.aspx.vb">
+      <DependentUpon>Aspirante.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\Cafeteria.aspx.designer.vb">
+      <DependentUpon>Cafeteria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\Cafeteria.aspx.vb">
+      <DependentUpon>Cafeteria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\CafeteriaComprarProducto.aspx.designer.vb">
+      <DependentUpon>CafeteriaComprarProducto.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\CafeteriaComprarProducto.aspx.vb">
+      <DependentUpon>CafeteriaComprarProducto.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\CafeteriaCrearEmpClie.aspx.designer.vb">
+      <DependentUpon>CafeteriaCrearEmpClie.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\CafeteriaCrearEmpClie.aspx.vb">
+      <DependentUpon>CafeteriaCrearEmpClie.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\CafeteriaCRM.aspx.designer.vb">
+      <DependentUpon>CafeteriaCRM.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\CafeteriaCRM.aspx.vb">
+      <DependentUpon>CafeteriaCRM.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\CaidaSistema.aspx.designer.vb">
+      <DependentUpon>CaidaSistema.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\CaidaSistema.aspx.vb">
+      <DependentUpon>CaidaSistema.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\centinela.aspx.designer.vb">
+      <DependentUpon>centinela.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\centinela.aspx.vb">
+      <DependentUpon>centinela.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\checkdoc.aspx.designer.vb">
+      <DependentUpon>checkdoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\checkdoc.aspx.vb">
+      <DependentUpon>checkdoc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\consbonos.aspx.designer.vb">
+      <DependentUpon>consbonos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\consbonos.aspx.vb">
+      <DependentUpon>consbonos.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\conscentinela.aspx.designer.vb">
+      <DependentUpon>conscentinela.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\conscentinela.aspx.vb">
+      <DependentUpon>conscentinela.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\consnovxusu.aspx.designer.vb">
+      <DependentUpon>consnovxusu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\consnovxusu.aspx.vb">
+      <DependentUpon>consnovxusu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\consulta.aspx.designer.vb">
+      <DependentUpon>consulta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\consulta.aspx.vb">
+      <DependentUpon>consulta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\consultacompleta.aspx.designer.vb">
+      <DependentUpon>consultacompleta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\consultacompleta.aspx.vb">
+      <DependentUpon>consultacompleta.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\ConsultaCompletaCentinela.aspx.designer.vb">
+      <DependentUpon>ConsultaCompletaCentinela.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\ConsultaCompletaCentinela.aspx.vb">
+      <DependentUpon>ConsultaCompletaCentinela.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\consultanov.aspx.designer.vb">
+      <DependentUpon>consultanov.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\consultanov.aspx.vb">
+      <DependentUpon>consultanov.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\ConsultaVenta.aspx.designer.vb">
+      <DependentUpon>ConsultaVenta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\ConsultaVenta.aspx.vb">
+      <DependentUpon>ConsultaVenta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\desprendible.aspx.designer.vb">
+      <DependentUpon>desprendible.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\desprendible.aspx.vb">
+      <DependentUpon>desprendible.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\DesprendibleCafeteUsu.aspx.designer.vb">
+      <DependentUpon>DesprendibleCafeteUsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\DesprendibleCafeteUsu.aspx.vb">
+      <DependentUpon>DesprendibleCafeteUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\Estudios.aspx.designer.vb">
+      <DependentUpon>Estudios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\Estudios.aspx.vb">
+      <DependentUpon>Estudios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\MesCafeteria.aspx.designer.vb">
+      <DependentUpon>MesCafeteria.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\MesCafeteria.aspx.vb">
+      <DependentUpon>MesCafeteria.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\modificaop.aspx.designer.vb">
+      <DependentUpon>modificaop.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\modificaop.aspx.vb">
+      <DependentUpon>modificaop.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\novedades.aspx.designer.vb">
+      <DependentUpon>novedades.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\novedades.aspx.vb">
+      <DependentUpon>novedades.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\Plantilla.aspx.designer.vb">
+      <DependentUpon>Plantilla.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\Plantilla.aspx.vb">
+      <DependentUpon>Plantilla.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\procesosolicdoc.aspx.designer.vb">
+      <DependentUpon>procesosolicdoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\procesosolicdoc.aspx.vb">
+      <DependentUpon>procesosolicdoc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\Productividad.aspx.designer.vb">
+      <DependentUpon>Productividad.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\Productividad.aspx.vb">
+      <DependentUpon>Productividad.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\ProductividadVoz.aspx.designer.vb">
+      <DependentUpon>ProductividadVoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\ProductividadVoz.aspx.vb">
+      <DependentUpon>ProductividadVoz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\regdotacion.aspx.designer.vb">
+      <DependentUpon>regdotacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\regdotacion.aspx.vb">
+      <DependentUpon>regdotacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\RegProduc.aspx.designer.vb">
+      <DependentUpon>RegProduc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\RegProduc.aspx.vb">
+      <DependentUpon>RegProduc.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\regrrhh.aspx.designer.vb">
+      <DependentUpon>regrrhh.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\regrrhh.aspx.vb">
+      <DependentUpon>regrrhh.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\Retroalimentacion.aspx.designer.vb">
+      <DependentUpon>Retroalimentacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\Retroalimentacion.aspx.vb">
+      <DependentUpon>Retroalimentacion.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\solicituddoc.aspx.designer.vb">
+      <DependentUpon>solicituddoc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\solicituddoc.aspx.vb">
+      <DependentUpon>solicituddoc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SolicClaro\respuestaclaro.aspx.designer.vb">
+      <DependentUpon>respuestaclaro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicClaro\respuestaclaro.aspx.vb">
+      <DependentUpon>respuestaclaro.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SolicClaro\Seguimasig.aspx.designer.vb">
+      <DependentUpon>Seguimasig.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicClaro\Seguimasig.aspx.vb">
+      <DependentUpon>Seguimasig.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="SolicClaro\Solicitud.aspx.designer.vb">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SolicClaro\Solicitud.aspx.vb">
+      <DependentUpon>Solicitud.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\Activo_Inventario.aspx.designer.vb">
+      <DependentUpon>Activo_Inventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\Activo_Inventario.aspx.vb">
+      <DependentUpon>Activo_Inventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\Activo_Inventario_Acta.aspx.designer.vb">
+      <DependentUpon>Activo_Inventario_Acta.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\Activo_Inventario_Acta.aspx.vb">
+      <DependentUpon>Activo_Inventario_Acta.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\Activo_inventario_Cambio.aspx.designer.vb">
+      <DependentUpon>Activo_inventario_Cambio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\Activo_inventario_Cambio.aspx.vb">
+      <DependentUpon>Activo_inventario_Cambio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\ConDatosUsu.aspx.designer.vb">
+      <DependentUpon>ConDatosUsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\ConDatosUsu.aspx.vb">
+      <DependentUpon>ConDatosUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\ConsCredenciales.aspx.designer.vb">
+      <DependentUpon>ConsCredenciales.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\ConsCredenciales.aspx.vb">
+      <DependentUpon>ConsCredenciales.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\Historial_Equipos.aspx.designer.vb">
+      <DependentUpon>Historial_Equipos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\Historial_Equipos.aspx.vb">
+      <DependentUpon>Historial_Equipos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\Inventario.aspx.designer.vb">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\Inventario.aspx.vb">
+      <DependentUpon>Inventario.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\InventarioActivos.aspx.designer.vb">
+      <DependentUpon>InventarioActivos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\InventarioActivos.aspx.vb">
+      <DependentUpon>InventarioActivos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\InventarioActivosCambio.aspx.designer.vb">
+      <DependentUpon>InventarioActivosCambio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\InventarioActivosCambio.aspx.vb">
+      <DependentUpon>InventarioActivosCambio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\inventarioActivosMantenimiento.aspx.designer.vb">
+      <DependentUpon>inventarioActivosMantenimiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\inventarioActivosMantenimiento.aspx.vb">
+      <DependentUpon>inventarioActivosMantenimiento.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\InventarioCambios.aspx.designer.vb">
+      <DependentUpon>InventarioCambios.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\InventarioCambios.aspx.vb">
+      <DependentUpon>InventarioCambios.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\InventarioSoftware.aspx.designer.vb">
+      <DependentUpon>InventarioSoftware.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\InventarioSoftware.aspx.vb">
+      <DependentUpon>InventarioSoftware.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\RegDatosUsu.aspx.designer.vb">
+      <DependentUpon>RegDatosUsu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\RegDatosUsu.aspx.vb">
+      <DependentUpon>RegDatosUsu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\RegDatosUsuCarga.aspx.designer.vb">
+      <DependentUpon>RegDatosUsuCarga.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\RegDatosUsuCarga.aspx.vb">
+      <DependentUpon>RegDatosUsuCarga.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Soporte\UbicacionModulo.aspx.designer.vb">
+      <DependentUpon>UbicacionModulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Soporte\UbicacionModulo.aspx.vb">
+      <DependentUpon>UbicacionModulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Acumulado_Voz.aspx.designer.vb">
+      <DependentUpon>Acumulado_Voz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Acumulado_Voz.aspx.vb">
+      <DependentUpon>Acumulado_Voz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\asignacionescalamservice.aspx.designer.vb">
+      <DependentUpon>asignacionescalamservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\asignacionescalamservice.aspx.vb">
+      <DependentUpon>asignacionescalamservice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Asignaciongestionvoz.aspx.designer.vb">
+      <DependentUpon>Asignaciongestionvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Asignaciongestionvoz.aspx.vb">
+      <DependentUpon>Asignaciongestionvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\asignadigitacion.aspx.designer.vb">
+      <DependentUpon>asignadigitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\asignadigitacion.aspx.vb">
+      <DependentUpon>asignadigitacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Asignafallatec.aspx.designer.vb">
+      <DependentUpon>Asignafallatec.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Asignafallatec.aspx.vb">
+      <DependentUpon>Asignafallatec.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Asignaseguimdigita.aspx.designer.vb">
+      <DependentUpon>Asignaseguimdigita.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Asignaseguimdigita.aspx.vb">
+      <DependentUpon>Asignaseguimdigita.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\CampañasVoz.aspx.designer.vb">
+      <DependentUpon>CampañasVoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\CampañasVoz.aspx.vb">
+      <DependentUpon>CampañasVoz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\CasosHoraV.aspx.designer.vb">
+      <DependentUpon>CasosHoraV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\CasosHoraV.aspx.vb">
+      <DependentUpon>CasosHoraV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Chat_Agente.aspx.designer.vb">
+      <DependentUpon>Chat_Agente.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Chat_Agente.aspx.vb">
+      <DependentUpon>Chat_Agente.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Chat_Supervisor.aspx.designer.vb">
+      <DependentUpon>Chat_Supervisor.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Chat_Supervisor.aspx.vb">
+      <DependentUpon>Chat_Supervisor.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\consfallasred.aspx.designer.vb">
+      <DependentUpon>consfallasred.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\consfallasred.aspx.vb">
+      <DependentUpon>consfallasred.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\consgralvoz.aspx.designer.vb">
+      <DependentUpon>consgralvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\consgralvoz.aspx.vb">
+      <DependentUpon>consgralvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\consincvoz.aspx.designer.vb">
+      <DependentUpon>consincvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\consincvoz.aspx.vb">
+      <DependentUpon>consincvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\ConsultaCasosVipSegGran.aspx.designer.vb">
+      <DependentUpon>ConsultaCasosVipSegGran.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\ConsultaCasosVipSegGran.aspx.vb">
+      <DependentUpon>ConsultaCasosVipSegGran.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\crmpqr.aspx.designer.vb">
+      <DependentUpon>crmpqr.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\crmpqr.aspx.vb">
+      <DependentUpon>crmpqr.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\CuadroMando.aspx.designer.vb">
+      <DependentUpon>CuadroMando.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\CuadroMando.aspx.vb">
+      <DependentUpon>CuadroMando.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\devolucionesc.aspx.designer.vb">
+      <DependentUpon>devolucionesc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\devolucionesc.aspx.vb">
+      <DependentUpon>devolucionesc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\digitacion.aspx.designer.vb">
+      <DependentUpon>digitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\digitacion.aspx.vb">
+      <DependentUpon>digitacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Digitacionsegvoz.aspx.designer.vb">
+      <DependentUpon>Digitacionsegvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Digitacionsegvoz.aspx.vb">
+      <DependentUpon>Digitacionsegvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="DirecTv\Direct-TV.aspx.designer.vb">
+      <DependentUpon>Direct-TV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="DirecTv\Direct-TV.aspx.vb">
+      <DependentUpon>Direct-TV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Encuesta611Voz.aspx.designer.vb">
+      <DependentUpon>Encuesta611Voz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Encuesta611Voz.aspx.vb">
+      <DependentUpon>Encuesta611Voz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\escalamiento.aspx.designer.vb">
+      <DependentUpon>escalamiento.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\escalamiento.aspx.vb">
+      <DependentUpon>escalamiento.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\estadisticasvoz.aspx.designer.vb">
+      <DependentUpon>estadisticasvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\estadisticasvoz.aspx.vb">
+      <DependentUpon>estadisticasvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\GestionporGrupo.aspx.designer.vb">
+      <DependentUpon>GestionporGrupo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\GestionporGrupo.aspx.vb">
+      <DependentUpon>GestionporGrupo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\inconsvoz.aspx.designer.vb">
+      <DependentUpon>inconsvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\inconsvoz.aspx.vb">
+      <DependentUpon>inconsvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\InformeBarriosVoz.aspx.designer.vb">
+      <DependentUpon>InformeBarriosVoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\InformeBarriosVoz.aspx.vb">
+      <DependentUpon>InformeBarriosVoz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\InformeInconsistenciasVoz.aspx.designer.vb">
+      <DependentUpon>InformeInconsistenciasVoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\InformeInconsistenciasVoz.aspx.vb">
+      <DependentUpon>InformeInconsistenciasVoz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\InformeMensualLDI.aspx.designer.vb">
+      <DependentUpon>InformeMensualLDI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\InformeMensualLDI.aspx.vb">
+      <DependentUpon>InformeMensualLDI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\liberaasignacion.aspx.designer.vb">
+      <DependentUpon>liberaasignacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\liberaasignacion.aspx.vb">
+      <DependentUpon>liberaasignacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\liberaasigservice.aspx.designer.vb">
+      <DependentUpon>liberaasigservice.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\liberaasigservice.aspx.vb">
+      <DependentUpon>liberaasigservice.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\liberafallatecv.aspx.designer.vb">
+      <DependentUpon>liberafallatecv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\liberafallatecv.aspx.vb">
+      <DependentUpon>liberafallatecv.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\liberarasiggestionvoz.aspx.designer.vb">
+      <DependentUpon>liberarasiggestionvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\liberarasiggestionvoz.aspx.vb">
+      <DependentUpon>liberarasiggestionvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\liberarasigseguimdigit.aspx.designer.vb">
+      <DependentUpon>liberarasigseguimdigit.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\liberarasigseguimdigit.aspx.vb">
+      <DependentUpon>liberarasigseguimdigit.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\LiberarDigitacion.aspx.designer.vb">
+      <DependentUpon>LiberarDigitacion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\LiberarDigitacion.aspx.vb">
+      <DependentUpon>LiberarDigitacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\nuevoformato.aspx.designer.vb">
+      <DependentUpon>nuevoformato.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\nuevoformato.aspx.vb">
+      <DependentUpon>nuevoformato.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\PendientesAmdocsV.aspx.designer.vb">
+      <DependentUpon>PendientesAmdocsV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\PendientesAmdocsV.aspx.vb">
+      <DependentUpon>PendientesAmdocsV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\procescala.aspx.designer.vb">
+      <DependentUpon>procescala.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\procescala.aspx.vb">
+      <DependentUpon>procescala.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\procescalav2.aspx.designer.vb">
+      <DependentUpon>procescalav2.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\procescalav2.aspx.vb">
+      <DependentUpon>procescalav2.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\procesofallatecv.aspx.designer.vb">
+      <DependentUpon>procesofallatecv.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\procesofallatecv.aspx.vb">
+      <DependentUpon>procesofallatecv.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\RegCrmMTI.aspx.designer.vb">
+      <DependentUpon>RegCrmMTI.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\RegCrmMTI.aspx.vb">
+      <DependentUpon>RegCrmMTI.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\regcrmvoz.aspx.designer.vb">
+      <DependentUpon>regcrmvoz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\regcrmvoz.aspx.vb">
+      <DependentUpon>regcrmvoz.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\RegCRM_Config_Red.aspx.designer.vb">
+      <DependentUpon>RegCRM_Config_Red.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\RegCRM_Config_Red.aspx.vb">
+      <DependentUpon>RegCRM_Config_Red.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\RegCrm_Poll.aspx.designer.vb">
+      <DependentUpon>RegCrm_Poll.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\RegCrm_Poll.aspx.vb">
+      <DependentUpon>RegCrm_Poll.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Resolved.aspx.designer.vb">
+      <DependentUpon>Resolved.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Resolved.aspx.vb">
+      <DependentUpon>Resolved.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Revisionmodulo.aspx.designer.vb">
+      <DependentUpon>Revisionmodulo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Revisionmodulo.aspx.vb">
+      <DependentUpon>Revisionmodulo.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\SeguimientoIlocalizableV.aspx.designer.vb">
+      <DependentUpon>SeguimientoIlocalizableV.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\SeguimientoIlocalizableV.aspx.vb">
+      <DependentUpon>SeguimientoIlocalizableV.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\TiendaVirtual.aspx.designer.vb">
+      <DependentUpon>TiendaVirtual.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\TiendaVirtual.aspx.vb">
+      <DependentUpon>TiendaVirtual.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\TipoFallaVozNueva.aspx.designer.vb">
+      <DependentUpon>TipoFallaVozNueva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\TipoFallaVozNueva.aspx.vb">
+      <DependentUpon>TipoFallaVozNueva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="VozCRM\Tipo_Cliente_Voz.aspx.designer.vb">
+      <DependentUpon>Tipo_Cliente_Voz.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="VozCRM\Tipo_Cliente_Voz.aspx.vb">
+      <DependentUpon>Tipo_Cliente_Voz.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>4436</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

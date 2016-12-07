@@ -1,0 +1,16 @@
+
+Se deben reemplazar los jQuery existentes en el proyecto dentro de la carpeta Css2 por los actuales.
+para utilizar el datepicker, timepicker y datetimepicker.
+
+Se debe usar el siguiente script en cada formulario:
+
+
+<script type="text/javascript" src="../Css2/jquery-ui-timepiker.js"></script>
+    <script type="text/jscript">
+        var $_$ = jQuery.noConflict(); 
+        function pageLoad() {
+            $_$("#txtFechainicio").datepicker({}).val();/*Fecha*/
+            $_$("#txtFechafin").timepicker({}).val();/*Hora*/
+            $_$("#txtfcsap").datetimepicker({}).val();/*Fecha y Hora*/
+        }
+</script>
