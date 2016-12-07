@@ -148,10 +148,6 @@
             CedulaCliente = value
         End Set
     End Property
-
-
-
-
     'empiezo a hacer conexion con la base de datos para insertar datos 
     'utilizo stored procedured y una propiedad como parametro que recibe
     Public Sub RegEmpleadosCafeteria()
@@ -384,8 +380,6 @@
             Throw ex
         End Try
     End Function
-
-
     Public Function CargarDatosDDlComprarNombreCliente()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Dim datos As New DataSet
@@ -405,7 +399,6 @@
                 cn.Close()
             End If
         End Try
-
     End Function
     Public Sub Ventas()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
@@ -420,7 +413,6 @@
             cmd.Parameters.AddWithValue("@ValorProducto", PublicValorProducto)
             cmd.Parameters.AddWithValue("@CantidadProducto", PublicCantidadProducto)
             cmd.Parameters.AddWithValue("@FechaVenta", PublicFechaVenta)
-
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
         Catch ex As Exception

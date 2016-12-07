@@ -98,13 +98,13 @@
                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                     <HeaderStyle BackColor="#B3C556" Font-Bold="False" ForeColor="White" Font-Size="Small" />
                                     <Columns>
-                                        <asp:ButtonField CommandName="Delete" Text="Eliminar" ButtonType="Button" />
+                                        <asp:ButtonField CommandName="Delete" ControlStyle-BackColor="#B3C556" Text="Eliminar" ButtonType="Image" />
                                     </Columns>
                                     <EditRowStyle BackColor="#999999" />
                                     <AlternatingRowStyle BackColor="White" ForeColor="#333333" />
                                 </asp:GridView>
 
-                                <asp:Label CssClass="form-control" ID="Lbl_ValorTotal" runat="server" Text="Label"></asp:Label>
+                                <asp:Label CssClass="form-control" style="color:#B3C556;"  ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>
                             </div>
 
                         </div>
