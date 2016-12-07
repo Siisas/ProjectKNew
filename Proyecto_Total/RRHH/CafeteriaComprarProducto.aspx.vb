@@ -124,9 +124,12 @@ Public Class CafeteriaComprarProducto
             Lbl_CantidadDisponible.Text = ""
             Lbl_ValorTotal.Text = "Por favor agregue un elemento para comprar"
         Else
+            Dim dt As DataTable = Session("AcumulaRegistros")
             For index = 1 To Gtg_TotalCompras.Rows.Count Step 1
-
-
+                Session("AcumulaRegistros") = dt
+                Gtg_TotalCompras.DataSource = dt
+                Gtg_TotalCompras.DataBind()
+                dt.AcceptChanges()
                 ObjetoClsCafeteriaProductos.PublicIdCategoria = Drl_Categoria.SelectedValue
                 ObjetoClsCafeteriaProductos.PublicidProducto = Drl_Productos.SelectedItem.Value
                 ObjetoClsCafeteriaProductos.PublicCodigoEmpleado = Drl_NombreEmpleado.SelectedValue
