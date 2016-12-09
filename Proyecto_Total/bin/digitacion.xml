@@ -63514,9 +63514,27 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:digitacion.Plantilla._TxtCantidad">
+<summary>
+Control TxtCantidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:digitacion.Plantilla._Btn_RegistrarProducto">
 <summary>
 Control Btn_RegistrarProducto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.Plantilla._Lbl_MensajePlantilla">
+<summary>
+Control Lbl_MensajePlantilla.
 </summary>
 <remarks>
 Campo generado automáticamente.

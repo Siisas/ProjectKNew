@@ -1,5 +1,4 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CafeteriaComprarProducto.aspx.vb" Inherits="digitacion.CafeteriaComprarProducto" %>
-
 <%@ Register Src="~/Controles/Header.ascx" TagName="Header" TagPrefix="Control" %>
 <!DOCTYPE html>
 <html>
@@ -103,10 +102,8 @@
                                     <EditRowStyle BackColor="#999999" />
                                     <AlternatingRowStyle BackColor="White" ForeColor="#333333" />
                                 </asp:GridView>
-
                                 <asp:Label CssClass="form-control" style="color:#B3C556;"  ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>
                             </div>
-
                         </div>
                     </section>
                 </ContentTemplate>

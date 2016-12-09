@@ -68,6 +68,15 @@ Partial Public Class Plantilla
     Protected WithEvents TxtValorProducto As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
+    '''Control TxtCantidad.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TxtCantidad As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Control Btn_RegistrarProducto.
     '''</summary>
     '''<remarks>
@@ -75,6 +84,15 @@ Partial Public Class Plantilla
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Btn_RegistrarProducto As Global.System.Web.UI.WebControls.Button
+    
+    '''<summary>
+    '''Control Lbl_MensajePlantilla.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Lbl_MensajePlantilla As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Control TxtFecha.

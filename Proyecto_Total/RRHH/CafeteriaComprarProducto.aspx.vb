@@ -125,11 +125,8 @@ Public Class CafeteriaComprarProducto
             Lbl_ValorTotal.Text = "Por favor agregue un elemento para comprar"
         Else
             Dim dt As DataTable = Session("AcumulaRegistros")
-            For index = 1 To Gtg_TotalCompras.Rows.Count Step 1
+            For index = 0 To Gtg_TotalCompras.Rows.Count - 1
                 Session("AcumulaRegistros") = dt
-                Gtg_TotalCompras.DataSource = dt
-                Gtg_TotalCompras.DataBind()
-                dt.AcceptChanges()
                 ObjetoClsCafeteriaProductos.PublicIdCategoria = Drl_Categoria.SelectedValue
                 ObjetoClsCafeteriaProductos.PublicidProducto = Drl_Productos.SelectedItem.Value
                 ObjetoClsCafeteriaProductos.PublicCodigoEmpleado = Drl_NombreEmpleado.SelectedValue
@@ -138,11 +135,15 @@ Public Class CafeteriaComprarProducto
                 ObjetoClsCafeteriaProductos.PublicCodigoCliente = Drl_NombreCliente.SelectedValue
                 ObjetoClsCafeteriaProductos.PublicFechaVenta = TxtFechaVenta.Text
                 ObjetoClsCafeteriaProductos.Ventas()
+                Gtg_TotalCompras.DataBind()
+                'Gtg_TotalCompras.DataSource = dt
+                'dt.AcceptChanges()
             Next
         End If
     End Sub
 
     Protected Sub btn_NuevaCompra_Click(sender As Object, e As EventArgs) Handles btn_NuevaCompra.Click
+
         Lbl_ValorTotal.Text = "selecciona los productos"
         Session("Suma") = 0
         Session("Suma") = Nothing
@@ -154,6 +155,7 @@ Public Class CafeteriaComprarProducto
         Drl_NombreCliente.SelectedIndex = 0
         Lbl_Valor.Text = ""
         Lbl_CantidadDisponible.Text = ""
+        TxtFechaVenta.Text = ""
         'ok
     End Sub
 End Class

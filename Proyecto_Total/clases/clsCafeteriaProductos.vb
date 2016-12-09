@@ -200,6 +200,7 @@
             cmd.Parameters.AddWithValue("@FechaIngresoPro", PublicFechaRegistroProducto)
             cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
             cmd.Parameters.AddWithValue("@Proveedor", PublicProveedor)
+            cmd.Parameters.AddWithValue("@CantidadProducto", PublicCantidadProducto)
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -423,4 +424,34 @@
             End If
         End Try
     End Sub
+    Public Function ConsultaProductos()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeDatos As SqlClient.SqlDataAdapter
+        Dim cmd As New SqlClient.SqlCommand
+        Try
+            cn.Open()
+            cmd.CommandText = "
+              select NombreProducto, Categoria,FechaIngresoPro,NombreEmpleado,Proveedor,ValorProducto,CantidadProducto 
+              From RLProductos P
+              left join RLProductosCategoria C
+              on P.IdProducto = C.IdCategoria
+              left join RLProductosEmpleadoCafeteria E
+              on P.IdProducto = E.CodigoEmpleado"
+            cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = nombreProducto
+            cmd.Parameters.Add("@FechaIngresoPro", SqlDbType.Date).Value = fechaRegistroProducto
+            'cmd.Parameters.Add("@Proveedor", SqlDbType.VarChar).Value = proveedor
+            RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+            cmd.Connection = cn
+            RecibeDatos.Fill(datos)
+            'If datos.Tables(0).Rows(0).Item("nombreProducto") Is System.DBNull.Value Then
+            '    cantidadProducto = " nombreProducto"
+            'Else
+            '    cantidadProducto = datos.Tables(0).Rows(0).Item("nombreProducto")
+            'End If
+            Return datos
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
 End Class
