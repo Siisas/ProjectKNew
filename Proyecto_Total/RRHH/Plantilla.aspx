@@ -86,7 +86,7 @@
                         </div>                        
                     </section>
                     <section>
-                        <div class="text-center Subtitulos">Consulta de Productos</div>
+                        <div class="text-center Subtitulos">Consulta de Productos desde el Ingreso a la cafeterìa</div>
                         <div class="Form">
                             <div class="Cell-Form">
                                 <div class="input-group">

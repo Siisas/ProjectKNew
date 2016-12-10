@@ -437,18 +437,21 @@
               left join RLProductosCategoria C
               on P.IdProducto = C.IdCategoria
               left join RLProductosEmpleadoCafeteria E
-              on P.IdProducto = E.CodigoEmpleado"
-            cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = nombreProducto
-            cmd.Parameters.Add("@FechaIngresoPro", SqlDbType.Date).Value = fechaRegistroProducto
+              on P.IdProducto = E.CodigoEmpleado where IdProducto = @IdProducto
+              or Categoria = @Categoria 
+	          or FechaIngresoPro = @FechaIngresoPro"
+            If PublicNombreProducto = "-Seleccione-" Then
+                PublicNombreProducto = 0
+                cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = PublicNombreProducto
+            Else
+                cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = PublicNombreProducto
+            End If
+            cmd.Parameters.Add("@Categoria", SqlDbType.VarChar).Value = categoria
+            cmd.Parameters.Add("@FechaIngresoPro", SqlDbType.DateTime).Value = fechaRegistroProducto
             'cmd.Parameters.Add("@Proveedor", SqlDbType.VarChar).Value = proveedor
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
-            'If datos.Tables(0).Rows(0).Item("nombreProducto") Is System.DBNull.Value Then
-            '    cantidadProducto = " nombreProducto"
-            'Else
-            '    cantidadProducto = datos.Tables(0).Rows(0).Item("nombreProducto")
-            'End If
             Return datos
         Catch ex As Exception
             Throw ex

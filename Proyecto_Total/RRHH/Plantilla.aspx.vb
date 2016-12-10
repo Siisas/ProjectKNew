@@ -58,17 +58,20 @@
         Drl_CodigoEmpleado.DataValueField = "CodigoEmpleado"
         Drl_CodigoEmpleado.DataBind()
         Drl_CodigoEmpleado.Items.Insert(0, "-Seleccione-")
-        Drl_Categoria.DataSource = ObjProductosCafeteria.CargarDatosDDlProductos()
+        Drl_CategoriaBuscar.DataSource = ObjProductosCafeteria.CargarDatosDDlProductos()
         Drl_CategoriaBuscar.DataTextField = "Categoria"
-        Drl_CategoriaBuscar.DataValueField = "IdCategoria"
+        Drl_CategoriaBuscar.DataValueField = "Categoria"
         Drl_CategoriaBuscar.DataBind()
         Drl_CategoriaBuscar.Items.Insert(0, "- Seleccione -")
-    End Sub
 
+    End Sub
     Protected Sub btn_Consultar_Click(sender As Object, e As EventArgs) Handles btn_Consultar.Click
         ObjProductosCafeteria.PublicNombreProducto = Drl_NombreProducto.SelectedValue
-        'ObjProductosCafeteria.PublicCategoria = Drl_CategoriaBuscar.SelectedValue
-        'ObjProductosCafeteria.PublicFechaRegistroProducto = TxtBuscarFecha.Text
+        ObjProductosCafeteria.PublicCategoria = Drl_CategoriaBuscar.SelectedValue
+        If TxtBuscarFecha.Text = "" Then
+            TxtBuscarFecha.Text = "01/01/2001"
+        End If
+        ObjProductosCafeteria.PublicFechaRegistroProducto = TxtBuscarFecha.Text
         Gtg_Productos.DataSource = ObjProductosCafeteria.ConsultaProductos()
         'Gtg_Productos = ObjProductosCafeteria.ConsultaProductos() 'Metodo toca crear el metodo que haga la busqueda y nos devuelva la consulta en la clase remember
         Gtg_Productos.DataBind()
