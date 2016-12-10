@@ -240,6 +240,7 @@
     <Content Include="RRHH\CafeteriaComprarProducto.aspx" />
     <Content Include="RRHH\CafeteriaCrearEmpClie.aspx" />
     <Content Include="RRHH\CafeteriaCRM.aspx" />
+    <Content Include="RRHH\CafeteriaReportes.aspx" />
     <Content Include="RRHH\CaidaSistema.aspx" />
     <Content Include="RRHH\centinela.aspx" />
     <Content Include="RRHH\checkdoc.aspx" />
@@ -257,7 +258,7 @@
     <Content Include="RRHH\MesCafeteria.aspx" />
     <Content Include="RRHH\modificaop.aspx" />
     <Content Include="RRHH\novedades.aspx" />
-    <Content Include="RRHH\Plantilla.aspx" />
+    <Content Include="RRHH\CafeteriaVenta.aspx" />
     <Content Include="RRHH\procesosolicdoc.aspx" />
     <Content Include="RRHH\Productividad.aspx" />
     <Content Include="RRHH\ProductividadVoz.aspx" />
@@ -1311,6 +1312,13 @@
       <DependentUpon>CafeteriaCRM.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="RRHH\CafeteriaReportes.aspx.designer.vb">
+      <DependentUpon>CafeteriaReportes.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\CafeteriaReportes.aspx.vb">
+      <DependentUpon>CafeteriaReportes.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="RRHH\CaidaSistema.aspx.designer.vb">
       <DependentUpon>CaidaSistema.aspx</DependentUpon>
     </Compile>
@@ -1430,11 +1438,11 @@
       <DependentUpon>novedades.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="RRHH\Plantilla.aspx.designer.vb">
-      <DependentUpon>Plantilla.aspx</DependentUpon>
+    <Compile Include="RRHH\CafeteriaVenta.aspx.designer.vb">
+      <DependentUpon>CafeteriaVenta.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RRHH\Plantilla.aspx.vb">
-      <DependentUpon>Plantilla.aspx</DependentUpon>
+    <Compile Include="RRHH\CafeteriaVenta.aspx.vb">
+      <DependentUpon>CafeteriaVenta.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="RRHH\procesosolicdoc.aspx.designer.vb">

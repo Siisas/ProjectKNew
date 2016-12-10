@@ -14,7 +14,17 @@
     Protected NumeroCedulaEmpleado As Integer
     Protected CedulaCliente As Integer
     Protected FechaVenta As Date
+    Protected FechaFinal As Date
 
+    Public Property PublicFechaFinal As Date
+        Get
+            Return FechaFinal
+
+        End Get
+        Set(value As Date)
+            FechaFinal = value
+        End Set
+    End Property
     Public Property PublicFechaVenta As Date
         Get
             Return FechaVenta
@@ -457,4 +467,41 @@
             Throw ex
         End Try
     End Function
+    Public Function ConsultarProductosPorFecha()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeDatos As SqlClient.SqlDataAdapter
+        Dim cmd As New SqlClient.SqlCommand
+        Try
+            cn.Open()
+            cmd.CommandText = "select  sum(ValorProducto) as total_en_dinero_por_productos_vendidos from RlProductosVentas where (@FechaInicial < @FechaFinal)"
+            cmd.Parameters.Add("@FechaInicial", SqlDbType.Date).Value = PublicFechaRegistroProducto
+            cmd.Parameters.Add("@FechaFinal", SqlDbType.Date).Value = PublicFechaFinal
+            RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+            cmd.Connection = cn
+            RecibeDatos.Fill(datos)
+            Return datos
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Public Function ConsultarDisponibilidadProductos()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeDatos As SqlClient.SqlDataAdapter
+        Dim cmd As New SqlClient.SqlCommand
+        Try
+            cn.Open()
+            cmd.CommandText = "select NombreProducto = @NombreProducto, sum(CantidadProducto)as totalDisponible from RLProductos"
+            cmd.Parameters.Add("@NombreProducto", SqlDbType.VarChar).Value = PublicNombreProducto
+            RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+            cmd.Connection = cn
+            RecibeDatos.Fill(datos)
+            Return datos
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+
 End Class
+
