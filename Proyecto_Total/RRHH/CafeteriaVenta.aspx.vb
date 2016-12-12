@@ -48,7 +48,7 @@
         Drl_Categoria.DataValueField = "IdCategoria"
         Drl_Categoria.DataBind()
         Drl_Categoria.Items.Insert(0, "- Seleccione -")
-        Drl_NombreProducto.DataSource = ObjProductosCafeteria.CargarDatosDDlProductosNmbreP()
+        Drl_NombreProducto.DataSource = ObjProductosCafeteria.CargarDatosDDlProductosNmbreP1()
         Drl_NombreProducto.DataTextField = "NombreProducto"
         Drl_NombreProducto.DataValueField = "IdProducto"
         Drl_NombreProducto.DataBind()
@@ -63,7 +63,6 @@
         Drl_CategoriaBuscar.DataValueField = "Categoria"
         Drl_CategoriaBuscar.DataBind()
         Drl_CategoriaBuscar.Items.Insert(0, "- Seleccione -")
-
     End Sub
     Protected Sub btn_Consultar_Click(sender As Object, e As EventArgs) Handles btn_Consultar.Click
         ObjProductosCafeteria.PublicNombreProducto = Drl_NombreProducto.SelectedValue

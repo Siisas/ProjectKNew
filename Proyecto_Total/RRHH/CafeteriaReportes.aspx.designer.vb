@@ -68,6 +68,15 @@ Partial Public Class CafeteriaReportes
     Protected WithEvents btn_ConsultarVentasFecha As Global.System.Web.UI.WebControls.Button
     
     '''<summary>
+    '''Control Gtg_Productos1.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Gtg_Productos1 As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
     '''Control Drl_NombreProductoStock.
     '''</summary>
     '''<remarks>

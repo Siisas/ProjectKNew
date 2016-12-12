@@ -221,14 +221,32 @@
             End If
         End Try
     End Sub
-
+    Public Function CargarDatosDDlProductosNmbreP1()
+        Dim cx As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeData As SqlClient.SqlDataAdapter
+        Try
+            cx.Open()
+            Dim cmd As New SqlClient.SqlCommand("select * from RLProductos ", cx)
+            RecibeData = New SqlClient.SqlDataAdapter(cmd)
+            RecibeData.Fill(datos)
+            cmd.ExecuteReader()
+            Return datos
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If cx.State = ConnectionState.Open Then
+                cx.Close()
+            End If
+        End Try
+    End Function
     Public Function CargarDatosDDlProductosNmbreP()
         Dim cx As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Dim datos As New DataSet
         Dim RecibeData As SqlClient.SqlDataAdapter
         Try
             cx.Open()
-            Dim cmd As New SqlClient.SqlCommand("SpDDLConsultaProducNombre", cx)
+            Dim cmd As New SqlClient.SqlCommand("select NombreProducto from RLProductos  group by NombreProducto", cx)
             RecibeData = New SqlClient.SqlDataAdapter(cmd)
             RecibeData.Fill(datos)
             cmd.ExecuteReader()
@@ -414,16 +432,43 @@
     Public Sub Ventas()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cmd As New SqlClient.SqlCommand("SpInsertarVentas", cn) 'ok  
+            Dim cmd As New SqlClient.SqlCommand("SpRestarCantidadProducto", cn) 'ok  
             cn.Open()
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
             cmd.Parameters.AddWithValue("@IdProducto", PublicidProducto)
+            cmd.Parameters.AddWithValue("@NombreProducto", PublicNombreProducto)
+            cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
+            cmd.Parameters.AddWithValue("@FechaIngresoPro", Date.Now)
             cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
-            cmd.Parameters.AddWithValue("@CodigoCliente", PublicCodigoCliente)
+            cmd.Parameters.AddWithValue("@Proveedor", PublicProveedor)
             cmd.Parameters.AddWithValue("@ValorProducto", PublicValorProducto)
             cmd.Parameters.AddWithValue("@CantidadProducto", PublicCantidadProducto)
-            cmd.Parameters.AddWithValue("@FechaVenta", PublicFechaVenta)
+            cmd.Parameters.AddWithValue("@CodigoCliente", PublicCodigoCliente)
+            cmd.Connection = cn
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
+    End Sub
+    Public Sub DatoTblVentas()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Try
+            Dim cmd As New SqlClient.SqlCommand("[SpInsertarVentas]", cn) 'ok  
+            cn.Open()
+            cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@IdProducto", PublicidProducto)
+            'cmd.Parameters.AddWithValue("@NombreProducto", PublicNombreProducto)
+            cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
+            cmd.Parameters.AddWithValue("@FechaVenta", Date.Now)
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
+            'cmd.Parameters.AddWithValue("@Proveedor", PublicProveedor)
+            cmd.Parameters.AddWithValue("@ValorProducto", PublicValorProducto)
+            cmd.Parameters.AddWithValue("@CantidadProducto", PublicCantidadProducto)
+            cmd.Parameters.AddWithValue("@CodigoCliente", PublicCodigoCliente)
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -474,7 +519,7 @@
         Dim cmd As New SqlClient.SqlCommand
         Try
             cn.Open()
-            cmd.CommandText = "select  sum(ValorProducto) as total_en_dinero_por_productos_vendidos from RlProductosVentas where (@FechaInicial < @FechaFinal)"
+            cmd.CommandText = "select  sum(ValorProducto) as total_en_dinero_por_productos_vendidos from RlProductosVentas where FechaVenta Between @FechaInicial and @FechaFinal"
             cmd.Parameters.Add("@FechaInicial", SqlDbType.Date).Value = PublicFechaRegistroProducto
             cmd.Parameters.Add("@FechaFinal", SqlDbType.Date).Value = PublicFechaFinal
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
@@ -485,14 +530,14 @@
             Throw ex
         End Try
     End Function
-    Public Function ConsultarDisponibilidadProductos()
+    Public Function ConsultarDisponibilidad()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Dim datos As New DataSet
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Dim cmd As New SqlClient.SqlCommand
         Try
             cn.Open()
-            cmd.CommandText = "select NombreProducto = @NombreProducto, sum(CantidadProducto)as totalDisponible from RLProductos"
+            cmd.CommandText = "select NombreProducto,sum(CantidadProducto) as Total_Disponible from RLProductos group by NombreProducto having NombreProducto = @NombreProducto"
             cmd.Parameters.Add("@NombreProducto", SqlDbType.VarChar).Value = PublicNombreProducto
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
@@ -502,6 +547,22 @@
             Throw ex
         End Try
     End Function
-
+    'Public Function ConsultarDisponibilidadProductos()
+    '    Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+    '    Dim datos As New DataSet
+    '    Dim RecibeDatos As SqlClient.SqlDataAdapter
+    '    Dim cmd As New SqlClient.SqlCommand
+    '    Try
+    '        cn.Open()
+    '        cmd.CommandText = "select NombreProducto = @NombreProducto, sum as Total_Disponible(CantidadProducto)as totalDisponible from RLProductos"
+    '        cmd.Parameters.Add("@NombreProducto", SqlDbType.VarChar).Value = PublicNombreProducto
+    '        RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+    '        cmd.Connection = cn
+    '        RecibeDatos.Fill(datos)
+    '        Return datos
+    '    Catch ex As Exception
+    '        Throw ex
+    '    End Try
+    'End Function
 End Class
 

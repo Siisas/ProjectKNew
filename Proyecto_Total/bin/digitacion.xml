@@ -6,6 +6,22 @@ digitacion
 </name>
 </assembly>
 <members>
+<member name="T:digitacion.My.Resources.Resources">
+<summary>
+  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
+</summary>
+</member>
+<member name="P:digitacion.My.Resources.Resources.ResourceManager">
+<summary>
+  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
+</summary>
+</member>
+<member name="P:digitacion.My.Resources.Resources.Culture">
+<summary>
+  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
+  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
+</summary>
+</member>
 <member name="F:digitacion.consbitacora._form1">
 <summary>
 Control form1.
@@ -55614,22 +55630,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="T:digitacion.My.Resources.Resources">
-<summary>
-  Clase de recurso con establecimiento inflexible de tipos, para buscar cadenas traducidas, etc.
-</summary>
-</member>
-<member name="P:digitacion.My.Resources.Resources.ResourceManager">
-<summary>
-  Devuelve la instancia de ResourceManager almacenada en caché utilizada por esta clase.
-</summary>
-</member>
-<member name="P:digitacion.My.Resources.Resources.Culture">
-<summary>
-  Reemplaza la propiedad CurrentUICulture del subproceso actual para todas las
-  búsquedas de recursos mediante esta clase de recurso con establecimiento inflexible de tipos.
-</summary>
-</member>
 <member name="F:digitacion.ArchivosDoc._form1">
 <summary>
 Control form1.
@@ -58852,9 +58852,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaComprarProducto._TxtFechaVenta">
+<member name="F:digitacion.CafeteriaComprarProducto._TxtProveedor">
 <summary>
-Control TxtFechaVenta.
+Control TxtProveedor.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -59341,6 +59341,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:digitacion.CafeteriaReportes._btn_ConsultarVentasFecha">
 <summary>
 Control btn_ConsultarVentasFecha.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.CafeteriaReportes._Gtg_Productos1">
+<summary>
+Control Gtg_Productos1.
 </summary>
 <remarks>
 Campo generado automáticamente.

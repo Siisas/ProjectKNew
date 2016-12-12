@@ -2,6 +2,10 @@
     Inherits System.Web.UI.Page
     Dim ObjProductosCafeteria As New clsCafeteriaProductos
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+
+
+
+
         Try
             If Session("permisos") Is Nothing Then
                 Response.Redirect("~/entrada.aspx?ReturnUrl=" & Request.RawUrl)
@@ -21,11 +25,26 @@
 
     Protected Sub btn_ConsultarVentasFecha_Click(sender As Object, e As EventArgs) Handles btn_ConsultarVentasFecha.Click
         '' Importante instancio la el objeto de la clase, selecciono el atributo y este es igual al parametro que llega de la aspx para pasar a la clase 
-        ObjProductosCafeteria.PublicFechaRegistroProducto = TxtFechaInicial.Text
-        ObjProductosCafeteria.PublicFechaFinal = TxtFechaFinal.Text
-        Gtg_Productos.DataSource = ObjProductosCafeteria.ConsultarProductosPorFecha()
+        If TxtFechaInicial.Text = "" Then
+            TxtFechaInicial.Text = Date.Now.Date
+            ObjProductosCafeteria.PublicFechaRegistroProducto = TxtFechaInicial.Text
+            ObjProductosCafeteria.PublicFechaFinal = TxtFechaFinal.Text
+            Gtg_Productos1.DataSource = ObjProductosCafeteria.ConsultarProductosPorFecha()
+            Gtg_Productos1.DataBind()
 
-        Gtg_Productos.DataBind()
+        ElseIf TxtFechaFinal.Text = "" Then
+            TxtFechaFinal.Text = Date.Now.Date
+            ObjProductosCafeteria.PublicFechaRegistroProducto = TxtFechaInicial.Text
+            ObjProductosCafeteria.PublicFechaFinal = TxtFechaFinal.Text
+            Gtg_Productos1.DataSource = ObjProductosCafeteria.ConsultarProductosPorFecha()
+            Gtg_Productos1.DataBind()
+
+        Else
+            ObjProductosCafeteria.PublicFechaRegistroProducto = TxtFechaInicial.Text
+            ObjProductosCafeteria.PublicFechaFinal = TxtFechaFinal.Text
+            Gtg_Productos1.DataSource = ObjProductosCafeteria.ConsultarProductosPorFecha()
+            Gtg_Productos1.DataBind()
+        End If
     End Sub
 
     Public Sub ConsultarStock()
@@ -34,15 +53,12 @@
         Drl_NombreProductoStock.DataValueField = "NombreProducto"
         Drl_NombreProductoStock.DataBind()
         Drl_NombreProductoStock.Items.Insert(0, "-Seleccione-")
-        Gtg_Productos.DataSource = ObjProductosCafeteria.ConsultarDisponibilidadProductos()
-        Gtg_Productos.DataBind()
-
-
     End Sub
 
     Protected Sub Btn_ConsultarDisProductos_Click(sender As Object, e As EventArgs) Handles Btn_ConsultarDisProductos.Click
         ObjProductosCafeteria.PublicNombreProducto = Drl_NombreProductoStock.SelectedValue
-        Gtg_Productos.DataSource = ObjProductosCafeteria.ConsultarDisponibilidadProductos
+        Gtg_Productos.DataSource = ObjProductosCafeteria.ConsultarDisponibilidad()
         Gtg_Productos.DataBind()
+        Gtg_Productos.DataSource = Nothing
     End Sub
 End Class

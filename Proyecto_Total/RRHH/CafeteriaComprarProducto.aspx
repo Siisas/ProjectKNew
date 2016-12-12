@@ -1,4 +1,5 @@
 ﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CafeteriaComprarProducto.aspx.vb" Inherits="digitacion.CafeteriaComprarProducto" %>
+
 <%@ Register Src="~/Controles/Header.ascx" TagName="Header" TagPrefix="Control" %>
 <!DOCTYPE html>
 <html>
@@ -36,7 +37,9 @@
                         <div class="text-center Subtitulos">Comprar Productos</div>
                         <div class="Form">
                             <div class="Cell-Form">
-                                <div class="input-group">
+                                    <asp:RegularExpressionValidator ControlToValidate="TxtProveedor" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
+                             <asp:RegularExpressionValidator ControlToValidate="TxtCantidadProducto" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[0-9]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
+                                   <div class="input-group">
                                     <div class="input-group-addon">Producto</div>
                                     <asp:DropDownList ID="Drl_Productos" CssClass="form-control" AutoPostBack="true" runat="server"></asp:DropDownList>
                                 </div>
@@ -48,9 +51,13 @@
                                     <div class="input-group-addon">Nombre del Empleado</div>
                                     <asp:DropDownList ID="Drl_NombreEmpleado" CssClass="form-control" runat="server"></asp:DropDownList>
                                 </div>
-                                <div class="input-group">
+                            <%--    <div class="input-group">
                                     <div class="input-group-addon">Fecha Venta</div>
                                     <asp:TextBox ID="TxtFechaVenta" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
+                                </div>--%>
+                                <div class="input-group">
+                                    <div class="input-group-addon">Proveedor</div>
+                                    <asp:TextBox ID="TxtProveedor" CssClass="form-control" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="Space-Form"></div>
@@ -65,19 +72,19 @@
                                     <div class="input-group-addon">Cantidad Disponible</div>
                                     <asp:Label ID="Lbl_CantidadDisponible" CssClass="form-control" readonly="true" runat="server"></asp:Label>
                                 </div>
-                                   
+
                                 <div class="input-group">
                                     <div class="input-group-addon">Nombre del Cliente</div>
                                     <asp:DropDownList ID="Drl_NombreCliente" CssClass="form-control" runat="server"></asp:DropDownList>
                                 </div>
-                             <div class="input-group">
+                                <div class="input-group">
                                     <div class="input-group-addon">Cantidad</div>
                                     <asp:TextBox ID="TxtCantidadProducto" CssClass="form-control" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
-                        <asp:Button ID="btn_Comprar" CssClass="btn btn-primary" runat="server" Text="Comprar" />
-                        <asp:Button ID="btn_Agregar" CssClass="btn btn-primary" runat="server" Text="Agregar" />
+                        <asp:Button ID="btn_Comprar" CssClass="btn btn-primary" ValidationGroup="Registro" runat="server" Text="Comprar" />
+                        <asp:Button ID="btn_Agregar" CssClass="btn btn-primary" ValidationGroup="Registro" runat="server" Text="Agregar" />
                         <asp:Button ID="btn_NuevaCompra" CssClass="btn btn-primary" runat="server" Text="Realizar nueva compra" />
                     </section>
                     <section>
@@ -102,7 +109,7 @@
                                     <EditRowStyle BackColor="#999999" />
                                     <AlternatingRowStyle BackColor="White" ForeColor="#333333" />
                                 </asp:GridView>
-                                <asp:Label CssClass="form-control" style="color:#B3C556;"  ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>
+                                <asp:Label CssClass="form-control" Style="color: #B3C556;" ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
                     </section>

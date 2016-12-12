@@ -127,17 +127,19 @@ Public Class CafeteriaComprarProducto
             Dim dt As DataTable = Session("AcumulaRegistros")
             For index = 0 To Gtg_TotalCompras.Rows.Count - 1
                 Session("AcumulaRegistros") = dt
-                ObjetoClsCafeteriaProductos.PublicIdCategoria = Drl_Categoria.SelectedValue
                 ObjetoClsCafeteriaProductos.PublicidProducto = Drl_Productos.SelectedItem.Value
+                ObjetoClsCafeteriaProductos.PublicNombreProducto = Drl_Productos.SelectedItem.Text
+                ObjetoClsCafeteriaProductos.PublicIdCategoria = Drl_Categoria.SelectedValue
+                'TxtFechaVenta.Text = Date.Now
+                'ObjetoClsCafeteriaProductos.PublicFechaRegistroProducto = TxtFechaVenta.Text
                 ObjetoClsCafeteriaProductos.PublicCodigoEmpleado = Drl_NombreEmpleado.SelectedValue
+                ObjetoClsCafeteriaProductos.PublicProveedor = TxtProveedor.Text
                 ObjetoClsCafeteriaProductos.PublicValorProducto = Lbl_Valor.Text
                 ObjetoClsCafeteriaProductos.PublicCantidadProducto = TxtCantidadProducto.Text
                 ObjetoClsCafeteriaProductos.PublicCodigoCliente = Drl_NombreCliente.SelectedValue
-                ObjetoClsCafeteriaProductos.PublicFechaVenta = TxtFechaVenta.Text
                 ObjetoClsCafeteriaProductos.Ventas()
+                ObjetoClsCafeteriaProductos.DatoTblVentas()
                 Gtg_TotalCompras.DataBind()
-                'Gtg_TotalCompras.DataSource = dt
-                'dt.AcceptChanges()
             Next
         End If
     End Sub
@@ -155,7 +157,7 @@ Public Class CafeteriaComprarProducto
         Drl_NombreCliente.SelectedIndex = 0
         Lbl_Valor.Text = ""
         Lbl_CantidadDisponible.Text = ""
-        TxtFechaVenta.Text = ""
+        'TxtFechaVenta.Text = ""
         'ok
     End Sub
 End Class

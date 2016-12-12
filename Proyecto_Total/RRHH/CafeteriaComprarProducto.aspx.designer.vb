@@ -68,13 +68,13 @@ Partial Public Class CafeteriaComprarProducto
     Protected WithEvents Drl_NombreEmpleado As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control TxtFechaVenta.
+    '''Control TxtProveedor.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtFechaVenta As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TxtProveedor As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Lbl_Valor.
