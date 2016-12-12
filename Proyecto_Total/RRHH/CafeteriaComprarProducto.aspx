@@ -69,8 +69,10 @@
                                     <asp:Label ID="Lbl_Valor" CssClass="form-control" readonly="true" runat="server"></asp:Label>
                                 </div>
                                 <div class="input-group">
-                                    <div class="input-group-addon">Cantidad Disponible</div>
-                                    <asp:Label ID="Lbl_CantidadDisponible" CssClass="form-control" readonly="true" runat="server"></asp:Label>
+                                    <div class="input-group-addon">
+                                   <asp:RequiredFieldValidator ControlToValidate="TxtValorProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>     Cantidad Disponible</div>
+                                  
+                                      <asp:Label ID="Lbl_CantidadDisponible" CssClass="form-control" readonly="true" runat="server"></asp:Label>
                                 </div>
 
                                 <div class="input-group">

@@ -38,6 +38,7 @@
                         <div class="text-center Subtitulos">Crear Empleado</div>
                         <div class="Form">
                             <div class="Cell-Form">
+
                                 <asp:RegularExpressionValidator Display="Dynamic" ValidationGroup="Nombre" ControlToValidate="TxtNombreEmpleado" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Por favor ingrese solo letras</asp:RegularExpressionValidator>
                                    <div class="input-group">
                                     <div class="input-group-addon"> <asp:RequiredFieldValidator ControlToValidate="TxtNombreEmpleado" ValidationGroup="Nombre" runat="server"  >*</asp:RequiredFieldValidator> Nombres del Empleado</div>
