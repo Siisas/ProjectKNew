@@ -98,19 +98,36 @@ Public Class CafeteriaComprarProducto
     Private Sub Gtg_TotalCompras_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles Gtg_TotalCompras.RowDeleting
         Dim dt As DataTable = Session("AcumulaRegistros")
         Dim resta As Double = Session("Resta")
-        dt.Rows.RemoveAt(e.RowIndex = 1)
-        resta = Lbl_ValorTotal.Text - Lbl_Valor.Text * TxtCantidadProducto.Text
-        Lbl_ValorTotal.Text = resta
-        dt.AcceptChanges()
-        Session("AcumulaRegistros") = dt
-        Gtg_TotalCompras.DataSource = dt
-        Gtg_TotalCompras.DataBind()
-        If (e.RowIndex = 0) Then
-            Lbl_ValorTotal.Text = "Seleccione Productos"
-            Session("Suma") = 0
-            'Session.Clear() con esta ópcion de session salgo de la sesion actual 
-        End If
-        'Session("Resta") = resta - Session("Suma")
+
+
+        dt.Rows.RemoveAt(e.RowIndex)
+
+
+
+
+        'dt.Rows.RemoveAt(e.RowIndex)
+        ''For index = 1 To Gtg_TotalCompras.Rows.Count - 1
+
+        ''Next
+        ''resta = Lbl_ValorTotal.Text - Lbl_Valor.Text * TxtCantidadProducto.Text
+        ''Lbl_ValorTotal.Text = resta
+
+
+        'Session("AcumulaRegistros") = dt
+        ''Session("AcumulaRegistros") = dt
+
+
+
+        'dt.AcceptChanges()
+        'Gtg_TotalCompras.DataBind()
+        'Gtg_TotalCompras.DataSource = dt
+
+        'If (e.RowIndex = 0) Then
+        '    Lbl_ValorTotal.Text = "Seleccione Productos"
+        '    Session("Suma") = 0
+        '    'Session.Clear() con esta ópcion de session salgo de la sesion actual 
+        'End If
+        ''Session("Resta") = resta - Session("Suma")
     End Sub
 
     Protected Sub Drl_Productos_SelectedIndexChanged(sender As Object, e As EventArgs) Handles Drl_Productos.SelectedIndexChanged
