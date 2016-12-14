@@ -58825,15 +58825,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaComprarProducto._Drl_Productos">
-<summary>
-Control Drl_Productos.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:digitacion.CafeteriaComprarProducto._Drl_Categoria">
 <summary>
 Control Drl_Categoria.
@@ -58852,9 +58843,36 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:digitacion.CafeteriaComprarProducto._Drl_NombreCliente">
+<summary>
+Control Drl_NombreCliente.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.CafeteriaComprarProducto._Drl_Productos">
+<summary>
+Control Drl_Productos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:digitacion.CafeteriaComprarProducto._TxtProveedor">
 <summary>
 Control TxtProveedor.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.CafeteriaComprarProducto._Lbl_IdProducto">
+<summary>
+Control Lbl_IdProducto.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -58873,15 +58891,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:digitacion.CafeteriaComprarProducto._Lbl_CantidadDisponible">
 <summary>
 Control Lbl_CantidadDisponible.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:digitacion.CafeteriaComprarProducto._Drl_NombreCliente">
-<summary>
-Control Drl_NombreCliente.
 </summary>
 <remarks>
 Campo generado automáticamente.

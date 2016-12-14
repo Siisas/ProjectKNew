@@ -34,10 +34,10 @@
             ObjProductosCafeteria.RegProductos()
             Lbl_MensajePlantilla.Text = "El producto fue ingresado con exito"
             TxtProducto.Text = ""
-            Drl_Categoria.SelectedValue = 0
+            'Drl_Categoria.SelectedItem
             TxtValorProducto.Text = ""
             TxtFecha.Text = ""
-            Drl_CodigoEmpleado.SelectedValue = 0
+            'Drl_CodigoEmpleado.SelectedValue = 0
             TxtProveedor.Text = ""
             TxtCantidad.Text = ""
         End If
