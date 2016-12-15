@@ -204,7 +204,7 @@
             Dim cmd As New SqlClient.SqlCommand("SpInsertarProductos", cn) 'ok  
             cn.Open()
             cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@IdProducto", PublicNombreProducto)
+            'cmd.Parameters.AddWithValue("@IdProducto", PublicNombreProducto)
             cmd.Parameters.AddWithValue("@NombreProducto", PublicNombreProducto)
             cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
             cmd.Parameters.AddWithValue("@ValorProducto", PublicValorProducto)
@@ -288,7 +288,7 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             cn.Open()
-            Dim cmd As New SqlClient.SqlCommand("SpLLenarDDLVEntaProductos", cn) 'OK
+            Dim cmd As New SqlClient.SqlCommand("[dbo].[SpDdlProductos]", cn) 'OK
             cmd.CommandType = CommandType.StoredProcedure
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             RecibeDatos.Fill(datos)
@@ -437,8 +437,8 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             Dim cmd As New SqlClient.SqlCommand
-            cmd.CommandText = "select IdProducto from RLProductos where IdProducto = @IdProductos"
-            cmd.Parameters.Add("@IdProductos", SqlDbType.BigInt).Value = idProducto
+            cmd.CommandText = "select IdProducto from RLProductos where IdProducto = @IdProducto"
+            cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = idProducto
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
