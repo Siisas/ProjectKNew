@@ -41,13 +41,13 @@ Partial Public Class CafeteriaComprarProducto
     Protected WithEvents lblmsg As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
-    '''Control Drl_Categoria.
+    '''Control Lbl_Catego.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Drl_Categoria As Global.System.Web.UI.WebControls.DropDownList
+    Protected WithEvents Lbl_Catego As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
     '''Control Drl_NombreEmpleado.
@@ -68,6 +68,15 @@ Partial Public Class CafeteriaComprarProducto
     Protected WithEvents Drl_NombreCliente As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
+    '''Control TxtFechaComprar.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TxtFechaComprar As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Control Drl_Productos.
     '''</summary>
     '''<remarks>
@@ -77,13 +86,13 @@ Partial Public Class CafeteriaComprarProducto
     Protected WithEvents Drl_Productos As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
-    '''Control TxtProveedor.
+    '''Control TxtCantidadProducto.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents TxtProveedor As Global.System.Web.UI.WebControls.TextBox
+    Protected WithEvents TxtCantidadProducto As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control Lbl_IdProducto.
@@ -111,15 +120,6 @@ Partial Public Class CafeteriaComprarProducto
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Lbl_CantidadDisponible As Global.System.Web.UI.WebControls.Label
-    
-    '''<summary>
-    '''Control TxtCantidadProducto.
-    '''</summary>
-    '''<remarks>
-    '''Campo generado automáticamente.
-    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-    '''</remarks>
-    Protected WithEvents TxtCantidadProducto As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
     '''Control btn_Comprar.

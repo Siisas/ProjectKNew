@@ -258,7 +258,7 @@
     <Content Include="RRHH\MesCafeteria.aspx" />
     <Content Include="RRHH\modificaop.aspx" />
     <Content Include="RRHH\novedades.aspx" />
-    <Content Include="RRHH\CafeteriaVenta.aspx" />
+    <Content Include="RRHH\CafeteriaCrearProducto.aspx" />
     <Content Include="RRHH\procesosolicdoc.aspx" />
     <Content Include="RRHH\Productividad.aspx" />
     <Content Include="RRHH\ProductividadVoz.aspx" />
@@ -1438,11 +1438,11 @@
       <DependentUpon>novedades.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
-    <Compile Include="RRHH\CafeteriaVenta.aspx.designer.vb">
-      <DependentUpon>CafeteriaVenta.aspx</DependentUpon>
+    <Compile Include="RRHH\CafeteriaCrearProducto.aspx.designer.vb">
+      <DependentUpon>CafeteriaCrearProducto.aspx</DependentUpon>
     </Compile>
-    <Compile Include="RRHH\CafeteriaVenta.aspx.vb">
-      <DependentUpon>CafeteriaVenta.aspx</DependentUpon>
+    <Compile Include="RRHH\CafeteriaCrearProducto.aspx.vb">
+      <DependentUpon>CafeteriaCrearProducto.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="RRHH\procesosolicdoc.aspx.designer.vb">

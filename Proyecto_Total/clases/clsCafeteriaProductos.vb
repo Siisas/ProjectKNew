@@ -163,9 +163,9 @@
     Public Sub RegEmpleadosCafeteria()
         Dim cn As New SqlClient.SqlConnection(System.Configuration.ConfigurationManager.ConnectionStrings("conexion2").ConnectionString) ' Conexion con la base 
         Try
-            Dim cms As New SqlClient.SqlCommand("SpRegistrarEmpleado", cn)
+            Dim cms As New SqlClient.SqlCommand("Insert into REmpleadoCafeteria values (@NombreEmpleado,@CedulaEmpleado)", cn)
             cn.Open()
-            cms.CommandType = CommandType.StoredProcedure
+
             cms.Parameters.AddWithValue("@NombreEmpleado", PublicNombreEmpleado)
             cms.Parameters.AddWithValue("@CedulaEmpleado", PublicCodigoEmpleado)
             cms.Connection = cn
@@ -182,11 +182,10 @@
     Public Sub RegClienteCafeteria()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cms As New SqlClient.SqlCommand("SpRegistarCliente", cn)
+            Dim cms As New SqlClient.SqlCommand("Insert into RCLienteCafeteria values (@NombreCliente,@CedulaCliente)", cn)
             cn.Open()
-            cms.CommandType = CommandType.StoredProcedure
-            cms.Parameters.AddWithValue("@NombreCliente", nombreCliente)
-            cms.Parameters.AddWithValue("@CedulaCliente", CedulaCliente)
+            cms.Parameters.AddWithValue("@NombreCliente", PublicNombreCliente)
+            cms.Parameters.AddWithValue("@CedulaCliente", PublicicCedulaCliente)
             cms.Connection = cn
             cms.ExecuteNonQuery()
         Catch ex As Exception
@@ -198,20 +197,38 @@
         End Try
     End Sub
 
-    Public Sub RegProductos()
+    Public Sub CrearProducto()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cmd As New SqlClient.SqlCommand("SpInsertarProductos", cn) 'ok  
+            Dim cmd As New SqlClient.SqlCommand("Insert into RCrearProducto values (@NombreProducto,@ValorProducto,@Proveedor,@FechaCreacion,@IdCategoria,@CodigoEmpleado)", cn) 'ok  
             cn.Open()
-            cmd.CommandType = CommandType.StoredProcedure
-            'cmd.Parameters.AddWithValue("@IdProducto", PublicNombreProducto)
+            'cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@NombreProducto", PublicNombreProducto)
-            cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
             cmd.Parameters.AddWithValue("@ValorProducto", PublicValorProducto)
-            cmd.Parameters.AddWithValue("@FechaIngresoPro", PublicFechaRegistroProducto)
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
             cmd.Parameters.AddWithValue("@Proveedor", PublicProveedor)
-            cmd.Parameters.AddWithValue("@CantidadProducto", PublicCantidadProducto)
+            cmd.Parameters.AddWithValue("@FechaCreacion", PublicFechaRegistroProducto)
+            cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
+            cmd.Connection = cn
+            cmd.ExecuteNonQuery()
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
+    End Sub
+    Public Sub IngProductos()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Try
+            Dim cmd As New SqlClient.SqlCommand("Insert into RIngresoProducto values (@IdCreacionProducto,@Cantidad,@CodigoEmpleado,@FechaIngreso)", cn) 'ok  
+            cn.Open()
+            'cmd.CommandType = CommandType.StoredProcedure
+            cmd.Parameters.AddWithValue("@IdCreacionProducto", PublicNombreProducto)
+            cmd.Parameters.AddWithValue("@Cantidad", PublicCantidadProducto)
+            cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
+            cmd.Parameters.AddWithValue("@FechaIngreso", PublicFechaRegistroProducto)
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -268,7 +285,7 @@
         Dim RecibeData As SqlClient.SqlDataAdapter
         Try
             cx.Open()
-            Dim cmd As New SqlClient.SqlCommand("SpConsultaJoinCategoriaCafeteriaProductos", cx)
+            Dim cmd As New SqlClient.SqlCommand("select * from RProductosCategoria", cx)
             RecibeData = New SqlClient.SqlDataAdapter(cmd)
             RecibeData.Fill(datos)
             cmd.ExecuteReader()
@@ -288,8 +305,7 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             cn.Open()
-            Dim cmd As New SqlClient.SqlCommand("[dbo].[SpDdlProductos]", cn) 'OK
-            cmd.CommandType = CommandType.StoredProcedure
+            Dim cmd As New SqlClient.SqlCommand("select * from RCrearProducto", cn) 'OK
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             RecibeDatos.Fill(datos)
             cmd.ExecuteReader()
@@ -331,8 +347,30 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             cn.Open()
-            Dim cmd As New SqlClient.SqlCommand("SpLLenarDDlNombreEmpleado", cn) 'ok
-            cmd.CommandType = CommandType.StoredProcedure
+            Dim cmd As New SqlClient.SqlCommand("select * from REmpleadoCafeteria", cn) 'ok
+            'cmd.CommandType = CommandType.StoredProcedure
+            RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+            RecibeDatos.Fill(datos)
+            cmd.ExecuteReader()
+            Return datos
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
+
+    End Function
+
+    Public Function CargarDatosDDlrCrearProducto()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeDatos As SqlClient.SqlDataAdapter
+        Try
+            cn.Open()
+            Dim cmd As New SqlClient.SqlCommand("select * from RCrearProducto", cn) 'ok
+            'cmd.CommandType = CommandType.StoredProcedure
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             RecibeDatos.Fill(datos)
             cmd.ExecuteReader()
@@ -374,8 +412,9 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             Dim cmd As New SqlClient.SqlCommand
-            cmd.CommandText = "select ValorProducto from RLProductos where IdProducto = @IdProductos"
-            cmd.Parameters.Add("@IdProductos", SqlDbType.BigInt).Value = idProducto
+            cmd.CommandText = "select ValorProducto from RCrearProducto where IdCreacionProducto = @IdCreacionProducto"
+            cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = PublicidProducto
+
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
@@ -395,8 +434,8 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             Dim cmd As New SqlClient.SqlCommand
-            cmd.CommandText = "select ValorProducto from RLProductos where IdProducto = @IdProductos"
-            cmd.Parameters.Add("@IdProductos", SqlDbType.BigInt).Value = idProducto
+            cmd.CommandText = "select ValorProducto from RCrearProductos where IdCreacionProducto = @IdCreacionProducto"
+            cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = idProducto
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
@@ -416,15 +455,15 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             Dim cmd As New SqlClient.SqlCommand
-            cmd.CommandText = "select CantidadProducto from RLProductos where IdProducto = @IdProductos"
-            cmd.Parameters.Add("@IdProductos", SqlDbType.BigInt).Value = idProducto
+            cmd.CommandText = "select Cantidad from RIngresoProducto where IdCreacionProducto = @IdCreacionProducto"
+            cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = idProducto
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
-            If datos.Tables(0).Rows(0).Item("CantidadProducto") Is System.DBNull.Value Then
+            If datos.Tables(0).Rows(0).Item("Cantidad") Is System.DBNull.Value Then
                 cantidadProducto = " "
             Else
-                cantidadProducto = datos.Tables(0).Rows(0).Item("CantidadProducto")
+                cantidadProducto = datos.Tables(0).Rows(0).Item("Cantidad")
             End If
             Return cantidadProducto
         Catch ex As Exception
@@ -437,15 +476,41 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             Dim cmd As New SqlClient.SqlCommand
-            cmd.CommandText = "select IdProducto from RLProductos where IdProducto = @IdProducto"
-            cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = idProducto
+            cmd.CommandText = "select IdCreacionProducto from RCrearProducto where IdCreacionProducto = @IdCreacionProducto"
+            cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = idProducto
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
-            If datos.Tables(0).Rows(0).Item("IdProducto") Is System.DBNull.Value Then
+            If datos.Tables(0).Rows(0).Item("IdCreacionProducto") Is System.DBNull.Value Then
                 idProducto = " "
             Else
-                idProducto = datos.Tables(0).Rows(0).Item("IdProducto")
+                idProducto = datos.Tables(0).Rows(0).Item("IdCreacionProducto")
+            End If
+            Return idProducto
+        Catch ex As Exception
+            Throw ex
+        End Try
+    End Function
+    Public Function CargarDatosIndexProductoXCategoria()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeDatos As SqlClient.SqlDataAdapter
+        Try
+            Dim cmd As New SqlClient.SqlCommand
+            cmd.CommandText = "
+                        select Categoria 
+                            from RCrearProducto RP
+                            join RProductosCategoria RC
+                            on RP.CodigoEmpleado= RC.IdCategoria
+                            where IdCreacionProducto = @IdCreacionProducto"
+            cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = idProducto
+            RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+            cmd.Connection = cn
+            RecibeDatos.Fill(datos)
+            If datos.Tables(0).Rows(0).Item("Categoria") Is System.DBNull.Value Then
+                idProducto = " "
+            Else
+                idProducto = datos.Tables(0).Rows(0).Item("Categoria")
             End If
             Return idProducto
         Catch ex As Exception

@@ -58825,9 +58825,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaComprarProducto._Drl_Categoria">
+<member name="F:digitacion.CafeteriaComprarProducto._Lbl_Catego">
 <summary>
-Control Drl_Categoria.
+Control Lbl_Catego.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -58852,6 +58852,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:digitacion.CafeteriaComprarProducto._TxtFechaComprar">
+<summary>
+Control TxtFechaComprar.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:digitacion.CafeteriaComprarProducto._Drl_Productos">
 <summary>
 Control Drl_Productos.
@@ -58861,9 +58870,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaComprarProducto._TxtProveedor">
+<member name="F:digitacion.CafeteriaComprarProducto._TxtCantidadProducto">
 <summary>
-Control TxtProveedor.
+Control TxtCantidadProducto.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -58891,15 +58900,6 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:digitacion.CafeteriaComprarProducto._Lbl_CantidadDisponible">
 <summary>
 Control Lbl_CantidadDisponible.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
-<member name="F:digitacion.CafeteriaComprarProducto._TxtCantidadProducto">
-<summary>
-Control TxtCantidadProducto.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -63613,15 +63613,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.Plantilla._TxtCantidad">
-<summary>
-Control TxtCantidad.
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:digitacion.Plantilla._Btn_RegistrarProducto">
 <summary>
 Control Btn_RegistrarProducto.
@@ -63640,9 +63631,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.Plantilla._TxtFecha">
+<member name="F:digitacion.Plantilla._TxtFechaCreacion">
 <summary>
-Control TxtFecha.
+Control TxtFechaCreacion.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -63661,6 +63652,60 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:digitacion.Plantilla._TxtProveedor">
 <summary>
 Control TxtProveedor.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.Plantilla._Drl_NombreIdCreacionProducto">
+<summary>
+Control Drl_NombreIdCreacionProducto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.Plantilla._TxtCantidad">
+<summary>
+Control TxtCantidad.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.Plantilla._Btn_IngresarProductos">
+<summary>
+Control Btn_IngresarProductos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.Plantilla._Lbl_MensajeIngresoProducto">
+<summary>
+Control Lbl_MensajeIngresoProducto.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.Plantilla._TxtFecha">
+<summary>
+Control TxtFecha.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.Plantilla._Drl_CodigoEmpleado1">
+<summary>
+Control Drl_CodigoEmpleado1.
 </summary>
 <remarks>
 Campo generado automáticamente.
