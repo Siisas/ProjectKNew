@@ -1,4 +1,5 @@
 ﻿Public Class clsCafeteriaProductos
+    Protected valorVenta As Integer
     Protected idProducto As Integer
     Protected nombreProducto As String
     Protected idCategoria As Integer
@@ -16,6 +17,14 @@
     Protected FechaVenta As Date
     Protected FechaFinal As Date
 
+    Public Property PublicValorVenta As Integer
+        Get
+            Return valorVenta
+        End Get
+        Set(value As Integer)
+            valorVenta = value
+        End Set
+    End Property
     Public Property PublicFechaFinal As Date
         Get
             Return FechaFinal
@@ -455,14 +464,16 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             Dim cmd As New SqlClient.SqlCommand
-            cmd.CommandText = "select Cantidad from RIngresoProducto where IdCreacionProducto = @IdCreacionProducto"
+            cmd.CommandText = "select SUM(Cantidad) as Cantidad from RIngresoProducto where IdCreacionProducto = @IdCreacionProducto"
             cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = idProducto
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
+
             If datos.Tables(0).Rows(0).Item("Cantidad") Is System.DBNull.Value Then
-                cantidadProducto = " "
+                cantidadProducto = 0
             Else
+
                 cantidadProducto = datos.Tables(0).Rows(0).Item("Cantidad")
             End If
             Return cantidadProducto
@@ -508,11 +519,11 @@
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
             If datos.Tables(0).Rows(0).Item("Categoria") Is System.DBNull.Value Then
-                idProducto = " "
+                categoria = " "
             Else
-                idProducto = datos.Tables(0).Rows(0).Item("Categoria")
+                categoria = datos.Tables(0).Rows(0).Item("Categoria")
             End If
-            Return idProducto
+            Return categoria
         Catch ex As Exception
             Throw ex
         End Try
@@ -542,18 +553,11 @@
     Public Sub Ventas()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cmd As New SqlClient.SqlCommand("SpRestarCantidadProducto", cn) 'ok  
+            Dim cmd As New SqlClient.SqlCommand("update RIngresoProducto set Cantidad= Cantidad - @Cantidad where @IdCreacionProducto", cn) 'ok  
             cn.Open()
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@IdProducto", PublicidProducto)
-            cmd.Parameters.AddWithValue("@NombreProducto", PublicNombreProducto)
-            cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
-            cmd.Parameters.AddWithValue("@FechaIngresoPro", Date.Now)
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
-            cmd.Parameters.AddWithValue("@Proveedor", PublicProveedor)
-            cmd.Parameters.AddWithValue("@ValorProducto", PublicValorProducto)
-            cmd.Parameters.AddWithValue("@CantidadProducto", PublicCantidadProducto)
-            cmd.Parameters.AddWithValue("@CodigoCliente", PublicCodigoCliente)
+            cmd.Parameters.AddWithValue("@IdCreacionProducto", PublicidProducto)
+            cmd.Parameters.AddWithValue("@Cantidad", PublicCantidadProducto)
+
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -567,18 +571,15 @@
     Public Sub DatoTblVentas()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cmd As New SqlClient.SqlCommand("[SpInsertarVentas]", cn) 'ok  
+            Dim cmd As New SqlClient.SqlCommand("insert into RProductoVentas values ('@IdCreacionProducto','@CodigoEmpleado','@ValorVenta','@CantidadProducto','@FechaVenta','@CodigoCliente')", cn) 'ok  
             cn.Open()
-            cmd.CommandType = CommandType.StoredProcedure
-            cmd.Parameters.AddWithValue("@IdProducto", PublicidProducto)
-            'cmd.Parameters.AddWithValue("@NombreProducto", PublicNombreProducto)
-            cmd.Parameters.AddWithValue("@IdCategoria", PublicIdCategoria)
-            cmd.Parameters.AddWithValue("@FechaVenta", Date.Now)
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
-            'cmd.Parameters.AddWithValue("@Proveedor", PublicProveedor)
-            cmd.Parameters.AddWithValue("@ValorProducto", PublicValorProducto)
-            cmd.Parameters.AddWithValue("@CantidadProducto", PublicCantidadProducto)
-            cmd.Parameters.AddWithValue("@CodigoCliente", PublicCodigoCliente)
+
+            cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = PublicidProducto
+            cmd.Parameters.Add("@CodigoEmpleado", SqlDbType.BigInt).Value = PublicCodigoEmpleado
+            cmd.Parameters.Add("@ValorVenta", SqlDbType.BigInt).Value = PublicValorVenta
+            cmd.Parameters.Add("@CantidadProducto", SqlDbType.BigInt).Value = PublicCantidadProducto
+            cmd.Parameters.Add("@FechaVenta", SqlDbType.Date).Value = Date.Now
+            cmd.Parameters.Add("@CodigoCliente", SqlDbType.BigInt).Value = PublicCodigoCliente
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
         Catch ex As Exception

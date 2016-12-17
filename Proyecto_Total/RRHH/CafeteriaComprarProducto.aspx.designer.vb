@@ -165,4 +165,13 @@ Partial Public Class CafeteriaComprarProducto
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Lbl_ValorTotal As Global.System.Web.UI.WebControls.Label
+    
+    '''<summary>
+    '''Control Lbl_String.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Lbl_String As Global.System.Web.UI.WebControls.Label
 End Class

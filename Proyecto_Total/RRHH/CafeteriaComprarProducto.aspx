@@ -54,7 +54,7 @@
                                     <asp:DropDownList ID="Drl_NombreCliente" CssClass="form-control" runat="server"></asp:DropDownList>
                                 </div>      
                                   <div class="input-group">
-                                    <div class="input-group-addon">Fecha de Ingreso</div>
+                                    <div class="input-group-addon">Fecha de Venta</div>
                                     <asp:TextBox ID="TxtFechaComprar" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
                                 </div>                         
                             </div>
@@ -95,7 +95,7 @@
                         <asp:Button ID="btn_NuevaCompra" CssClass="btn btn-primary" runat="server" Text="Realizar nueva compra" />
                     </section>
                     <section>
-                        <div class="text-center Subtitulos">Total a pagar</div>
+                        <div class="text-center Subtitulos">Descripciòn Compra</div>
                         <div class="Cell-Form">                                                      <div class="bordes" style="overflow: auto; min-height: 0px; max-height: 1000px; width: 100%;">
                                 <asp:GridView ID="Gtg_TotalCompras" runat="server" CellPadding="4" ForeColor="#333333"
                                     GridLines="None" Width="100%" Style="font-size: x-small"
@@ -112,6 +112,7 @@
                                     <AlternatingRowStyle BackColor="White" ForeColor="#333333" />
                                 </asp:GridView>
                                 <asp:Label CssClass="form-control" Style="color: #B3C556;" ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>
+                               <asp:Label CssClass="form-control" Style="color: #B3C556;" ID="Lbl_String" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
                     </section>

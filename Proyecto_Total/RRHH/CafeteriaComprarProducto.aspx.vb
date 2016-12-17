@@ -27,76 +27,61 @@ Public Class CafeteriaComprarProducto
         Drl_Productos.DataValueField = "IdCreacionProducto"
         Drl_Productos.DataBind()
         Drl_Productos.Items.Insert(0, "- Seleccione -")
-        'Drl_Categoria.DataSource = ObjetoClsCafeteriaProductos.CargarDatosDDlComprarCategoria()
-        'Drl_Categoria.DataTextField = "Categoria"
-        'Drl_Categoria.DataValueField = "IdCategoria"
-        'Drl_Categoria.DataBind()
-
-        'Drl_Categoria.Items.Insert(0, "- Seleccione -")
         Drl_NombreEmpleado.DataSource = ObjetoClsCafeteriaProductos.CargarDatosDDlComprarNombreEmpleado()
         Drl_NombreEmpleado.DataTextField = "NombreEmpleado"
         Drl_NombreEmpleado.DataValueField = "CodigoEmpleado"
         Drl_NombreEmpleado.DataBind()
-
         Drl_NombreEmpleado.Items.Insert(0, "- Seleccione -")
-        'Lbl_Valor.DataSource = ObjetoClsCafeteriaProductos.CargarDatosDDlValorProducto
-        'Drl_Valor.DataTextField = "ValorProducto"
-        'Drl_Valor.DataValueField = "ValorProducto"
-        'Drl_Valor.DataBind()
-        'Drl_Valor.Items.Insert(0, "- Seleccione -")
         Drl_NombreCliente.DataSource = ObjetoClsCafeteriaProductos.CargarDatosDDlComprarNombreCliente()
         Drl_NombreCliente.DataTextField = "NombreCliente"
         Drl_NombreCliente.DataValueField = "CodigoCLiente"
         Drl_NombreCliente.DataBind()
-
         Drl_NombreCliente.Items.Insert(0, "- Seleccione -")
     End Sub
     Private Sub Detalle()
         dt.Columns.Add(New DataColumn("Codigo del Producto", GetType(Integer)))
         dt.Columns.Add(New DataColumn("Nombre del Producto", GetType(String)))
-        'dt.Columns.Add(New DataColumn("Proveedor", GetType(String)))
-        'dt.Columns.Add(New DataColumn("Categoria", GetType(String)))
-        'dt.Columns.Add(New DataColumn("Nombre del Empleado", GetType(String)))
         dt.Columns.Add(New DataColumn("Valor Unidad", GetType(Integer)))
         dt.Columns.Add(New DataColumn("Cantidad", GetType(Integer)))
-
-        'dt.Columns.Add(New DataColumn("Nombre del Cliente", GetType(String)))
     End Sub
     Protected Sub btn_Agregar_Click(sender As Object, e As EventArgs) Handles btn_Agregar.Click
         Dim totalSuma As Double
         Dim totalSuma2 As Double
         Dim dt As DataTable
         If Drl_Productos.SelectedIndex = 0 Then
-            'Drl_Categoria.SelectedIndex = 0
             Drl_NombreEmpleado.SelectedIndex = 0
             TxtCantidadProducto.Text = ""
             Drl_NombreCliente.SelectedIndex = 0
             Lbl_Valor.Text = ""
             Lbl_CantidadDisponible.Text = ""
-            Lbl_ValorTotal.Text = "POr favor agregue un elemento para agregar"
+            Lbl_String.Text = "Por favor agregue un elemento para agregar"
         Else
-            If Lbl_CantidadDisponible.Text < 0 Then
-                Lbl_ValorTotal.Text = "No hay disponibilidad del producto por favor seleccione otro"
+            If Lbl_CantidadDisponible.Text <= 0 Then
+                Lbl_String.Text = "No hay disponibilidad del producto por favor seleccione otro"
             Else
-                dt = Session("AcumulaRegistros")
-                dt.AcceptChanges()
-                dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text))
-                Gtg_TotalCompras.DataSource = dt
-                Gtg_TotalCompras.DataBind()
-                Session("AcumulaRegistros") = dt
-                totalSuma = Session("Suma")
-                If totalSuma = 0 Then
-                    totalSuma += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
-                    Lbl_ValorTotal.Text = totalSuma
+                If Convert.ToInt32(TxtCantidadProducto.Text) > Convert.ToInt32(Lbl_CantidadDisponible.Text) Then
+                    Lbl_String.Text = "La cantidad seleccionada sobre pasa la cantidad disponible"
                 Else
-                    totalSuma2 += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
-                    Lbl_ValorTotal.Text = totalSuma + totalSuma2
+                    dt = Session("AcumulaRegistros")
+                    dt.AcceptChanges()
+                    dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text))
+                    Gtg_TotalCompras.DataSource = dt
+                    Gtg_TotalCompras.DataBind()
+                    Session("AcumulaRegistros") = dt
+                    totalSuma = Session("Suma")
+                    If totalSuma = 0 Then
+                        totalSuma += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
+                        Lbl_ValorTotal.Text = totalSuma
+                        Lbl_String.Text = ""
+                    Else
+                        totalSuma2 += Val(TxtCantidadProducto.Text) * Val(Lbl_Valor.Text)
+                        Lbl_ValorTotal.Text = totalSuma + totalSuma2
+                        Lbl_String.Text = ""
+                    End If
+                    Session("Suma") += totalSuma
                 End If
-                Session("Suma") += totalSuma
             End If
         End If
-        'Convert.ToString(Drl_Productos.SelectedValue)
-
     End Sub
     Private Sub Gtg_TotalCompras_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles Gtg_TotalCompras.RowDeleting
         Dim dt As DataTable = Session("AcumulaRegistros")
@@ -119,13 +104,12 @@ Public Class CafeteriaComprarProducto
     End Sub
     Protected Sub btn_Comprar_Click(sender As Object, e As EventArgs) Handles btn_Comprar.Click
         If Drl_Productos.SelectedIndex = 0 Then
-            'Drl_Categoria.SelectedIndex = 0
             Drl_NombreEmpleado.SelectedIndex = 0
             TxtCantidadProducto.Text = ""
             Drl_NombreCliente.SelectedIndex = 0
             Lbl_Valor.Text = ""
             Lbl_CantidadDisponible.Text = ""
-            Lbl_ValorTotal.Text = "Por favor agregue un elemento para comprar"
+            Lbl_String.Text = "Por favor agregue un elemento para comprar"
         Else
             Dim dt As DataTable = Session("AcumulaRegistros")
             Dim row As DataRow
@@ -138,20 +122,21 @@ Public Class CafeteriaComprarProducto
                 ObjetoClsCafeteriaProductos.PublicNombreProducto = row(1)
                 ObjetoClsCafeteriaProductos.PublicProveedor = row(2)
                 ObjetoClsCafeteriaProductos.PublicValorProducto = row(3)
-                ObjetoClsCafeteriaProductos.PublicCantidadProducto = row(4)
-                'ObjetoClsCafeteriaProductos.PublicIdCategoria = Drl_Categoria.SelectedValue
+                'ObjetoClsCafeteriaProductos.PublicCantidadProducto = row(4)
                 ObjetoClsCafeteriaProductos.PublicCodigoEmpleado = Drl_NombreEmpleado.SelectedValue
                 ObjetoClsCafeteriaProductos.PublicCodigoCliente = Drl_NombreCliente.SelectedValue
+                ObjetoClsCafeteriaProductos.PublicCantidadProducto = TxtCantidadProducto.Text
+                ObjetoClsCafeteriaProductos.PublicFechaVenta = TxtFechaComprar.Text
+                ObjetoClsCafeteriaProductos.PublicValorVenta = Lbl_ValorTotal.Text
+
                 ObjetoClsCafeteriaProductos.Ventas()
-                'ObjetoClsCafeteriaProductos.DatoTblVentas()
+                'ObjetoClsCafeteriaProductos.DatoTblVentas() pediente por un dato string q no encuentro
                 Gtg_TotalCompras.DataBind()
             Next
             dt.Clear()
-            'Drl_Categoria.SelectedIndex = 0
             Drl_NombreEmpleado.SelectedIndex = 0
             Drl_NombreCliente.SelectedIndex = 0
             Drl_Productos.SelectedIndex = 0
-            'TxtProveedor.Text = ""
             TxtCantidadProducto.Text = ""
             Lbl_Valor.Text = ""
             Lbl_CantidadDisponible.Text = 0
@@ -160,19 +145,16 @@ Public Class CafeteriaComprarProducto
         End If
     End Sub
     Protected Sub btn_NuevaCompra_Click(sender As Object, e As EventArgs) Handles btn_NuevaCompra.Click
-
-        Lbl_ValorTotal.Text = "selecciona los productos"
+        Lbl_ValorTotal.Text = 0
+        Lbl_String.Text = "Seleciona"
         Session("Suma") = 0
         Session("Suma") = Nothing
         Session("Suma") = ""
         Drl_Productos.SelectedIndex = 0
-        'Drl_Categoria.SelectedIndex = 0
         Drl_NombreEmpleado.SelectedIndex = 0
         TxtCantidadProducto.Text = ""
         Drl_NombreCliente.SelectedIndex = 0
         Lbl_Valor.Text = ""
         Lbl_CantidadDisponible.Text = ""
-        'TxtFechaVenta.Text = ""
-        'ok
     End Sub
 End Class
