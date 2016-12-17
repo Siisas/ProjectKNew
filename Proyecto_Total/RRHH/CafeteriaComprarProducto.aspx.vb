@@ -83,6 +83,7 @@ Public Class CafeteriaComprarProducto
             End If
         End If
     End Sub
+    '13
     Private Sub Gtg_TotalCompras_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles Gtg_TotalCompras.RowDeleting
         Dim dt As DataTable = Session("AcumulaRegistros")
         Dim resta As Double = Session("Resta")
