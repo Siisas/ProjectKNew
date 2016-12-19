@@ -535,8 +535,27 @@
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             cn.Open()
-            Dim cmd As New SqlClient.SqlCommand("SpLLenarDDlNombreCliente", cn) 'ók
-            cmd.CommandType = CommandType.StoredProcedure
+            Dim cmd As New SqlClient.SqlCommand("select * from RClienteCafeteria", cn) 'ók
+            RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
+            RecibeDatos.Fill(datos)
+            cmd.ExecuteReader()
+            Return datos
+        Catch ex As Exception
+            Throw ex
+        Finally
+            If cn.State = ConnectionState.Open Then
+                cn.Close()
+            End If
+        End Try
+    End Function
+    Public Function CargarDatosCliente()
+        Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
+        Dim datos As New DataSet
+        Dim RecibeDatos As SqlClient.SqlDataAdapter
+        Try
+            cn.Open()
+            Dim cmd As New SqlClient.SqlCommand("select * from RClienteCafeteria", cn) 'ók
+
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             RecibeDatos.Fill(datos)
             cmd.ExecuteReader()
@@ -553,7 +572,7 @@
     Public Sub Ventas()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cmd As New SqlClient.SqlCommand("update RIngresoProducto set Cantidad= Cantidad - @Cantidad where @IdCreacionProducto", cn) 'ok  
+            Dim cmd As New SqlClient.SqlCommand("update RIngresoProducto set Cantidad= Cantidad - @Cantidad where IdCreacionProducto = @IdCreacionProducto", cn) 'ok  
             cn.Open()
             cmd.Parameters.AddWithValue("@IdCreacionProducto", PublicidProducto)
             cmd.Parameters.AddWithValue("@Cantidad", PublicCantidadProducto)
@@ -571,14 +590,14 @@
     Public Sub DatoTblVentas()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cmd As New SqlClient.SqlCommand("insert into RProductoVentas values ('@IdCreacionProducto','@CodigoEmpleado','@ValorVenta','@CantidadProducto','@FechaVenta','@CodigoCliente')", cn) 'ok  
+            Dim cmd As New SqlClient.SqlCommand("insert into RProductoVentas values (@IdCreacionProducto,@CodigoEmpleado,@ValorVenta,@CantidadProducto,@FechaVenta,@CodigoCliente)", cn) 'ok  
             cn.Open()
 
             cmd.Parameters.Add("@IdCreacionProducto", SqlDbType.BigInt).Value = PublicidProducto
             cmd.Parameters.Add("@CodigoEmpleado", SqlDbType.BigInt).Value = PublicCodigoEmpleado
             cmd.Parameters.Add("@ValorVenta", SqlDbType.BigInt).Value = PublicValorVenta
             cmd.Parameters.Add("@CantidadProducto", SqlDbType.BigInt).Value = PublicCantidadProducto
-            cmd.Parameters.Add("@FechaVenta", SqlDbType.Date).Value = Date.Now
+            cmd.Parameters.Add("@FechaVenta", SqlDbType.Date).Value = Date.Now.Date
             cmd.Parameters.Add("@CodigoCliente", SqlDbType.BigInt).Value = PublicCodigoCliente
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
@@ -597,20 +616,20 @@
         Dim cmd As New SqlClient.SqlCommand
         Try
             cn.Open()
-            cmd.CommandText = "
-              select NombreProducto, Categoria,FechaIngresoPro,NombreEmpleado,Proveedor,ValorProducto,CantidadProducto 
-              From RLProductos P
-              left join RLProductosCategoria C
-              on P.IdProducto = C.IdCategoria
-              left join RLProductosEmpleadoCafeteria E
-              on P.IdProducto = E.CodigoEmpleado where IdProducto = @IdProducto
-              or Categoria = @Categoria 
-	          or FechaIngresoPro = @FechaIngresoPro"
+            cmd.CommandText = "         
+                select Categoria,NombreProducto,ValorProducto,Proveedor,FechaCreacion,Cantidad
+                from RCrearProducto RCP 
+                join RProductosCategoria RCategoria
+                on RCP.IdCategoria = RCategoria.IdCategoria
+                join RIngresoProducto RIn
+                on RCP.IdCreacionProducto = RIn.IdCreacionProducto where NombreProducto = @NombreProducto
+                or Categoria = @Categoria
+                or FechaIngreso = @FechaIngresoPro"
             If PublicNombreProducto = "-Seleccione-" Then
                 PublicNombreProducto = 0
-                cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = PublicNombreProducto
+                cmd.Parameters.Add("@NombreProducto", SqlDbType.VarChar).Value = PublicNombreProducto
             Else
-                cmd.Parameters.Add("@IdProducto", SqlDbType.BigInt).Value = PublicNombreProducto
+                cmd.Parameters.Add("@NombreProducto", SqlDbType.VarChar).Value = PublicNombreProducto
             End If
             cmd.Parameters.Add("@Categoria", SqlDbType.VarChar).Value = categoria
             cmd.Parameters.Add("@FechaIngresoPro", SqlDbType.DateTime).Value = fechaRegistroProducto

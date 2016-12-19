@@ -122,6 +122,15 @@ Partial Public Class CafeteriaComprarProducto
     Protected WithEvents Lbl_CantidadDisponible As Global.System.Web.UI.WebControls.Label
     
     '''<summary>
+    '''Control Drl_CodigoCliente .
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Drl_CodigoCliente  As Global.System.Web.UI.WebControls.DropDownList
+    
+    '''<summary>
     '''Control btn_Comprar.
     '''</summary>
     '''<remarks>

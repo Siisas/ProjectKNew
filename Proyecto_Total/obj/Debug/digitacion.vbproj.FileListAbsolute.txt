@@ -184,3 +184,14 @@ C:\Users\chm6577a\Source\Repos\ProjectKNew2\Proyecto_Total\obj\Debug\digitacion.
 C:\Users\chm6577a\Source\Repos\ProjectKNew2\Proyecto_Total\obj\Debug\digitacion.dll
 C:\Users\chm6577a\Source\Repos\ProjectKNew2\Proyecto_Total\obj\Debug\digitacion.xml
 C:\Users\chm6577a\Source\Repos\ProjectKNew2\Proyecto_Total\obj\Debug\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\bin\Css2\Imagenes\FondoCafeteria.jpg
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\bin\digitacion.dll.config
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\bin\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\bin\digitacion.pdb
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\bin\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\obj\Debug\digitacion.vbprojResolveAssemblyReference.cache
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\obj\Debug\digitacion.Resources.resources
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\obj\Debug\digitacion.vbproj.GenerateResource.Cache
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\obj\Debug\digitacion.dll
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\obj\Debug\digitacion.xml
+C:\Users\chm6577a\Source\Repos\ProjectKNew3\Proyecto_Total\obj\Debug\digitacion.pdb

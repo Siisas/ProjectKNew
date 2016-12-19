@@ -36,58 +36,63 @@
                         <%--Aqui hago una columna --%>
                         <div class="text-center Subtitulos">Datos Basicos</div>
                         <div class="Form">
-                            <div class="Cell-Form">                 
-                                 <div class="input-group">
+                            <div class="Cell-Form">
+                                <div class="input-group">
                                     <div class="input-group-addon">Categoría</div>
-                                           <asp:Label ID="Lbl_Catego" CssClass="form-control" readonly="true" runat="server"></asp:Label>
-                        <%--            <asp:DropDownList ID="Drl_Categoria" CssClass="form-control" runat="server"></asp:DropDownList>--%>
+                                    <asp:Label ID="Lbl_Catego" CssClass="form-control" readonly="true" runat="server"></asp:Label>
+                                    <%--            <asp:DropDownList ID="Drl_Categoria" CssClass="form-control" runat="server"></asp:DropDownList>--%>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Nombre del Empleado</div>
                                     <asp:DropDownList ID="Drl_NombreEmpleado" CssClass="form-control" runat="server"></asp:DropDownList>
-                                </div>                           
-                            </div>
-                            <div class="Space-Form"></div>
-                            <div class="Cell-Form">                                      
-                                <div class="input-group">
-                                    <div class="input-group-addon">Nombre del Cliente</div>
-                                    <asp:DropDownList ID="Drl_NombreCliente" CssClass="form-control" runat="server"></asp:DropDownList>
-                                </div>      
-                                  <div class="input-group">
-                                    <div class="input-group-addon">Fecha de Venta</div>
-                                    <asp:TextBox ID="TxtFechaComprar" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
-                                </div>                         
-                            </div>
-                       </div>                  
-                    </section>               
-                         <section>
-                        <%--Aqui hago una columna --%>
-                        <div class="text-center Subtitulos">Comprar Productos</div>
-                        <div class="Form">
-                            <div class="Cell-Form">                  
-                                   <div class="input-group">
-                                    <div class="input-group-addon">Producto</div>
-                                    <asp:DropDownList ID="Drl_Productos" CssClass="form-control" AutoPostBack="true" runat="server"></asp:DropDownList>
-                                </div>                                                 
-                                 <div class="input-group">
-                                    <div class="input-group-addon">Cantidad</div>
-                                    <asp:TextBox ID="TxtCantidadProducto" CssClass="form-control" runat="server"></asp:TextBox>
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-addon">Codigo Producto</div>                                  
-                                      <asp:Label ID="Lbl_IdProducto" CssClass="form-control" readonly="true" runat="server"></asp:Label>
                                 </div>
                             </div>
                             <div class="Space-Form"></div>
                             <div class="Cell-Form">
                                 <div class="input-group">
-                                    <div class="input-group-addon">Valor</div>                                  
+                                    <div class="input-group-addon">Nombre del Cliente</div>
+                                    <asp:DropDownList ID="Drl_NombreCliente" CssClass="form-control" runat="server"></asp:DropDownList>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-addon">Fecha de Venta</div>
+                                    <asp:TextBox ID="TxtFechaComprar" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <%--Aqui hago una columna --%>
+                        <div class="text-center Subtitulos">Comprar Productos</div>
+                        <div class="Form">
+                            <div class="Cell-Form">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Producto</div>
+                                    <asp:DropDownList ID="Drl_Productos" CssClass="form-control" AutoPostBack="true" runat="server"></asp:DropDownList>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-addon">Cantidad</div>
+                                    <asp:TextBox ID="TxtCantidadProducto" CssClass="form-control" runat="server"></asp:TextBox>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-addon">Codigo Producto</div>
+                                    <asp:Label ID="Lbl_IdProducto" CssClass="form-control" readonly="true" runat="server"></asp:Label>
+                                </div>
+                            </div>
+                            <div class="Space-Form"></div>
+                            <div class="Cell-Form">
+                                <div class="input-group">
+                                    <div class="input-group-addon">Valor</div>
                                     <asp:Label ID="Lbl_Valor" CssClass="form-control" readonly="true" runat="server"></asp:Label>
                                 </div>
                                 <div class="input-group">
-                                    <div class="input-group-addon"> Cantidad Disponible</div>                                  
-                                      <asp:Label ID="Lbl_CantidadDisponible" CssClass="form-control" readonly="true" runat="server"></asp:Label>
-                                </div>                                                            
+                                    <div class="input-group-addon">Cantidad Disponible</div>
+                                    <asp:Label ID="Lbl_CantidadDisponible" CssClass="form-control" readonly="true" runat="server"></asp:Label>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group-addon">Codigo Cliente</div>
+                                    <%--<asp:DropDownList ID="Drl_CodigoCliente " CssClass="form-control" AutoPostBack="true" runat="server"></asp:DropDownList>   --%>                                     
+                                    <asp:DropDownList ID="Drl_CodigoCliente" CssClass="form-control"  runat="server"></asp:DropDownList>
+                                </div>
                             </div>
                         </div>
                         <asp:Button ID="btn_Comprar" CssClass="btn btn-primary" ValidationGroup="Registro" runat="server" Text="Comprar" />
@@ -96,7 +101,8 @@
                     </section>
                     <section>
                         <div class="text-center Subtitulos">Descripciòn Compra</div>
-                        <div class="Cell-Form">                                                      <div class="bordes" style="overflow: auto; min-height: 0px; max-height: 1000px; width: 100%;">
+                        <div class="Cell-Form">
+                            <div class="bordes" style="overflow: auto; min-height: 0px; max-height: 1000px; width: 100%;">
                                 <asp:GridView ID="Gtg_TotalCompras" runat="server" CellPadding="4" ForeColor="#333333"
                                     GridLines="None" Width="100%" Style="font-size: x-small"
                                     EnableModelValidation="True">
@@ -106,13 +112,13 @@
                                     <SelectedRowStyle BackColor="#E2DED6" Font-Bold="True" ForeColor="#333333" />
                                     <HeaderStyle BackColor="#B3C556" Font-Bold="False" ForeColor="White" Font-Size="Small" />
                                     <Columns>
-                                        <asp:ButtonField CommandName="Delete"  ControlStyle-BackColor="#B3C556" Text="Eliminar" ButtonType="Button" />
+                                        <asp:ButtonField CommandName="Delete" ControlStyle-BackColor="#B3C556" Text="Eliminar" ButtonType="Button" />
                                     </Columns>
                                     <EditRowStyle BackColor="#999999" />
                                     <AlternatingRowStyle BackColor="White" ForeColor="#333333" />
                                 </asp:GridView>
                                 <asp:Label CssClass="form-control" Style="color: #B3C556;" ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>
-                               <asp:Label CssClass="form-control" Style="color: #B3C556;" ID="Lbl_String" runat="server" Text=""></asp:Label>
+                                <asp:Label CssClass="form-control" Style="color: #B3C556;" ID="Lbl_String" runat="server" Text=""></asp:Label>
                             </div>
                         </div>
                     </section>
