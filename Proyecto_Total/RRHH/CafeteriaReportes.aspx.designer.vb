@@ -102,4 +102,13 @@ Partial Public Class CafeteriaReportes
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Gtg_Productos As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control Lbl_Mensaje.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Lbl_Mensaje As Global.System.Web.UI.WebControls.Label
 End Class

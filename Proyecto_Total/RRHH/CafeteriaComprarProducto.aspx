@@ -28,19 +28,19 @@
                     <asp:Label ID="lblmsg" runat="server"></asp:Label>
                 </asp:Panel>
             </ContentTemplate>
-        </asp:UpdatePanel>
+        </asp:UpdatePanel>      
         <article>
             <asp:UpdatePanel runat="server">
-                <ContentTemplate>
+                <ContentTemplate>            
                     <section>
                         <%--Aqui hago una columna --%>
+
                         <div class="text-center Subtitulos">Datos Basicos</div>
                         <div class="Form">
                             <div class="Cell-Form">
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoría</div>
-                                    <asp:Label ID="Lbl_Catego" CssClass="form-control" readonly="true" runat="server"></asp:Label>
-                                    <%--            <asp:DropDownList ID="Drl_Categoria" CssClass="form-control" runat="server"></asp:DropDownList>--%>
+                                    <asp:Label ID="Lbl_Catego" CssClass="form-control" readonly="true" runat="server"></asp:Label>                                   
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Nombre del Empleado</div>
@@ -87,12 +87,7 @@
                                 <div class="input-group">
                                     <div class="input-group-addon">Cantidad Disponible</div>
                                     <asp:Label ID="Lbl_CantidadDisponible" CssClass="form-control" readonly="true" runat="server"></asp:Label>
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-addon">Codigo Cliente</div>
-                                    <%--<asp:DropDownList ID="Drl_CodigoCliente " CssClass="form-control" AutoPostBack="true" runat="server"></asp:DropDownList>   --%>                                     
-                                    <asp:DropDownList ID="Drl_CodigoCliente" CssClass="form-control"  runat="server"></asp:DropDownList>
-                                </div>
+                                </div>                    
                             </div>
                         </div>
                         <asp:Button ID="btn_Comprar" CssClass="btn btn-primary" ValidationGroup="Registro" runat="server" Text="Comprar" />

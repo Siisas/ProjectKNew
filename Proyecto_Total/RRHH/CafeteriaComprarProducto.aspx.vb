@@ -32,11 +32,11 @@ Public Class CafeteriaComprarProducto
         Drl_NombreEmpleado.DataValueField = "CodigoEmpleado"
         Drl_NombreEmpleado.DataBind()
         Drl_NombreEmpleado.Items.Insert(0, "- Seleccione -")
-        Drl_CodigoCliente.DataSource = ObjetoClsCafeteriaProductos.CargarDatosDDlComprarNombreCliente()
-        Drl_CodigoCliente.DataTextField = "NombreCliente"
-        Drl_CodigoCliente.DataValueField = "CodigoCLiente"
-        Drl_CodigoCliente.DataBind()
-        Drl_CodigoCliente.Items.Insert(0, "- Seleccione -")
+        Drl_NombreCliente.DataSource = ObjetoClsCafeteriaProductos.CargarDatosDDlComprarNombreCliente()
+        Drl_NombreCliente.DataTextField = "NombreCliente"
+        Drl_NombreCliente.DataValueField = "CodigoCLiente"
+        Drl_NombreCliente.DataBind()
+        Drl_NombreCliente.Items.Insert(0, "- Seleccione -")
     End Sub
     Private Sub Detalle()
         dt.Columns.Add(New DataColumn("Codigo del Producto", GetType(Integer)))
@@ -66,12 +66,9 @@ Public Class CafeteriaComprarProducto
                     dt.AcceptChanges()
                     'dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text))
                     If (Convert.ToDouble(TxtCantidadProducto.Text) < TxtCantidadProducto.Text) Then
-
                         Lbl_String.Text = "la cantidad seleccionada no es disponible"
-
                     Else
                         dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text))
-
                         Gtg_TotalCompras.DataSource = dt
                         Gtg_TotalCompras.DataBind()
                         Session("AcumulaRegistros") = dt
@@ -90,10 +87,6 @@ Public Class CafeteriaComprarProducto
                 End If
             End If
         End If
-
-
-
-
     End Sub
     '13
     Private Sub Gtg_TotalCompras_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles Gtg_TotalCompras.RowDeleting
@@ -113,8 +106,6 @@ Public Class CafeteriaComprarProducto
         Lbl_CantidadDisponible.Text = ObjetoClsCafeteriaProductos.CargarDatosIndexProductoCantidadProductosDisponibles()
         Lbl_IdProducto.Text = ObjetoClsCafeteriaProductos.CargarDatosIndexProductoXIdProducto()
         Lbl_Catego.Text = ObjetoClsCafeteriaProductos.CargarDatosIndexProductoXCategoria()
-        'TxtCodigoCliente.Text = ObjetoClsCafeteriaProductos.CargarDatosCliente()
-
     End Sub
     Protected Sub btn_Comprar_Click(sender As Object, e As EventArgs) Handles btn_Comprar.Click
         If Drl_Productos.SelectedIndex = 0 Then
@@ -137,16 +128,23 @@ Public Class CafeteriaComprarProducto
                 ObjetoClsCafeteriaProductos.PublicProveedor = row(2)
                 ObjetoClsCafeteriaProductos.PublicValorProducto = row(3)
                 'ObjetoClsCafeteriaProductos.PublicCantidadProducto = row(4)
-                ObjetoClsCafeteriaProductos.PublicCodigoEmpleado = Drl_NombreEmpleado.SelectedValue
-                ObjetoClsCafeteriaProductos.PublicCodigoCliente = Drl_NombreCliente.SelectedValue
-                ObjetoClsCafeteriaProductos.PublicCantidadProducto = TxtCantidadProducto.Text
-                ObjetoClsCafeteriaProductos.PublicFechaVenta = TxtFechaComprar.Text
-                ObjetoClsCafeteriaProductos.PublicValorVenta = Lbl_ValorTotal.Text
+                If Drl_NombreEmpleado.SelectedValue = "- Seleccione -" Then
+                    Lbl_String.Text = "Por favor seleccione el nombre del empleado"
+                Else
+                    ObjetoClsCafeteriaProductos.PublicCodigoEmpleado = Drl_NombreEmpleado.SelectedValue
+                    If Drl_NombreCliente.SelectedValue = "- Seleccione -" Then
+                        Lbl_String.Text = "Por favor seleccione el codigo del cliente"
+                    Else
+                        ObjetoClsCafeteriaProductos.PublicCodigoCliente = Drl_NombreCliente.SelectedValue
+                        ObjetoClsCafeteriaProductos.PublicCantidadProducto = TxtCantidadProducto.Text
+                        ObjetoClsCafeteriaProductos.PublicFechaVenta = TxtFechaComprar.Text
+                        ObjetoClsCafeteriaProductos.PublicValorVenta = Lbl_ValorTotal.Text
+                        ObjetoClsCafeteriaProductos.Ventas()
+                        ObjetoClsCafeteriaProductos.DatoTblVentas()
+                        Gtg_TotalCompras.DataBind()
+                    End If
 
-                ObjetoClsCafeteriaProductos.Ventas()
-                ObjetoClsCafeteriaProductos.DatoTblVentas()
-                'pediente por un dato string q no encuentro
-                Gtg_TotalCompras.DataBind()
+                End If
             Next
             dt.Clear()
             Drl_NombreEmpleado.SelectedIndex = 0
@@ -157,7 +155,6 @@ Public Class CafeteriaComprarProducto
             Lbl_CantidadDisponible.Text = 0
             Lbl_ValorTotal.Text = 0
             Lbl_IdProducto.Text = 0
-
         End If
     End Sub
     Protected Sub btn_NuevaCompra_Click(sender As Object, e As EventArgs) Handles btn_NuevaCompra.Click
@@ -177,6 +174,5 @@ Public Class CafeteriaComprarProducto
         Lbl_CantidadDisponible.Text = ""
         Lbl_ValorTotal.Text = Session("Suma")
         dt.AcceptChanges()
-
     End Sub
 End Class

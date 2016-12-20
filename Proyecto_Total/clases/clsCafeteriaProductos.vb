@@ -649,9 +649,14 @@
         Dim cmd As New SqlClient.SqlCommand
         Try
             cn.Open()
-            cmd.CommandText = "select  sum(ValorProducto) as total_en_dinero_por_productos_vendidos from RlProductosVentas where FechaVenta Between @FechaInicial and @FechaFinal"
-            cmd.Parameters.Add("@FechaInicial", SqlDbType.Date).Value = PublicFechaRegistroProducto
-            cmd.Parameters.Add("@FechaFinal", SqlDbType.Date).Value = PublicFechaFinal
+            cmd.CommandText =
+                "select  NombreEmpleado,sum(CantidadProducto)as total_Cantidad_Productos, sum(ValorVenta) as total_Ventas 
+                from RProductoVentas RPVentas
+                join REmpleadoCafeteria Rcafeteria
+                on RPVentas.IdCreacionProducto = Rcafeteria.CodigoEmpleado
+                where FechaVenta Between @FechaVenta and @FechaVent group by NombreEmpleado"
+            cmd.Parameters.Add("@FechaVenta", SqlDbType.Date).Value = Convert.ToDateTime(PublicFechaRegistroProducto)
+            cmd.Parameters.Add("@FechaVent", SqlDbType.Date).Value = Convert.ToDateTime(PublicFechaFinal)
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn
             RecibeDatos.Fill(datos)
@@ -667,7 +672,12 @@
         Dim cmd As New SqlClient.SqlCommand
         Try
             cn.Open()
-            cmd.CommandText = "select NombreProducto,sum(CantidadProducto) as Total_Disponible from RLProductos group by NombreProducto having NombreProducto = @NombreProducto"
+            cmd.CommandText = "
+            select NombreProducto, Cantidad,Proveedor,ValorProducto 
+            from RCrearProducto RP
+            join RIngresoProducto RI
+            on RP.IdCreacionProducto = RI.IdCreacionProducto
+            where NombreProducto = @NombreProducto"
             cmd.Parameters.Add("@NombreProducto", SqlDbType.VarChar).Value = PublicNombreProducto
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             cmd.Connection = cn

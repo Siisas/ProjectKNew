@@ -24,7 +24,7 @@
         <Control:Header ID="Header" runat="server" />
         <asp:UpdatePanel runat="server">
             <ContentTemplate>
-                <asp:Panel ID="Pnl_Message" runat="server">
+                <asp:Panel ID="Pnl_Message" runat="server"> 
                     <asp:Label ID="lblmsg" runat="server"></asp:Label>
                 </asp:Panel>
             </ContentTemplate>
@@ -33,7 +33,7 @@
             <asp:UpdatePanel runat="server">
                 <ContentTemplate>
                     <section>
-                        <div class="text-center Subtitulos">Crear Producto</div>
+                          <div class="text-center Subtitulos">Crear Producto</div>
                         <div class="Form">
                             <div class="Cell-Form">
                                 <%--En este div se encierran las filas de esta columna--%>
@@ -100,7 +100,7 @@
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
-                              <%--  <div class="input-group">
+                                <%--  <div class="input-group">
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtValorProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Valor del Producto                                   
                                     </div>
@@ -110,8 +110,8 @@
                                     <div class="input-group-addon">Cantidad</div>
                                     <asp:TextBox ID="TxtCantidad" CssClass="form-control" runat="server"></asp:TextBox>
                                 </div>
-                                <asp:Button ID="Btn_IngresarProductos"  CssClass="btn btn-primary" runat="server" Text="Registrar" />
-                                   <asp:Label ID="Lbl_MensajeIngresoProducto" runat="server" Text=""></asp:Label>
+                                <asp:Button ID="Btn_IngresarProductos" CssClass="btn btn-primary" runat="server" Text="Registrar" />
+                                <asp:Label ID="Lbl_MensajeIngresoProducto" runat="server" Text=""></asp:Label>
                             </div>
                             <div class="Space-Form"></div>
                             <div class="Cell-Form">

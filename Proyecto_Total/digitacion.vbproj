@@ -136,6 +136,14 @@
     </Content>
     <Content Include="Css2\Imagenes\FondoCafeteria2.jpg" />
     <Content Include="Css2\Imagenes\LogoMilDelicias.JPG" />
+    <Content Include="Css2\Snow\basic-example-customized.html" />
+    <Content Include="Css2\Snow\basic-example.html" />
+    <Content Include="Css2\Snow\index.html" />
+    <Content Include="Css2\Snow\license.txt" />
+    <Content Include="Css2\Snow\snowstorm-min.js" />
+    <Content Include="Css2\Snow\snowstorm.js" />
+    <Content Include="Css2\Snow\target-element-absolute-example.html" />
+    <Content Include="Css2\Snow\target-element-relative-example.html" />
     <Content Include="DatosCRM\Asignaciones.aspx" />
     <Content Include="DatosCRM\Asignaciongestion.aspx" />
     <Content Include="DatosCRM\AsignacionNivel3.aspx" />
@@ -1980,6 +1988,8 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Css2\Snow\.gitignore" />
+    <Content Include="Css2\Snow\README" />
     <None Include="My Project\Application.myapp">
       <Generator>MyApplicationCodeGenerator</Generator>
       <LastGenOutput>Application.Designer.vb</LastGenOutput>

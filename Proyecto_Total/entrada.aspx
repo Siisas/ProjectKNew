@@ -10,6 +10,7 @@
     <script type="text/javascript" src="Css2/Boot/js/bootstrap.min.js"></script>
     <link type="text/css" rel="Stylesheet" href="~/Css2/Boot/css/bootstrap.min.css" />
     <link type="text/css" rel="Stylesheet" href="~/Css2/Kamilion.css"/>  
+    <script src="Css2/Snow/snowstorm-min.js"></script>
     <script type="text/javascript">
         $(document).ready(function () {
             var Val = false
@@ -76,7 +77,7 @@
     </form>
     <footer class="navbar-default navbar-fixed-bottom">
         <div class="container text-center">
-            <p style="font-size:1.0vw">Copyright © Cafeteria Mil Delicias 2016</p>
+            <p style="font-size:1.0vw">Copyright © Chameleon Comunicaciones Móviles SAS 2016</p>
         </div>
     </footer>   
 </body>

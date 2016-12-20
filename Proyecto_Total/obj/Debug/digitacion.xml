@@ -54381,47 +54381,47 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 </member>
 <member name="F:digitacion.entrada._Txt_Usuario">
 <summary>
-Txt_Usuario control.
+Control Txt_Usuario.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:digitacion.entrada._Txt_Password">
 <summary>
-Txt_Password control.
+Control Txt_Password.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:digitacion.entrada._Btn_Login">
 <summary>
-Btn_Login control.
+Control Btn_Login.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:digitacion.entrada._Pnl_Message">
 <summary>
-Pnl_Message control.
+Control Pnl_Message.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:digitacion.entrada._lblmsg">
 <summary>
-lblmsg control.
+Control lblmsg.
 </summary>
 <remarks>
-Auto-generated field.
-To modify move field declaration from designer file to code-behind file.
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
 <member name="F:digitacion.HelpDeskAsignacion._Head1">
@@ -58906,15 +58906,6 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CafeteriaComprarProducto._Drl_CodigoCliente">
-<summary>
-Control Drl_CodigoCliente .
-</summary>
-<remarks>
-Campo generado automáticamente.
-Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-</remarks>
-</member>
 <member name="F:digitacion.CafeteriaComprarProducto._btn_Comprar">
 <summary>
 Control btn_Comprar.
@@ -59404,6 +59395,15 @@ Para modificarlo, mueva la declaración del campo del archivo del diseñador al 
 <member name="F:digitacion.CafeteriaReportes._Gtg_Productos">
 <summary>
 Control Gtg_Productos.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
+<member name="F:digitacion.CafeteriaReportes._Lbl_Mensaje">
+<summary>
+Control Lbl_Mensaje.
 </summary>
 <remarks>
 Campo generado automáticamente.

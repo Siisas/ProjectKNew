@@ -112,7 +112,7 @@ code, kbd, pre, samp {
 button, input, optgroup, select, textarea {
     margin: 0;
     font: inherit;
-    color: inherit;
+    color: inherit
 }
 
 button {
@@ -3129,13 +3129,13 @@ textarea.input-lg, select[multiple].input-lg {
 
 .btn-primary {
     color: #fff;
-    background-color: #4d494a;
+    background-color: #B3C556;
     border-color: #fff;
 }
 
     .btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
         color: #fff;
-        background-color: #968c8c;
+        background-color: #A1B14D;
         border-color: #818E3E;
     }
 
