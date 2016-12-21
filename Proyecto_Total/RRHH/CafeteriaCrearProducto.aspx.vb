@@ -1,7 +1,6 @@
 ﻿Public Class Plantilla
     Inherits System.Web.UI.Page
     Dim ObjProductosCafeteria As New clsCafeteriaProductos
-
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
         Try
             If Session("permisos") Is Nothing Then
@@ -12,7 +11,6 @@
             If Not IsPostBack Then
                 Session("Formulario") = "Ingreso Productos"
                 ConsultaDDl()
-
             End If
         Catch ex As Exception
             Pnl_Message.CssClass = "alert alert-danger"
@@ -47,6 +45,7 @@
                 TxtProveedor.Text = ""
                 'TxtCantidad.Text = ""
                 'End If
+                ConsultaDDl()
             End If
         End If
     End Sub
@@ -94,14 +93,13 @@
         'Gtg_Productos = ObjProductosCafeteria.ConsultaProductos() 'Metodo toca crear el metodo que haga la busqueda y nos devuelva la consulta en la clase remember
         Gtg_Productos.DataBind()
     End Sub
-
     Protected Sub Btn_IngresarProductos_Click(sender As Object, e As EventArgs) Handles Btn_IngresarProductos.Click
         If Drl_NombreIdCreacionProducto.SelectedValue = "-Seleccione-" Then
             Lbl_MensajeIngresoProducto.Text = "Por favor seleccione un Producto"
         Else
             ObjProductosCafeteria.PublicNombreProducto = Drl_NombreIdCreacionProducto.SelectedValue
             ObjProductosCafeteria.PublicCantidadProducto = TxtCantidad.Text
-            ObjProductosCafeteria.PublicFechaRegistroProducto = TxtFecha.Text
+            'ObjProductosCafeteria.PublicFechaRegistroProducto = TxtFecha.Text
             If Drl_CodigoEmpleado1.SelectedValue = "-Seleccione-" Then
                 Lbl_MensajeIngresoProducto.Text = "Por favor seleccione el codigo del empleado"
             Else
@@ -114,7 +112,7 @@
         Drl_CodigoEmpleado.SelectedItem.Value = 0
         TxtValorProducto.Text = ""
         TxtFechaCreacion.Text = ""
-        Drl_CodigoEmpleado.SelectedValue = "-Seleccione"
+        Drl_CodigoEmpleado.SelectedIndex = 0
         TxtProveedor.Text = ""
         TxtCantidad.Text = ""
     End Sub

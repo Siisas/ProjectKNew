@@ -231,13 +231,10 @@
     Public Sub IngProductos()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Try
-            Dim cmd As New SqlClient.SqlCommand("Insert into RIngresoProducto values (@IdCreacionProducto,@Cantidad,@CodigoEmpleado,@FechaIngreso)", cn) 'ok  
+            Dim cmd As New SqlClient.SqlCommand("update  RIngresoProducto set Cantidad = Cantidad + @Cantidad where IdCreacionProducto = @IdCreacionProducto", cn) 'ok  
             cn.Open()
-            'cmd.CommandType = CommandType.StoredProcedure
             cmd.Parameters.AddWithValue("@IdCreacionProducto", PublicNombreProducto)
             cmd.Parameters.AddWithValue("@Cantidad", PublicCantidadProducto)
-            cmd.Parameters.AddWithValue("@CodigoEmpleado", PublicCodigoEmpleado)
-            cmd.Parameters.AddWithValue("@FechaIngreso", PublicFechaRegistroProducto)
             cmd.Connection = cn
             cmd.ExecuteNonQuery()
         Catch ex As Exception
@@ -286,8 +283,6 @@
             End If
         End Try
     End Function
-
-
     Public Function CargarDatosDDlProductos()
         Dim cx As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Dim datos As New DataSet
@@ -307,14 +302,18 @@
             End If
         End Try
     End Function
-
     Public Function CargarDatosDDlComprarProductos()
         Dim cn As New SqlClient.SqlConnection(ConfigurationManager.ConnectionStrings("conexion2").ConnectionString)
         Dim datos As New DataSet
         Dim RecibeDatos As SqlClient.SqlDataAdapter
         Try
             cn.Open()
-            Dim cmd As New SqlClient.SqlCommand("select * from RCrearProducto", cn) 'OK
+            Dim cmd As New SqlClient.SqlCommand(
+            "select RC.IdCreacionProducto, NombreProducto,Cantidad 
+            from RCrearProducto RC
+			left join RIngresoProducto RI
+            on RC.IdCreacionProducto = RI.IdCreacionProducto
+            where Cantidad > 0", cn) 'OK
             RecibeDatos = New SqlClient.SqlDataAdapter(cmd)
             RecibeDatos.Fill(datos)
             cmd.ExecuteReader()
