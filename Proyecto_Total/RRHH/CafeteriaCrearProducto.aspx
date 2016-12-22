@@ -1,4 +1,4 @@
-﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CafeteriaCrearProducto.aspx.vb" Inherits="digitacion.Plantilla" %>
+﻿<%@ Page  Language="vb"  AutoEventWireup="false" CodeBehind="CafeteriaCrearProducto.aspx.vb" Inherits="digitacion.Plantilla" %>
 
 <%@ Register Src="~/Controles/Header.ascx" TagName="Header" TagPrefix="Control" %>
 <!DOCTYPE html>
@@ -17,6 +17,34 @@
     <link type="text/css" rel="Stylesheet" href="~/Css2/Boot/css/bootstrap.min.css" />
     <link type="text/css" rel="Stylesheet" href="~/Css2/jquery-ui.css" />
     <link type="text/css" rel="Stylesheet" href="~/Css2/Kamilion.css" />
+<%--    <script>
+        function fnOnUpdateValidators() {
+            for (var i = 0; i < Page_Validators.length; i++) {
+                var val = Page_Validators[i];
+                var ctrl = document.getElementById(val.controltovalidate);
+                if (ctrl != null && ctrl.style != null) {
+                    if (!val.isvalid)
+                        ctrl.style.background = '#FFAAAA';
+                    else
+                        ctrl.style.backgroundColor = '';
+                }
+            }
+        }
+    </script>--%>
+
+
+
+
+    <script>
+function myFunction() {
+    var x = document.getElementById("TxtProducto").value;
+    if (x != "")
+        x.style.background = '#FFAAFF'
+    document.getElementById("demo").style.background='#FFAAAA' 
+   
+    document.getElementById("TxtProducto").style.background = '#FFAAAA'
+}
+</script>
 </head>
 <body>
     <form runat="server">
@@ -24,7 +52,7 @@
         <Control:Header ID="Header" runat="server" />
         <asp:UpdatePanel runat="server">
             <ContentTemplate>
-                <asp:Panel ID="Pnl_Message" runat="server"> 
+                <asp:Panel ID="Pnl_Message" runat="server">
                     <asp:Label ID="lblmsg" runat="server"></asp:Label>
                 </asp:Panel>
             </ContentTemplate>
@@ -33,18 +61,18 @@
             <asp:UpdatePanel runat="server">
                 <ContentTemplate>
                     <section>
-                          <div class="text-center Subtitulos">Crear Producto</div>
+                    <div class="text-center Subtitulos">Crear Producto</div>
                         <div class="Form">
                             <div class="Cell-Form">
                                 <%--En este div se encierran las filas de esta columna--%>
-                                <asp:RegularExpressionValidator ControlToValidate="TxtProducto" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ControlToValidate="TxtProducto"  Style="background-color: #F45761;" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
                                 <%--                                <asp:RegularExpressionValidator ControlToValidate="TxtProveedor" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>--%>
                                 <asp:RegularExpressionValidator ControlToValidate="TxtCantidad" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[0-9]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
                                 <div class="input-group">
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
                                     </div>
-                                    <asp:TextBox ID="TxtProducto" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtProducto"    onkeyup="myFunction();" CssClass="form-control" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoría</div>
@@ -166,6 +194,9 @@
                         </asp:GridView>
                         <%--<asp:Label CssClass="form-control" style="color:#B3C556;"  ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>--%>
                     </div>
+
+                    <textarea id="demo" cols="20" rows="2" runat="server"></textarea>
+                    <asp:Button ID="Btn_Prueba" runat="server" Text="Mostrar" />
                 </ContentTemplate>
             </asp:UpdatePanel>
         </article>

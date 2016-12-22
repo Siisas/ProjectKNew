@@ -210,4 +210,22 @@ Partial Public Class Plantilla
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
     Protected WithEvents Gtg_Productos As Global.System.Web.UI.WebControls.GridView
+    
+    '''<summary>
+    '''Control demo.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents demo As Global.System.Web.UI.HtmlControls.HtmlTextArea
+    
+    '''<summary>
+    '''Control Btn_Prueba.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Btn_Prueba As Global.System.Web.UI.WebControls.Button
 End Class

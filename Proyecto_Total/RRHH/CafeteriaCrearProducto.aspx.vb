@@ -11,6 +11,10 @@
             If Not IsPostBack Then
                 Session("Formulario") = "Ingreso Productos"
                 ConsultaDDl()
+                EliminarVariables()
+                If TxtProducto.Text = "" Then
+
+                End If
             End If
         Catch ex As Exception
             Pnl_Message.CssClass = "alert alert-danger"
@@ -22,7 +26,10 @@
         'If TxtCantidad.Text <= 0 Then
         '    Lbl_MensajePlantilla.Text = "la cantidad del producto debe ser mayor a 0 "
         'Else
+
         ObjProductosCafeteria.PublicNombreProducto = TxtProducto.Text
+        ViewState("Dato") = TxtProducto.Text
+        ViewState("Da1") = Drl_Categoria.SelectedValue
         If Drl_Categoria.SelectedValue = "-Seleccione-" Then
             Lbl_MensajePlantilla.Text = "Por favor seleccione una categoria"
         Else
@@ -80,7 +87,6 @@
         Drl_NombreProducto.DataValueField = "NombreProducto"
         Drl_NombreProducto.DataBind()
         Drl_NombreProducto.Items.Insert(0, "-Seleccione-")
-
     End Sub
     Protected Sub btn_Consultar_Click(sender As Object, e As EventArgs) Handles btn_Consultar.Click
         ObjProductosCafeteria.PublicNombreProducto = Drl_NombreProducto.SelectedItem.Value
@@ -115,5 +121,26 @@
         Drl_CodigoEmpleado.SelectedIndex = 0
         TxtProveedor.Text = ""
         TxtCantidad.Text = ""
+    End Sub
+
+    Protected Sub Btn_Prueba_Click(sender As Object, e As EventArgs) Handles Btn_Prueba.Click
+        ViewState("Dato") = TxtProducto.Text
+        ViewState("Dato1") = "Hola "
+        demo.Value = ViewState("Dato1") & "" & ViewState("Dato")
+        ViewState("Dato") = Nothing
+        ViewState("Dato1") = Nothing
+        TxtProducto.Text = ""
+        ViewState("Dato1") = ""
+        'If demo.Value <> "" Then
+        '    EnableViewState = "false"
+        '    demo.Value = ""
+        'End If
+    End Sub
+
+
+    Protected Sub EliminarVariables()
+
+        demo.Value = ""
+
     End Sub
 End Class
