@@ -11,6 +11,7 @@
             If Not IsPostBack Then
                 Session("Formulario") = "Ingreso Productos"
                 ConsultaDDl()
+
                 EliminarVariables()
                 If TxtProducto.Text = "" Then
 
@@ -126,7 +127,9 @@
     Protected Sub Btn_Prueba_Click(sender As Object, e As EventArgs) Handles Btn_Prueba.Click
         ViewState("Dato") = TxtProducto.Text
         ViewState("Dato1") = "Hola "
-        demo.Value = ViewState("Dato1") & "" & ViewState("Dato")
+        ViewState("Dato2") = "Mi nombre es:"
+        ViewState("Dato3") = Convert.ToString(Drl_CodigoEmpleado1.SelectedItem)
+        demo.Value = ViewState("Dato1") & "" & ViewState("Dato") & "" & ViewState("Dato2") & "" & ViewState("Dato3")
         ViewState("Dato") = Nothing
         ViewState("Dato1") = Nothing
         TxtProducto.Text = ""

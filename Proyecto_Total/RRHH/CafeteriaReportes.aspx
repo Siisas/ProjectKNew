@@ -49,8 +49,7 @@
                             </div>                           
                         </div>
                         <asp:Button ID="btn_ConsultarVentasFecha" class="glyphicon glyphicon-search" CssClass="btn btn-primary" runat="server" Text="Filtrar" />
-                    </section>
-                    <asp:GridView ID="Gtg_Productos1" runat="server" CellPadding="4" ForeColor="#333333"
+                    <asp:GridView ID="Gtg_Productos1" runat="server" CellPadding="4" ForeColor="#333333"                    
                         GridLines="None" Width="100%" Style="font-size: x-small"
                         EnableModelValidation="True">
                         <RowStyle BackColor="#EEF1D8" ForeColor="#333333" />
@@ -61,6 +60,8 @@
                         <EditRowStyle BackColor="#999999" />
                         <AlternatingRowStyle BackColor="White" ForeColor="#333333" />
                     </asp:GridView>
+                        </section>
+                    
                     <section>
                         <div class="text-center Subtitulos">Disponibilidad de Productos</div>
                         <div class="Form">
@@ -72,9 +73,7 @@
                             </div>
                         </div>
                         <asp:Button ID="Btn_ConsultarDisProductos" CssClass="btn btn-primary" runat="server" Text="Filtrar" />
-                        </div>                               
-                    </section>
-                    <div class="bordes" style="overflow: auto; min-height: 0px; max-height: 1000px; width: 100%;">
+                        </div>
                         <asp:GridView ID="Gtg_Productos" runat="server" CellPadding="4" ForeColor="#333333"
                             GridLines="None" Width="100%" Style="font-size: x-small"
                             EnableModelValidation="True">
@@ -85,7 +84,10 @@
                             <HeaderStyle BackColor="#B3C556" Font-Bold="False" ForeColor="White" Font-Size="Small" />
                             <EditRowStyle BackColor="#999999" />
                             <AlternatingRowStyle BackColor="White" ForeColor="#333333" />
-                        </asp:GridView>
+                        </asp:GridView>                               
+                    </section>
+                    <div class="bordes" style="overflow: auto; min-height: 0px; max-height: 1000px; width: 100%;">
+                        
                         <asp:Label ID="Lbl_Mensaje" runat="server" Text=""></asp:Label>
                     </div>
                 </ContentTemplate>

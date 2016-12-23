@@ -1,4 +1,4 @@
-﻿<%@ Page  Language="vb"  AutoEventWireup="false" CodeBehind="CafeteriaCrearProducto.aspx.vb" Inherits="digitacion.Plantilla" %>
+﻿<%@ Page Language="vb" AutoEventWireup="false" CodeBehind="CafeteriaCrearProducto.aspx.vb" Inherits="digitacion.Plantilla" %>
 
 <%@ Register Src="~/Controles/Header.ascx" TagName="Header" TagPrefix="Control" %>
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <link type="text/css" rel="Stylesheet" href="~/Css2/Boot/css/bootstrap.min.css" />
     <link type="text/css" rel="Stylesheet" href="~/Css2/jquery-ui.css" />
     <link type="text/css" rel="Stylesheet" href="~/Css2/Kamilion.css" />
-<%--    <script>
+    <%--    <script>
         function fnOnUpdateValidators() {
             for (var i = 0; i < Page_Validators.length; i++) {
                 var val = Page_Validators[i];
@@ -35,7 +35,7 @@
 
 
 
-    <script>
+    <%--    <script>
 function myFunction() {
     var x = document.getElementById("TxtProducto").value;
     if (x != "")
@@ -44,9 +44,46 @@ function myFunction() {
    
     document.getElementById("TxtProducto").style.background = '#FFAAAA'
 }
-</script>
+</script>--%>
+
+
+    <script type="text/javascript">
+        function comprueba(obj) {
+            if (obj.value == '') {
+                if ((document.all) || (document.getElementById)) {
+                    obj.style.backgroundColor = 'rgb(239, 166, 166)';
+                }
+            }
+
+            else {
+                if 
+        ((document.all) || (document.getElementById)) {
+
+                    obj.style.backgroundColor = '#B3C556';
+                }
+            }
+        }
+    </script>
+       <script type="text/javascript">
+        function compruebaDDL(obj) {
+            if (obj.value == "-Seleccione-") {
+                if ((document.all) || (document.getElementById)) {
+                    obj.style.backgroundColor = 'rgb(239, 166, 166)';
+                }
+            }
+
+            else {
+                if 
+        ((document.all) || (document.getElementById)) {
+
+                    obj.style.backgroundColor = '#B3C556';
+                }
+            }
+        }
+    </script>
+
 </head>
-<body>
+<body onload="comprueba(this)">
     <form runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
         <Control:Header ID="Header" runat="server" />
@@ -61,22 +98,24 @@ function myFunction() {
             <asp:UpdatePanel runat="server">
                 <ContentTemplate>
                     <section>
-                    <div class="text-center Subtitulos">Crear Producto</div>
+                        <div class="text-center Subtitulos">Crear Producto</div>
                         <div class="Form">
                             <div class="Cell-Form">
                                 <%--En este div se encierran las filas de esta columna--%>
-                                <asp:RegularExpressionValidator ControlToValidate="TxtProducto"  Style="background-color: #F45761;" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
+                                <asp:RegularExpressionValidator ControlToValidate="TxtProducto" Style="background-color: #F45761;" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
                                 <%--                                <asp:RegularExpressionValidator ControlToValidate="TxtProveedor" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>--%>
                                 <asp:RegularExpressionValidator ControlToValidate="TxtCantidad" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[0-9]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
                                 <div class="input-group">
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
                                     </div>
-                                    <asp:TextBox ID="TxtProducto"    onkeyup="myFunction();" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtProducto" onblur="comprueba(this)" onclick="comprueba(this)"
+                                        onfocus="comprueba(this)"                                        
+                                        onchange="comprueba(this)" CssClass="form-control" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoría</div>
-                                    <asp:DropDownList ID="Drl_Categoria" CssClass="form-control" runat="server">
+                                    <asp:DropDownList ID="Drl_Categoria" onclick="compruebaDDL(this)"  CssClass="form-control" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
@@ -124,16 +163,16 @@ function myFunction() {
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
                                     </div>
-                                    <asp:DropDownList ID="Drl_NombreIdCreacionProducto" CssClass="form-control" runat="server">
+                                    <asp:DropDownList ID="Drl_NombreIdCreacionProducto" onclick="compruebaDDL(this)" CssClass="form-control" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
-                                <%--  <div class="input-group">
+                                <div class="input-group">
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtValorProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Valor del Producto                                   
                                     </div>
                                     <asp:TextBox ID="TxtValorProducto111" CssClass="form-control" runat="server"></asp:TextBox>
-                                </div>--%>
+                                </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Cantidad</div>
                                     <asp:TextBox ID="TxtCantidad" CssClass="form-control" runat="server"></asp:TextBox>
@@ -149,7 +188,7 @@ function myFunction() {
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Codigo del Empleado</div>
-                                    <asp:DropDownList ID="Drl_CodigoEmpleado1" CssClass="form-control" runat="server">
+                                    <asp:DropDownList ID="Drl_CodigoEmpleado1" onclick="compruebaDDL(this)"  CssClass="form-control" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
@@ -173,7 +212,7 @@ function myFunction() {
                             <div class="Cell-Form">
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoria</div>
-                                    <asp:DropDownList ID="Drl_CategoriaBuscar" CssClass="form-control" runat="server"></asp:DropDownList>
+                                    <asp:DropDownList ID="Drl_CategoriaBuscar" onclick="compruebaDDL(this)"  CssClass="form-control" runat="server"></asp:DropDownList>
                                 </div>
                             </div>
                         </div>
@@ -194,6 +233,15 @@ function myFunction() {
                         </asp:GridView>
                         <%--<asp:Label CssClass="form-control" style="color:#B3C556;"  ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>--%>
                     </div>
+                    <style type="text/css">
+                        input:required:invalid {
+                            border: 1px solid #f00;
+                        }
+
+                        input:required:valid {
+                            border: 1px solid #31ff00;
+                        }
+                    </style>
 
                     <textarea id="demo" cols="20" rows="2" runat="server"></textarea>
                     <asp:Button ID="Btn_Prueba" runat="server" Text="Mostrar" />

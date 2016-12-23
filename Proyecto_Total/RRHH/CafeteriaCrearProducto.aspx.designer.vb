@@ -122,6 +122,15 @@ Partial Public Class Plantilla
     Protected WithEvents Drl_NombreIdCreacionProducto As Global.System.Web.UI.WebControls.DropDownList
     
     '''<summary>
+    '''Control TxtValorProducto111.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents TxtValorProducto111 As Global.System.Web.UI.WebControls.TextBox
+    
+    '''<summary>
     '''Control TxtCantidad.
     '''</summary>
     '''<remarks>
