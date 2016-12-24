@@ -30,7 +30,7 @@
 
         ObjProductosCafeteria.PublicNombreProducto = TxtProducto.Text
         ViewState("Dato") = TxtProducto.Text
-        ViewState("Da1") = Drl_Categoria.SelectedValue
+        ViewState("Dato1") = Drl_Categoria.SelectedValue
         If Drl_Categoria.SelectedValue = "-Seleccione-" Then
             Lbl_MensajePlantilla.Text = "Por favor seleccione una categoria"
         Else
