@@ -51,7 +51,7 @@ function myFunction() {
         function comprueba(obj) {
             if (obj.value == '') {
                 if ((document.all) || (document.getElementById)) {
-                    obj.style.backgroundColor = 'rgb(239, 166, 166)';
+                    obj.style.backgroundColor = 'rgb(239, 166, 166  ';
                 }
             }
 
@@ -60,6 +60,7 @@ function myFunction() {
         ((document.all) || (document.getElementById)) {
 
                     obj.style.backgroundColor = '#B3C556';
+                    obj.style.color = "#FFF";
                 }
             }
         }
@@ -77,13 +78,14 @@ function myFunction() {
         ((document.all) || (document.getElementById)) {
 
                     obj.style.backgroundColor = '#B3C556';
+                    obj.style.color = "#FFF";
                 }
             }
         }
     </script>
 
 </head>
-<body onload="comprueba(this)">
+<body>
     <form runat="server">
         <asp:ScriptManager runat="server"></asp:ScriptManager>
         <Control:Header ID="Header" runat="server" />
@@ -97,7 +99,7 @@ function myFunction() {
         <article>
             <asp:UpdatePanel runat="server">
                 <ContentTemplate>
-                    <section>
+                    <section  onload ="comprueba(this)">
                         <div class="text-center Subtitulos">Crear Producto</div>
                         <div class="Form">
                             <div class="Cell-Form">
@@ -109,13 +111,11 @@ function myFunction() {
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
                                     </div>
-                                    <asp:TextBox ID="TxtProducto" onblur="comprueba(this)" onclick="comprueba(this)"
-                                        onfocus="comprueba(this)"                                        
-                                        onchange="comprueba(this)" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtProducto" onblur="comprueba(this)"  onclick="comprueba(this)"  onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoría</div>
-                                    <asp:DropDownList ID="Drl_Categoria" onclick="compruebaDDL(this)"  CssClass="form-control" runat="server">
+                                    <asp:DropDownList ID="Drl_Categoria" onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)"  CssClass="form-control1" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
@@ -123,12 +123,8 @@ function myFunction() {
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtValorProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Valor del Producto                                   
                                     </div>
-                                    <asp:TextBox ID="TxtValorProducto" CssClass="form-control" runat="server"></asp:TextBox>
-                                </div>
-                                <%--  <div class="input-group">
-                                    <div class="input-group-addon">Cantidad</div>
-                                    <asp:TextBox ID="TextBox3" CssClass="form-control" runat="server"></asp:TextBox>
-                                </div>--%>
+                                    <asp:TextBox ID="TxtValorProducto" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
+                                </div>                      
                                 <asp:Button ID="Btn_RegistrarProducto" ValidationGroup="Registro" CssClass="btn btn-primary" runat="server" Text="Registrar" />
                                 <asp:Label ID="Lbl_MensajePlantilla" runat="server" Text=""></asp:Label>
                             </div>
@@ -136,17 +132,17 @@ function myFunction() {
                             <div class="Cell-Form">
                                 <div class="input-group">
                                     <div class="input-group-addon">Fecha de Ingreso</div>
-                                    <asp:TextBox ID="TxtFechaCreacion" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtFechaCreacion" onclick="comprueba(this)" onblur="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" placeholder="DD/MM/YYYY" CssClass="form-control1 Fecha" MaxLength="10" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Codigo del Empleado</div>
-                                    <asp:DropDownList ID="Drl_CodigoEmpleado" CssClass="form-control" runat="server">
+                                    <asp:DropDownList ID="Drl_CodigoEmpleado" onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)" CssClass="form-control1" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Proveedor del Producto</div>
-                                    <asp:TextBox ID="TxtProveedor" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtProveedor" onclick="comprueba(this)" onblur="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                         </div>
@@ -161,9 +157,9 @@ function myFunction() {
                                 <asp:RegularExpressionValidator ControlToValidate="TxtCantidad" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[0-9]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
                                 <div class="input-group">
                                     <div class="input-group-addon">
-                                        <asp:RequiredFieldValidator ControlToValidate="TxtProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
+                                        <asp:RequiredFieldValidator ControlToValidate="TxtProducto" CssClass="form-control1"  ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
                                     </div>
-                                    <asp:DropDownList ID="Drl_NombreIdCreacionProducto" onclick="compruebaDDL(this)" CssClass="form-control" runat="server">
+                                    <asp:DropDownList ID="Drl_NombreIdCreacionProducto" onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)" CssClass="form-control1" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
@@ -171,11 +167,11 @@ function myFunction() {
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtValorProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Valor del Producto                                   
                                     </div>
-                                    <asp:TextBox ID="TxtValorProducto111" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtValorProducto111" onclick="comprueba(this)" onblur="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Cantidad</div>
-                                    <asp:TextBox ID="TxtCantidad" CssClass="form-control" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtCantidad" onclick="comprueba(this)" onblur="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
                                 </div>
                                 <asp:Button ID="Btn_IngresarProductos" CssClass="btn btn-primary" runat="server" Text="Registrar" />
                                 <asp:Label ID="Lbl_MensajeIngresoProducto" runat="server" Text=""></asp:Label>
@@ -184,11 +180,11 @@ function myFunction() {
                             <div class="Cell-Form">
                                 <div class="input-group">
                                     <div class="input-group-addon">Fecha de Ingreso</div>
-                                    <asp:TextBox ID="TxtFecha" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtFecha" onclick="comprueba(this)" onblur="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" placeholder="DD/MM/YYYY" CssClass="form-control1 Fecha" MaxLength="10" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Codigo del Empleado</div>
-                                    <asp:DropDownList ID="Drl_CodigoEmpleado1" onclick="compruebaDDL(this)"  CssClass="form-control" runat="server">
+                                    <asp:DropDownList ID="Drl_CodigoEmpleado1" onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)" CssClass="form-control1" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
@@ -201,18 +197,18 @@ function myFunction() {
                             <div class="Cell-Form">
                                 <div class="input-group">
                                     <div class="input-group-addon">Nombre del Producto</div>
-                                    <asp:DropDownList ID="Drl_NombreProducto" CssClass="form-control" runat="server"></asp:DropDownList>
+                                    <asp:DropDownList ID="Drl_NombreProducto" CssClass="form-control1" runat="server"></asp:DropDownList>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Fecha de Ingreso</div>
-                                    <asp:TextBox ID="TxtBuscarFecha" CssClass="form-control Fecha" MaxLength="10" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtBuscarFecha" CssClass="form-control1 Fecha" MaxLength="10" runat="server"></asp:TextBox>
                                 </div>
                             </div>
                             <div class="Space-Form"></div>
                             <div class="Cell-Form">
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoria</div>
-                                    <asp:DropDownList ID="Drl_CategoriaBuscar" onclick="compruebaDDL(this)"  CssClass="form-control" runat="server"></asp:DropDownList>
+                                    <asp:DropDownList ID="Drl_CategoriaBuscar" onblur="compruebaDDL(this)"  CssClass="form-control1" runat="server"></asp:DropDownList>
                                 </div>
                             </div>
                         </div>
@@ -233,18 +229,10 @@ function myFunction() {
                         </asp:GridView>
                         <%--<asp:Label CssClass="form-control" style="color:#B3C556;"  ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>--%>
                     </div>
-                    <style type="text/css">
-                        input:required:invalid {
-                            border: 1px solid #f00;
-                        }
+               
 
-                        input:required:valid {
-                            border: 1px solid #31ff00;
-                        }
-                    </style>
-
-                    <textarea id="demo" cols="20" rows="2" runat="server"></textarea>
-                    <asp:Button ID="Btn_Prueba" runat="server" Text="Mostrar" />
+                    <textarea id="demo" cols="20" rows="2" visible="false" runat="server"></textarea>
+                    <asp:Button ID="Btn_Prueba" runat="server" Text="Mostrar" Width="159px" />
                 </ContentTemplate>
             </asp:UpdatePanel>
         </article>

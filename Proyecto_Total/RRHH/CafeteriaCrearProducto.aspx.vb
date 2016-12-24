@@ -12,8 +12,8 @@
                 Session("Formulario") = "Ingreso Productos"
                 ConsultaDDl()
 
-                EliminarVariables()
                 If TxtProducto.Text = "" Then
+
 
                 End If
             End If
@@ -125,6 +125,7 @@
     End Sub
 
     Protected Sub Btn_Prueba_Click(sender As Object, e As EventArgs) Handles Btn_Prueba.Click
+        demo.Visible = True
         ViewState("Dato") = TxtProducto.Text
         ViewState("Dato1") = "Hola "
         ViewState("Dato2") = "Mi nombre es:"
@@ -134,6 +135,8 @@
         ViewState("Dato1") = Nothing
         TxtProducto.Text = ""
         ViewState("Dato1") = ""
+        ViewState.Clear()
+
         'If demo.Value <> "" Then
         '    EnableViewState = "false"
         '    demo.Value = ""
@@ -142,8 +145,12 @@
 
 
     Protected Sub EliminarVariables()
-
+        ViewState("Dato").Clear
+        ViewState("Dato1").Clear
+        ViewState("Dato2").Clear
+        ViewState("Dato3").Clear
         demo.Value = ""
+        demo.Visible = False
 
     End Sub
 End Class
