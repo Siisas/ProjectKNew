@@ -56,7 +56,7 @@ function myFunction() {
             }
 
             else {
-                if 
+                if
         ((document.all) || (document.getElementById)) {
 
                     obj.style.backgroundColor = '#B3C556';
@@ -65,7 +65,7 @@ function myFunction() {
             }
         }
     </script>
-       <script type="text/javascript">
+    <script type="text/javascript">
         function compruebaDDL(obj) {
             if (obj.value == "-Seleccione-") {
                 if ((document.all) || (document.getElementById)) {
@@ -74,7 +74,7 @@ function myFunction() {
             }
 
             else {
-                if 
+                if
         ((document.all) || (document.getElementById)) {
 
                     obj.style.backgroundColor = '#B3C556';
@@ -99,7 +99,7 @@ function myFunction() {
         <article>
             <asp:UpdatePanel runat="server">
                 <ContentTemplate>
-                    <section  onload ="comprueba(this)">
+                    <section onload="comprueba(this)">
                         <div class="text-center Subtitulos">Crear Producto</div>
                         <div class="Form">
                             <div class="Cell-Form">
@@ -111,11 +111,11 @@ function myFunction() {
                                     <div class="input-group-addon">
                                         <asp:RequiredFieldValidator ControlToValidate="TxtProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
                                     </div>
-                                    <asp:TextBox ID="TxtProducto" onblur="comprueba(this)"  onclick="comprueba(this)"  onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
+                                    <asp:TextBox ID="TxtProducto" onblur="comprueba(this)" onclick="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoría</div>
-                                    <asp:DropDownList ID="Drl_Categoria" onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)"  CssClass="form-control1" runat="server">
+                                    <asp:DropDownList ID="Drl_Categoria" onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)" CssClass="form-control1" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
                                 </div>
@@ -124,7 +124,7 @@ function myFunction() {
                                         <asp:RequiredFieldValidator ControlToValidate="TxtValorProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Valor del Producto                                   
                                     </div>
                                     <asp:TextBox ID="TxtValorProducto" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
-                                </div>                      
+                                </div>
                                 <asp:Button ID="Btn_RegistrarProducto" ValidationGroup="Registro" CssClass="btn btn-primary" runat="server" Text="Registrar" />
                                 <asp:Label ID="Lbl_MensajePlantilla" runat="server" Text=""></asp:Label>
                             </div>
@@ -156,19 +156,11 @@ function myFunction() {
                                 <%--                                <asp:RegularExpressionValidator ControlToValidate="TxtProveedor" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[a-zA-Z'.\s]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>--%>
                                 <asp:RegularExpressionValidator ControlToValidate="TxtCantidad" ValidationGroup="Registro" Display="Dynamic" ValidationExpression="^[0-9]{1,40}$" runat="server">Incorrecto!</asp:RegularExpressionValidator>
                                 <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <asp:RequiredFieldValidator ControlToValidate="TxtProducto" CssClass="form-control1"  ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Nombre Producto                                   
-                                    </div>
-                                    <asp:DropDownList ID="Drl_NombreIdCreacionProducto" onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)" CssClass="form-control1" runat="server">
+                                    <div class="input-group-addon">Nombre Producto</div>
+                                    <asp:DropDownList ID="Drl_NombreIdCreacionProducto"    onblur="compruebaDDL(this)" onclick="compruebaDDL(this)" onfocus="compruebaDDL(this)" onchance="compruebaDDL(this)" CssClass="form-control1" runat="server">
                                         <asp:ListItem Value="0">- Seleccione -</asp:ListItem>
                                     </asp:DropDownList>
-                                </div>
-                                <div class="input-group">
-                                    <div class="input-group-addon">
-                                        <asp:RequiredFieldValidator ControlToValidate="TxtValorProducto" ValidationGroup="Registro" runat="server">*</asp:RequiredFieldValidator>Valor del Producto                                   
-                                    </div>
-                                    <asp:TextBox ID="TxtValorProducto111" onclick="comprueba(this)" onblur="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
-                                </div>
+                                </div>                                
                                 <div class="input-group">
                                     <div class="input-group-addon">Cantidad</div>
                                     <asp:TextBox ID="TxtCantidad" onclick="comprueba(this)" onblur="comprueba(this)" onfocus="comprueba(this)" onchange="comprueba(this)" CssClass="form-control1" runat="server"></asp:TextBox>
@@ -208,7 +200,7 @@ function myFunction() {
                             <div class="Cell-Form">
                                 <div class="input-group">
                                     <div class="input-group-addon">Categoria</div>
-                                    <asp:DropDownList ID="Drl_CategoriaBuscar" onblur="compruebaDDL(this)"  CssClass="form-control1" runat="server"></asp:DropDownList>
+                                    <asp:DropDownList ID="Drl_CategoriaBuscar" onblur="compruebaDDL(this)" CssClass="form-control1" runat="server"></asp:DropDownList>
                                 </div>
                             </div>
                         </div>
@@ -229,9 +221,14 @@ function myFunction() {
                         </asp:GridView>
                         <%--<asp:Label CssClass="form-control" style="color:#B3C556;"  ID="Lbl_ValorTotal" runat="server" Text=""></asp:Label>--%>
                     </div>
-               
+                    <div class="input-group">
+                        <div class="input-group-addon">Observación Inconsistencia</div>
+                        <asp:TextBox ID="TxtDemo" Visible="false" TextMode="MultiLine" CssClass="form-control" runat="server" />
+                        <%--<asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>--%>
+                    </div>
 
-                    <textarea id="demo" cols="20" rows="2" visible="false" runat="server"></textarea>
+
+                    <%--       <textarea id="demos" cols="20" rows="2" visible="false" runat="server"></textarea>--%>
                     <asp:Button ID="Btn_Prueba" runat="server" Text="Mostrar" Width="159px" />
                 </ContentTemplate>
             </asp:UpdatePanel>

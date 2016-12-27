@@ -1,8 +1,6 @@
-﻿
-Public Class CafeteriaComprarProducto
+﻿Public Class CafeteriaComprarProducto
     Inherits System.Web.UI.Page
     Dim ObjetoClsCafeteriaProductos As New clsCafeteriaProductos
-
     Dim dt As New DataTable
     Dim CantidadDisponible As Integer
     Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
@@ -23,7 +21,7 @@ Public Class CafeteriaComprarProducto
         Catch ex As Exception
             Pnl_Message.CssClass = "alert alert-danger"
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
-            End Try
+        End Try
     End Sub
     Public Sub LlenatDDL()
         Drl_Productos.DataSource = ObjetoClsCafeteriaProductos.CargarDatosDDlComprarProductos()
@@ -74,57 +72,46 @@ Public Class CafeteriaComprarProducto
                 Else
                     dt = Session("AcumulaRegistros")
                     dt.AcceptChanges()
-                    'dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text))
                     If (Convert.ToDouble(TxtCantidadProducto.Text) < TxtCantidadProducto.Text) Then
                         Lbl_String.Text = "la cantidad seleccionada no es disponible"
                     Else
-
                     End If
-
-
-                    'If (Convert.ToDouble(Drl_Productos.SelectedValue)) = 1 Then
-                    '    For index = 0 To Gtg_TotalCompras.Rows.Count - 1
-
-                    '        Dim row As DataRow
-                    '        row = dt.Rows(index)
-                    '        Session("AcumulaRegistros") = dt.Rows.Item(0)
-                    '        Session("AcumulaRegistros") = dt
-                    '        'ObjetoClsCafeteriaProductos.PublicidProducto = row(0)
-                    '        'ObjetoClsCafeteriaProductos.PublicNombreProducto = row(1)
-                    '        'ObjetoClsCafeteriaProductos.PublicProveedor = row(2)
-                    '        'row(4) =
-                    '        dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(TxtCantidadProducto.Text) * (Convert.ToDouble(Lbl_Valor.Text)) + Convert.ToDouble(TxtCantidadProducto.Text) * Convert.ToDouble(Lbl_Valor.Text))
-                    '    Next
-                    'Else
                     If dt.Rows.Count = 0 Then
-
                         dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text), Convert.ToDouble(TxtCantidadProducto.Text) * Convert.ToDouble(Lbl_Valor.Text))
                     Else
                         For index = 0 To Gtg_TotalCompras.Rows.Count - 1
                             If dt.Rows(index).Item(0) = (Convert.ToDouble(Drl_Productos.SelectedValue)) Then
-                                cant = Convert.ToDouble(TxtCantidadProducto.Text) + Convert.ToDouble(TxtCantidadProducto.Text)
-                                dt.Rows(index).Item(3) = cant
-
-                                dt.Rows(index).Item(4) = Convert.ToDouble(TxtCantidadProducto.Text) * (Convert.ToDouble(Lbl_Valor.Text)) + Convert.ToDouble(TxtCantidadProducto.Text) * Convert.ToDouble(Lbl_Valor.Text)
+                                If (Convert.ToDouble(Drl_Productos.SelectedValue)) = dt.Rows(index).Item(0) Then
+                                    If Lbl_CantidadDisponible.Text = dt.Rows(index).Item(3) Then
+                                        Lbl_String.Text = "Ya selecciono la cantidad disponible del producto"
+                                    Else
+                                        cant = Convert.ToDouble(TxtCantidadProducto.Text) + dt.Rows(index).Item(3)
+                                        dt.Rows(index).Item(3) = cant
+                                        dt.Rows(index).Item(4) = Convert.ToDouble(TxtCantidadProducto.Text) * (Convert.ToDouble(Lbl_Valor.Text)) + dt.Rows(index).Item(4)
+                                    End If
+                                End If
                             Else
+                                dt.Rows.Add(Convert.ToDouble(Drl_Productos.SelectedValue), Convert.ToString(Drl_Productos.SelectedItem), Convert.ToDouble(Lbl_Valor.Text), Convert.ToDouble(TxtCantidadProducto.Text), Convert.ToDouble(TxtCantidadProducto.Text) * Convert.ToDouble(Lbl_Valor.Text))
                             End If
                         Next
                     End If
-                    CantidadDisponible = Session("Cantidad") - Convert.ToDouble(TxtCantidadProducto.Text)
-                        Gtg_TotalCompras.DataSource = dt
-                        Gtg_TotalCompras.DataBind()
-                        Session("AcumulaRegistros") = dt
-                        btn_Comprar.Visible = True
-                        If totalSuma = 0 Then
-                            Session("Total") = Session("Valor1") * Session("Valor2")
-                        Else
-                            Lbl_String.Text = ""
-                        End If
+                        CantidadDisponible = Session("Cantidad") - Convert.ToDouble(TxtCantidadProducto.Text)
+                    Gtg_TotalCompras.DataSource = dt
+                    Gtg_TotalCompras.DataBind()
+                    Session("AcumulaRegistros") = dt
+                    btn_Comprar.Visible = True
+                    If totalSuma = 0 Then
+                        Session("Total") = Session("Valor1") * Session("Valor2")
+                    Else
+                        Lbl_String.Text = ""
+                    End If
+                    If Lbl_String.Text = "Ya selecciono la cantidad disponible del producto" Then
+                    Else
                         Lbl_ValorTotal.Text += Session("Total")
                     End If
                 End If
             End If
-        'End If
+        End If
     End Sub
     Private Sub Gtg_TotalCompras_RowDeleting(sender As Object, e As GridViewDeleteEventArgs) Handles Gtg_TotalCompras.RowDeleting
         Dim dt As DataTable = Session("AcumulaRegistros")
@@ -132,10 +119,8 @@ Public Class CafeteriaComprarProducto
         Dim suma As Double = Session("Suma")
         Dim Total As Double = Session("Total")
         dt.Rows.Item(e.RowIndex).Delete()
-
         Gtg_TotalCompras.DataSource = dt
         Gtg_TotalCompras.DataBind()
-        'Session("AcumulaRegistros") = dt.Rows.Item(0)
         Session("AcumulaRegistros") = dt
         Lbl_ValorTotal.Text = Session("Total") - ObjetoClsCafeteriaProductos.PublicValorProducto()
     End Sub
@@ -151,7 +136,6 @@ Public Class CafeteriaComprarProducto
             Lbl_IdProducto.Text = ObjetoClsCafeteriaProductos.CargarDatosIndexProductoXIdProducto()
             Lbl_Catego.Text = ObjetoClsCafeteriaProductos.CargarDatosIndexProductoXCategoria()
         End If
-
     End Sub
     Protected Sub btn_Comprar_Click(sender As Object, e As EventArgs) Handles btn_Comprar.Click
         If Drl_Productos.SelectedIndex = 0 Then
@@ -173,7 +157,6 @@ Public Class CafeteriaComprarProducto
                 ObjetoClsCafeteriaProductos.PublicNombreProducto = row(1)
                 ObjetoClsCafeteriaProductos.PublicProveedor = row(2)
                 ObjetoClsCafeteriaProductos.PublicValorProducto = row(3)
-                'ObjetoClsCafeteriaProductos.PublicCantidadProducto = row(4)
                 If Drl_NombreEmpleado.SelectedValue = "- Seleccione -" Then
                     Lbl_String.Text = "Por favor seleccione un producto para agregar a su pedido"
                 Else
@@ -213,8 +196,6 @@ Public Class CafeteriaComprarProducto
         Session.Contents.Remove("Suma")
         Session("Suma") = Nothing
         dt.Clear()
-        'Session.RemoveAll()
-        'Session("Suma") = ""
         Drl_Productos.SelectedIndex = 0
         Drl_NombreEmpleado.SelectedIndex = 0
         TxtCantidadProducto.Text = ""
@@ -241,8 +222,6 @@ Public Class CafeteriaComprarProducto
         Session.Contents.Remove("Suma")
         Session("Suma") = Nothing
         dt.Clear()
-        'Session.RemoveAll()
-        'Session("Suma") = ""
         Drl_Productos.SelectedIndex = 0
         Drl_NombreEmpleado.SelectedIndex = 0
         TxtCantidadProducto.Text = ""

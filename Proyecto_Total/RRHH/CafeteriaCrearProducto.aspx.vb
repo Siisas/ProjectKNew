@@ -11,10 +11,8 @@
             If Not IsPostBack Then
                 Session("Formulario") = "Ingreso Productos"
                 ConsultaDDl()
-
+                EliminarVariables()
                 If TxtProducto.Text = "" Then
-
-
                 End If
             End If
         Catch ex As Exception
@@ -125,12 +123,12 @@
     End Sub
 
     Protected Sub Btn_Prueba_Click(sender As Object, e As EventArgs) Handles Btn_Prueba.Click
-        demo.Visible = True
+        TxtDemo.Visible = True
         ViewState("Dato") = TxtProducto.Text
-        ViewState("Dato1") = "Hola "
-        ViewState("Dato2") = "Mi nombre es:"
+        ViewState("Dato1") = "Hola gracias por comprar "
+        ViewState("Dato2") = "Su numero de documento es:"
         ViewState("Dato3") = Convert.ToString(Drl_CodigoEmpleado1.SelectedItem)
-        demo.Value = ViewState("Dato1") & "" & ViewState("Dato") & "" & ViewState("Dato2") & "" & ViewState("Dato3")
+        TxtDemo.Text = ViewState("Dato1") & "" & ViewState("Dato") & "," & ViewState("Dato2") & "" & ViewState("Dato3")
         ViewState("Dato") = Nothing
         ViewState("Dato1") = Nothing
         TxtProducto.Text = ""
@@ -149,8 +147,16 @@
         ViewState("Dato1").Clear
         ViewState("Dato2").Clear
         ViewState("Dato3").Clear
-        demo.Value = ""
-        demo.Visible = False
+        ViewState("Dato") = Nothing
+        ViewState("Dato1") = Nothing
+        ViewState("Dato2") = Nothing
+        ViewState("Dato3") = Nothing
+        TxtDemo.Text = ""
+        TxtDemo.Visible = False
+        ViewState.Remove("Dato")
+        ViewState.Remove("Dato1")
+        ViewState.Remove("Dato2")
+        ViewState.Remove("Dato3")
 
     End Sub
 End Class
