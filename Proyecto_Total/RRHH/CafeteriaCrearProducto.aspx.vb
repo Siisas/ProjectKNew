@@ -20,12 +20,7 @@
             lblmsg.Text = "<span class='glyphicon glyphicon-remove-sign'></span> " & ex.Message
         End Try
     End Sub
-
     Protected Sub Btn_RegistrarProducto_Click(sender As Object, e As EventArgs) Handles Btn_RegistrarProducto.Click
-        'If TxtCantidad.Text <= 0 Then
-        '    Lbl_MensajePlantilla.Text = "la cantidad del producto debe ser mayor a 0 "
-        'Else
-
         ObjProductosCafeteria.PublicNombreProducto = TxtProducto.Text
         ViewState("Dato") = TxtProducto.Text
         ViewState("Dato1") = Drl_Categoria.SelectedValue
@@ -40,17 +35,13 @@
             Else
                 ObjProductosCafeteria.PublicCodigoEmpleado = Drl_CodigoEmpleado.SelectedValue
                 ObjProductosCafeteria.PublicProveedor = TxtProveedor.Text
-                'ObjProductosCafeteria.PublicCantidadProducto = TxtCantidad.Text
                 ObjProductosCafeteria.CrearProducto()
                 Lbl_MensajePlantilla.Text = " <span class='glyphicon glyphicon-warning-sign'></span> El producto fue creado con exito"
                 TxtProducto.Text = ""
                 Drl_CodigoEmpleado.SelectedItem.Value = 0
                 TxtValorProducto.Text = ""
                 TxtFechaCreacion.Text = ""
-                'Drl_CodigoEmpleado.SelectedValue = "-Seleccione"
                 TxtProveedor.Text = ""
-                'TxtCantidad.Text = ""
-                'End If
                 ConsultaDDl()
             End If
         End If
@@ -95,7 +86,6 @@
         End If
         ObjProductosCafeteria.PublicFechaRegistroProducto = TxtBuscarFecha.Text
         Gtg_Productos.DataSource = ObjProductosCafeteria.ConsultaProductos()
-        'Gtg_Productos = ObjProductosCafeteria.ConsultaProductos() 'Metodo toca crear el metodo que haga la busqueda y nos devuelva la consulta en la clase remember
         Gtg_Productos.DataBind()
     End Sub
     Protected Sub Btn_IngresarProductos_Click(sender As Object, e As EventArgs) Handles Btn_IngresarProductos.Click
@@ -104,7 +94,6 @@
         Else
             ObjProductosCafeteria.PublicNombreProducto = Drl_NombreIdCreacionProducto.SelectedValue
             ObjProductosCafeteria.PublicCantidadProducto = TxtCantidad.Text
-            'ObjProductosCafeteria.PublicFechaRegistroProducto = TxtFecha.Text
             If Drl_CodigoEmpleado1.SelectedValue = "-Seleccione-" Then
                 Lbl_MensajeIngresoProducto.Text = "Por favor seleccione el codigo del empleado"
             Else
@@ -121,7 +110,6 @@
         TxtProveedor.Text = ""
         TxtCantidad.Text = ""
     End Sub
-
     Protected Sub Btn_Prueba_Click(sender As Object, e As EventArgs) Handles Btn_Prueba.Click
         TxtDemo.Visible = True
         ViewState("Dato") = TxtProducto.Text
@@ -134,14 +122,7 @@
         TxtProducto.Text = ""
         ViewState("Dato1") = ""
         ViewState.Clear()
-
-        'If demo.Value <> "" Then
-        '    EnableViewState = "false"
-        '    demo.Value = ""
-        'End If
     End Sub
-
-
     Protected Sub EliminarVariables()
         ViewState("Dato").Clear
         ViewState("Dato1").Clear
@@ -157,6 +138,5 @@
         ViewState.Remove("Dato1")
         ViewState.Remove("Dato2")
         ViewState.Remove("Dato3")
-
     End Sub
 End Class
