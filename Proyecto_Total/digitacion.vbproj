@@ -233,6 +233,8 @@
     <Content Include="DirecTv\DirecTv_Consulta.aspx" />
     <Content Include="entrada.aspx" />
     <Content Include="Estilos.css" />
+    <Content Include="RRHH\CalificacionTicketRH.aspx" />
+    <Content Include="RRHH\GestionTicketRH.aspx" />
     <Content Include="Help\HelpDeskAsignacion.aspx" />
     <Content Include="Help\HelpDeskRegistro.aspx" />
     <Content Include="Help\HelpDeskSolucion.aspx" />
@@ -263,6 +265,7 @@
     <Content Include="RRHH\desprendible.aspx" />
     <Content Include="RRHH\DesprendibleCafeteUsu.aspx" />
     <Content Include="RRHH\Estudios.aspx" />
+    <Content Include="RRHH\GestionTicketRH_Ajax.aspx" />
     <Content Include="RRHH\MesCafeteria.aspx" />
     <Content Include="RRHH\modificaop.aspx" />
     <Content Include="RRHH\novedades.aspx" />
@@ -271,6 +274,7 @@
     <Content Include="RRHH\Productividad.aspx" />
     <Content Include="RRHH\ProductividadVoz.aspx" />
     <Content Include="RRHH\regdotacion.aspx" />
+    <Content Include="RRHH\RegistroTicketRH.aspx" />
     <Content Include="RRHH\RegProduc.aspx" />
     <Content Include="RRHH\regrrhh.aspx" />
     <Content Include="RRHH\Retroalimentacion.aspx" />
@@ -1207,6 +1211,20 @@
       <DependentUpon>entrada.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
+    <Compile Include="RRHH\CalificacionTicketRH.aspx.designer.vb">
+      <DependentUpon>CalificacionTicketRH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\CalificacionTicketRH.aspx.vb">
+      <DependentUpon>CalificacionTicketRH.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\GestionTicketRH.aspx.designer.vb">
+      <DependentUpon>GestionTicketRH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\GestionTicketRH.aspx.vb">
+      <DependentUpon>GestionTicketRH.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="Help\HelpDeskAsignacion.aspx.designer.vb">
       <DependentUpon>HelpDeskAsignacion.aspx</DependentUpon>
     </Compile>
@@ -1425,6 +1443,13 @@
       <DependentUpon>Estudios.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
+    <Compile Include="RRHH\GestionTicketRH_Ajax.aspx.designer.vb">
+      <DependentUpon>GestionTicketRH_Ajax.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\GestionTicketRH_Ajax.aspx.vb">
+      <DependentUpon>GestionTicketRH_Ajax.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
     <Compile Include="RRHH\MesCafeteria.aspx.designer.vb">
       <DependentUpon>MesCafeteria.aspx</DependentUpon>
     </Compile>
@@ -1479,6 +1504,13 @@
     </Compile>
     <Compile Include="RRHH\regdotacion.aspx.vb">
       <DependentUpon>regdotacion.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="RRHH\RegistroTicketRH.aspx.designer.vb">
+      <DependentUpon>RegistroTicketRH.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RRHH\RegistroTicketRH.aspx.vb">
+      <DependentUpon>RegistroTicketRH.aspx</DependentUpon>
       <SubType>ASPXCodebehind</SubType>
     </Compile>
     <Compile Include="RRHH\RegProduc.aspx.designer.vb">
