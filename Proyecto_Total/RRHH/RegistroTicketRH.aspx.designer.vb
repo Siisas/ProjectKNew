@@ -86,6 +86,15 @@ Partial Public Class RegistroTicketRH
     Protected WithEvents Btn_Limpiar As Global.System.Web.UI.WebControls.LinkButton
     
     '''<summary>
+    '''Control Btn_Imprimir.
+    '''</summary>
+    '''<remarks>
+    '''Campo generado automáticamente.
+    '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+    '''</remarks>
+    Protected WithEvents Btn_Imprimir As Global.System.Web.UI.WebControls.LinkButton
+    
+    '''<summary>
     '''Control Drl_Prioridad.
     '''</summary>
     '''<remarks>
@@ -167,11 +176,11 @@ Partial Public Class RegistroTicketRH
     Protected WithEvents TxtFechaFin As Global.System.Web.UI.WebControls.TextBox
     
     '''<summary>
-    '''Control Gtg_Productos.
+    '''Control Gtg_ConsultaTickets.
     '''</summary>
     '''<remarks>
     '''Campo generado automáticamente.
     '''Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
     '''</remarks>
-    Protected WithEvents Gtg_Productos As Global.System.Web.UI.WebControls.GridView
+    Protected WithEvents Gtg_ConsultaTickets As Global.System.Web.UI.WebControls.GridView
 End Class

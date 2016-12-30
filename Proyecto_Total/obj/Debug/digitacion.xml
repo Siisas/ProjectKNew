@@ -54541,6 +54541,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:digitacion.CalificacionRH._Drl_Calificacion">
+<summary>
+Control Drl_Calificacion.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:digitacion.CalificacionRH._TxtObservacion">
 <summary>
 Control TxtObservacion.
@@ -54550,9 +54559,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.CalificacionRH._TxtFechaEstado">
+<member name="F:digitacion.CalificacionRH._Drl_NivelS">
 <summary>
-Control TxtFechaEstado.
+Control Drl_NivelS.
 </summary>
 <remarks>
 Campo generado automáticamente.
@@ -65350,6 +65359,15 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
+<member name="F:digitacion.RegistroTicketRH._Btn_Imprimir">
+<summary>
+Control Btn_Imprimir.
+</summary>
+<remarks>
+Campo generado automáticamente.
+Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+</remarks>
+</member>
 <member name="F:digitacion.RegistroTicketRH._Drl_Prioridad">
 <summary>
 Control Drl_Prioridad.
@@ -65431,9 +65449,9 @@ Campo generado automáticamente.
 Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
 </remarks>
 </member>
-<member name="F:digitacion.RegistroTicketRH._Gtg_Productos">
+<member name="F:digitacion.RegistroTicketRH._Gtg_ConsultaTickets">
 <summary>
-Control Gtg_Productos.
+Control Gtg_ConsultaTickets.
 </summary>
 <remarks>
 Campo generado automáticamente.

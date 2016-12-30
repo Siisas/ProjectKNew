@@ -56,7 +56,7 @@
                                     <asp:DropDownList ID="DropDownList2" CssClass="form-control" runat="server"></asp:DropDownList>
                                 </div>
                                 <div class="input-group">
-                                    <div class="input-group-addon">Fecha Inicio</div>
+                                    <div class="input-group-addon">Fecha Fin</div>
                                     <asp:TextBox ID="TxtFechaFin" CssClass="form-control Fecha" runat="server"></asp:TextBox>
                                 </div>                               
                             </div>

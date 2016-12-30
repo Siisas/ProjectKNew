@@ -55,6 +55,9 @@
                                 <asp:LinkButton ID="Btn_Limpiar" Font-Strikeout="false" CssClass="btn btn-primary" runat="server">
                                             <span class="glyphicon glyphicon-refresh"></span> Limpiar
                                         </asp:LinkButton>
+                                <asp:LinkButton ID="Btn_Imprimir" Font-Strikeout="false" Visible="false" CssClass="btn btn-primary" runat="server">
+                                            <span class="glyphicon glyphicon-print"></span> Imprimir
+                                        </asp:LinkButton>
                             </div>
                             <div class="Space-Form"></div>
                             <div class="Cell-Form">
@@ -93,6 +96,7 @@
                                 <asp:LinkButton ID="Btn_LimpiarDatos" Font-Strikeout="false" CssClass="btn btn-primary" runat="server">
                                             <span class="glyphicon glyphicon-refresh"></span> Limpiar
                                         </asp:LinkButton>
+                                   
                             </div>
                             <div class="Space-Form"></div>
                             <div class="Cell-Form">
@@ -101,14 +105,14 @@
                                     <asp:DropDownList ID="DropDownList2" CssClass="form-control" runat="server"></asp:DropDownList>
                                 </div>
                                 <div class="input-group">
-                                    <div class="input-group-addon">Fecha Inicio</div>
+                                    <div class="input-group-addon">Fecha Fin</div>
                                     <asp:TextBox ID="TxtFechaFin" CssClass="form-control Fecha" runat="server"></asp:TextBox>
                                 </div>                               
                             </div>
                         </div>
                         </div>
                         <div class="bordes" style="overflow: auto; min-height: 0px; max-height: 1000px; width: 100%;">
-                            <asp:GridView ID="Gtg_Productos" runat="server" CellPadding="4" ForeColor="#333333"
+                            <asp:GridView ID="Gtg_ConsultaTickets" runat="server" CellPadding="4" ForeColor="#333333"
                                 GridLines="None" Width="100%" Style="font-size: x-small"
                                 EnableModelValidation="True">
                                 <RowStyle BackColor="#EEF1D8" ForeColor="#333333" />

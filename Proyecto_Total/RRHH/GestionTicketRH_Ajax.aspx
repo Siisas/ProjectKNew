@@ -41,7 +41,7 @@
                                     <asp:TextBox ID="TxtCodigoaa" CssClass="form-control" ReadOnly="true" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
-                                    <div class="input-group-addon">Persona Solicita</div>
+                                    <div class="input-group-addon">Persona Solícita</div>
                                     <asp:TextBox ID="TxtPersonaSolicita" CssClass="form-control" ReadOnly="true" runat="server"></asp:TextBox>
                                 </div>
                                 <div class="input-group">
